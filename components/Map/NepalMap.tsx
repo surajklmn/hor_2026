@@ -101,6 +101,7 @@ export default function NepalMap({ }: NepalMapProps) {
     const [districtGeoData, setDistrictGeoData] = useState<import('geojson').FeatureCollection | null>(null);
     const [constituenciesMap, setConstituenciesMap] = useState<ConstituenciesMap | null>(null);
     const [isSatellite, setIsSatellite] = useState(false);
+    const [showDistrictNames, setShowDistrictNames] = useState(true);
     const [selectedId, setSelectedId] = useState<string | null>(null);
     const [isAnimating, setIsAnimating] = useState(false);
     const geoJsonRef = useRef<L.GeoJSON>(null);
@@ -271,9 +272,15 @@ export default function NepalMap({ }: NepalMapProps) {
                     white-space: nowrap;
                     pointer-events: none;
                 }
+                
             `}</style>
 
-            <MapControls isSatellite={isSatellite} onToggle={() => setIsSatellite(!isSatellite)} />
+            <MapControls
+                isSatellite={isSatellite}
+                onToggle={() => setIsSatellite(!isSatellite)}
+                showDistrictNames={showDistrictNames}
+                onToggleNames={() => setShowDistrictNames(!showDistrictNames)}
+            />
 
             {/* Search Control */}
             <SearchControl
@@ -300,6 +307,7 @@ export default function NepalMap({ }: NepalMapProps) {
                 {/* District Layer - Below features to keep tooltips work, but above base tile */}
                 {districtGeoData && (
                     <GeoJSON
+                        key={`districts-${showDistrictNames}`}
                         data={districtGeoData}
                         style={{
                             fillColor: 'transparent',
@@ -309,7 +317,8 @@ export default function NepalMap({ }: NepalMapProps) {
                             fillOpacity: 0
                         }}
                         onEachFeature={(feature, layer) => {
-                            if (feature.properties && feature.properties.district && feature.properties.district !== 'Protected Area') {
+                            // Only bind tooltip if showDistrictNames is true
+                            if (showDistrictNames && feature.properties && feature.properties.district && feature.properties.district !== 'Protected Area') {
                                 layer.bindTooltip(feature.properties.district, {
                                     permanent: true,
                                     direction: 'center',
@@ -341,6 +350,6 @@ export default function NepalMap({ }: NepalMapProps) {
             <div className="absolute bottom-4 left-4 bg-white/90 p-2 rounded border border-gray-100 text-[10px] text-gray-400 z-[400] pointer-events-none">
                 Nepal Election 2026 • {isSatellite ? "Satellite View" : "Map View"}
             </div>
-        </div>
+        </div >
     );
 }
