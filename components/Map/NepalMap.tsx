@@ -98,6 +98,7 @@ function MapEvents({ onClear, setAnimating }: { onClear: () => void, setAnimatin
 
 export default function NepalMap({ }: NepalMapProps) {
     const [geoData, setGeoData] = useState<import('geojson').FeatureCollection | null>(null);
+    const [districtGeoData, setDistrictGeoData] = useState<import('geojson').FeatureCollection | null>(null);
     const [constituenciesMap, setConstituenciesMap] = useState<ConstituenciesMap | null>(null);
     const [isSatellite, setIsSatellite] = useState(false);
     const [selectedId, setSelectedId] = useState<string | null>(null);
@@ -108,9 +109,11 @@ export default function NepalMap({ }: NepalMapProps) {
     useEffect(() => {
         Promise.all([
             fetch('/data/nepal_constituencies.geojson').then(r => r.json()),
+            fetch('/data/nepal_districts.geojson').then(r => r.json()),
             fetch('/data/candidates.json').then(r => r.json())
-        ]).then(([geo, candidates]) => {
+        ]).then(([geo, districts, candidates]) => {
             setGeoData(geo);
+            setDistrictGeoData(districts);
             setConstituenciesMap(candidates);
         }).catch(err => console.error("Error loading data:", err));
     }, []);
@@ -252,6 +255,22 @@ export default function NepalMap({ }: NepalMapProps) {
                 .custom-scrollbar::-webkit-scrollbar { width: 4px; }
                 .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
                 .custom-scrollbar::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 4px; }
+                
+                .district-label {
+                    background: transparent;
+                    border: none;
+                    box-shadow: none;
+                    font-size: 10px;
+                    font-weight: 600;
+                    color: #374151; /* Gray-700 */
+                    text-shadow: 
+                        -1px -1px 0 #fff,  
+                         1px -1px 0 #fff,
+                        -1px  1px 0 #fff,
+                         1px  1px 0 #fff;
+                    white-space: nowrap;
+                    pointer-events: none;
+                }
             `}</style>
 
             <MapControls isSatellite={isSatellite} onToggle={() => setIsSatellite(!isSatellite)} />
@@ -278,6 +297,32 @@ export default function NepalMap({ }: NepalMapProps) {
                     />
                 )}
 
+                {/* District Layer - Below features to keep tooltips work, but above base tile */}
+                {districtGeoData && (
+                    <GeoJSON
+                        data={districtGeoData}
+                        style={{
+                            fillColor: 'transparent',
+                            color: '#374151', // Gray-700
+                            weight: 1.5,
+                            opacity: 0.5,
+                            fillOpacity: 0
+                        }}
+                        onEachFeature={(feature, layer) => {
+                            if (feature.properties && feature.properties.district && feature.properties.district !== 'Protected Area') {
+                                layer.bindTooltip(feature.properties.district, {
+                                    permanent: true,
+                                    direction: 'center',
+                                    className: 'district-label',
+                                    interactive: false
+                                });
+                            }
+                        }}
+                        // Ensure it doesn't capture clicks
+                        interactive={false}
+                    />
+                )}
+
                 {/* Key prop ensures re-mount when mode switches, refreshing event hooks with new state */}
                 <GeoJSON
                     key={isSatellite ? 'sat' : 'elect'}
@@ -289,6 +334,9 @@ export default function NepalMap({ }: NepalMapProps) {
                 <MapEvents onClear={() => setSelectedId(null)} setAnimating={setIsAnimating} />
                 <MapBounds geoJson={geoData} />
             </MapContainer>
+
+
+
 
             <div className="absolute bottom-4 left-4 bg-white/90 p-2 rounded border border-gray-100 text-[10px] text-gray-400 z-[400] pointer-events-none">
                 Nepal Election 2026 • {isSatellite ? "Satellite View" : "Map View"}
