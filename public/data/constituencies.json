@@ -1,0 +1,2966 @@
+{
+  "Jhapa-1": {
+    "district": "Jhapa",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "jhap1-cpnuml",
+        "name": "Raghuji Pant",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "jhap1-rsp",
+        "name": "Nisha Dangi",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Jhapa-2": {
+    "district": "Jhapa",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "jhap2-cpnuml",
+        "name": "Pradeep Gyawali",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "jhap2-rsp",
+        "name": "Indira Ranamagar",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Jhapa-3": {
+    "district": "Jhapa",
+    "constituency": "3",
+    "candidates": [
+      {
+        "id": "jhap3-cpnuml",
+        "name": "Ram Kumari Jhakri",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "jhap3-rsp",
+        "name": "Prakash Pathak",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Jhapa-4": {
+    "district": "Jhapa",
+    "constituency": "4",
+    "candidates": [
+      {
+        "id": "jhap4-cpnuml",
+        "name": "Subas Nembang",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "jhap4-rsp",
+        "name": "Shambhu Sushkera",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Jhapa-5": {
+    "district": "Jhapa",
+    "constituency": "5",
+    "candidates": [
+      {
+        "id": "jhapa5-uml",
+        "name": "K.P. Sharma Oli",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "jhapa5-rsp",
+        "name": "Balendra Shah",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Morang-1": {
+    "district": "Morang",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "mora1-cpnuml",
+        "name": "Subas Nembang",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "mora1-rsp",
+        "name": "Yagya Mani Neupane",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Morang-2": {
+    "district": "Morang",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "mora2-cpnuml",
+        "name": "Agni Sapkota",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "mora2-rsp",
+        "name": "Krishna Kumar Karki",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Morang-3": {
+    "district": "Morang",
+    "constituency": "3",
+    "candidates": [
+      {
+        "id": "mora3-cpnuml",
+        "name": "Sherdhan Rai",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "mora3-rsp",
+        "name": "Ganesh Karki",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Morang-4": {
+    "district": "Morang",
+    "constituency": "4",
+    "candidates": [
+      {
+        "id": "mora4-cpnuml",
+        "name": "Bishnu Poudel",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "mora4-rsp",
+        "name": "Santosh Rajbanshi",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Morang-5": {
+    "district": "Morang",
+    "constituency": "5",
+    "candidates": [
+      {
+        "id": "mora5-cpnuml",
+        "name": "Top Bahadur Rayamajhi",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "mora5-rsp",
+        "name": "Asha Jha",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Morang-6": {
+    "district": "Morang",
+    "constituency": "6",
+    "candidates": [
+      {
+        "id": "mora6-cpnuml",
+        "name": "Ishwor Pokhrel",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "mora6-rsp",
+        "name": "Rubina Acharya",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Sunsari-1": {
+    "district": "Sunsari",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "suns1-cpnuml",
+        "name": "Pradeep Gyawali",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "suns1-rsp",
+        "name": "Sarin Tamang",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Sunsari-2": {
+    "district": "Sunsari",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "suns2-cpnuml",
+        "name": "Bhim Rawal",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "suns2-rsp",
+        "name": "Lal Bikram",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Sunsari-3": {
+    "district": "Sunsari",
+    "constituency": "3",
+    "candidates": [
+      {
+        "id": "suns3-cpnuml",
+        "name": "Yogesh Bhattarai",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "suns3-rsp",
+        "name": "Ashok Chaudhary",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Sunsari-4": {
+    "district": "Sunsari",
+    "constituency": "4",
+    "candidates": [
+      {
+        "id": "suns4-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "suns4-rsp",
+        "name": "Dipak Kumar Shah",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Ilam-1": {
+    "district": "Ilam",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "ilam1-cpnuml",
+        "name": "Top Bahadur Rayamajhi",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "ilam1-rsp",
+        "name": "Bimal Gadal",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Ilam-2": {
+    "district": "Ilam",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "ilam2-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "ilam2-rsp",
+        "name": "Gokul Bahadur Rai",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Panchthar-1": {
+    "district": "Panchthar",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "panc1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "panc1-rsp",
+        "name": "Mahendra Bikram Thamsuhang",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Taplejung-1": {
+    "district": "Taplejung",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "tapl1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "tapl1-rsp",
+        "name": "Birendra Shrestha",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Dhankuta-1": {
+    "district": "Dhankuta",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "dhan1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "dhan1-rsp",
+        "name": "Dinesh Bhandari",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Terhathum-1": {
+    "district": "Terhathum",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "terh1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "terh1-rsp",
+        "name": "Surendra Karki",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Sankhuwasabha-1": {
+    "district": "Sankhuwasabha",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "sank1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "sank1-rsp",
+        "name": "Mingma Sherpa",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Bhojpur-1": {
+    "district": "Bhojpur",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "bhoj1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "bhoj1-rsp",
+        "name": "Ramesh Prasad Ojha",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Solukhumbu-1": {
+    "district": "Solukhumbu",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "solu1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "solu1-rsp",
+        "name": "Rishidhan Rai",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Okhaldhunga-1": {
+    "district": "Okhaldhunga",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "okha1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "okha1-rsp",
+        "name": "Bishwaraj Pokharel",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Khotang-1": {
+    "district": "Khotang",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "khot1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "khot1-rsp",
+        "name": "Rudra Giri",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Khotang-2": {
+    "district": "Khotang",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "khot2-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "khot2-rsp",
+        "name": "Rudra Giri",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Udayapur-1": {
+    "district": "Udayapur",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "uday1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "uday1-rsp",
+        "name": "Parash Gelal",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Udayapur-2": {
+    "district": "Udayapur",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "uday2-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "uday2-rsp",
+        "name": "Surya Bahadur Tamang",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Saptari-1": {
+    "district": "Saptari",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "sapt1-jsp",
+        "name": "Upendra Yadav",
+        "party": "JSP",
+        "status": "Incumbent"
+      },
+      {
+        "id": "sapt1-rsp",
+        "name": "Pushpa Chaudhary",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Saptari-2": {
+    "district": "Saptari",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "sapt2-jsp",
+        "name": "Upendra Yadav",
+        "party": "JSP",
+        "status": "Incumbent"
+      },
+      {
+        "id": "sapt2-rsp",
+        "name": "Ramji Yadav",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Saptari-3": {
+    "district": "Saptari",
+    "constituency": "3",
+    "candidates": [
+      {
+        "id": "sapt3-jsp",
+        "name": "Rajendra Mahato",
+        "party": "JSP",
+        "status": "Incumbent"
+      },
+      {
+        "id": "sapt3-rsp",
+        "name": "Umakant Chaudhary",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Siraha-1": {
+    "district": "Siraha",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "sira1-jsp",
+        "name": "Mahantha Thakur",
+        "party": "JSP",
+        "status": "Incumbent"
+      },
+      {
+        "id": "sira1-rsp",
+        "name": "Bablu Gupta",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Siraha-2": {
+    "district": "Siraha",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "sira2-jsp",
+        "name": "Anil Kumar Jha",
+        "party": "JSP",
+        "status": "Incumbent"
+      },
+      {
+        "id": "sira2-rsp",
+        "name": "Shiv Shankar Yadav",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Siraha-3": {
+    "district": "Siraha",
+    "constituency": "3",
+    "candidates": [
+      {
+        "id": "sira3-jsp",
+        "name": "Sarat Singh Bhandari",
+        "party": "JSP",
+        "status": "Incumbent"
+      },
+      {
+        "id": "sira3-rsp",
+        "name": "Dr. Shambhu Yadav",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Dhanusha-1": {
+    "district": "Dhanusha",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "dhan1-jsp",
+        "name": "Mahantha Thakur",
+        "party": "JSP",
+        "status": "Incumbent"
+      },
+      {
+        "id": "dhan1-rsp",
+        "name": "Kishori Sah",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Dhanusha-2": {
+    "district": "Dhanusha",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "dhan2-jsp",
+        "name": "Mohammad Istiyak Rai",
+        "party": "JSP",
+        "status": "Incumbent"
+      },
+      {
+        "id": "dhan2-rsp",
+        "name": "Ram Binod Sah",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Dhanusha-3": {
+    "district": "Dhanusha",
+    "constituency": "3",
+    "candidates": [
+      {
+        "id": "dhan3-jsp",
+        "name": "Laxman Lal Karna",
+        "party": "JSP",
+        "status": "Incumbent"
+      },
+      {
+        "id": "dhan3-rsp",
+        "name": "Manisha Jha",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Dhanusha-4": {
+    "district": "Dhanusha",
+    "constituency": "4",
+    "candidates": [
+      {
+        "id": "dhan4-jsp",
+        "name": "JSP Candidate",
+        "party": "JSP",
+        "status": "Incumbent"
+      },
+      {
+        "id": "dhan4-rsp",
+        "name": "Raj Kishor Mahato",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Mahottari-1": {
+    "district": "Mahottari",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "maho1-jsp",
+        "name": "JSP Candidate",
+        "party": "JSP",
+        "status": "Incumbent"
+      },
+      {
+        "id": "maho1-rsp",
+        "name": "Pramod Mahato",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Mahottari-2": {
+    "district": "Mahottari",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "maho2-jsp",
+        "name": "JSP Candidate",
+        "party": "JSP",
+        "status": "Incumbent"
+      },
+      {
+        "id": "maho2-rsp",
+        "name": "Dipak Sah",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Mahottari-3": {
+    "district": "Mahottari",
+    "constituency": "3",
+    "candidates": [
+      {
+        "id": "maho3-jsp",
+        "name": "JSP Candidate",
+        "party": "JSP",
+        "status": "Incumbent"
+      },
+      {
+        "id": "maho3-rsp",
+        "name": "Ujjwal Jha",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Sarlahi-1": {
+    "district": "Sarlahi",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "sarl1-jsp",
+        "name": "JSP Candidate",
+        "party": "JSP",
+        "status": "Incumbent"
+      },
+      {
+        "id": "sarl1-rsp",
+        "name": "Nitima Karki",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Sarlahi-2": {
+    "district": "Sarlahi",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "sarl2-jsp",
+        "name": "JSP Candidate",
+        "party": "JSP",
+        "status": "Incumbent"
+      },
+      {
+        "id": "sarl2-rsp",
+        "name": "Rabin Mahato",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Sarlahi-3": {
+    "district": "Sarlahi",
+    "constituency": "3",
+    "candidates": [
+      {
+        "id": "sarl3-jsp",
+        "name": "JSP Candidate",
+        "party": "JSP",
+        "status": "Incumbent"
+      },
+      {
+        "id": "sarl3-rsp",
+        "name": "Narendra Sah Kalwar",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Sarlahi-4": {
+    "district": "Sarlahi",
+    "constituency": "4",
+    "candidates": [
+      {
+        "id": "sarlahi4-nc",
+        "name": "Gagan Thapa",
+        "party": "NEPALI_CONGRESS",
+        "status": "Challenger"
+      },
+      {
+        "id": "sarlahi4-rsp",
+        "name": "Amaresh Singh",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Rautahat-1": {
+    "district": "Rautahat",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "raut1-jsp",
+        "name": "JSP Candidate",
+        "party": "JSP",
+        "status": "Incumbent"
+      },
+      {
+        "id": "raut1-rsp",
+        "name": "Rajesh Chaudhary",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Rautahat-2": {
+    "district": "Rautahat",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "raut2-jsp",
+        "name": "JSP Candidate",
+        "party": "JSP",
+        "status": "Incumbent"
+      },
+      {
+        "id": "raut2-rsp",
+        "name": "Sheikh Sagir",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Rautahat-3": {
+    "district": "Rautahat",
+    "constituency": "3",
+    "candidates": [
+      {
+        "id": "raut3-jsp",
+        "name": "JSP Candidate",
+        "party": "JSP",
+        "status": "Incumbent"
+      },
+      {
+        "id": "raut3-rsp",
+        "name": "Dhiraj Patel",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Bara-1": {
+    "district": "Bara",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "bara1-jsp",
+        "name": "JSP Candidate",
+        "party": "JSP",
+        "status": "Incumbent"
+      },
+      {
+        "id": "bara1-rsp",
+        "name": "Ganesh Dhimal",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Bara-2": {
+    "district": "Bara",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "bara2-jsp",
+        "name": "JSP Candidate",
+        "party": "JSP",
+        "status": "Incumbent"
+      },
+      {
+        "id": "bara2-rsp",
+        "name": "Chandan Singh",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Bara-3": {
+    "district": "Bara",
+    "constituency": "3",
+    "candidates": [
+      {
+        "id": "bara3-jsp",
+        "name": "JSP Candidate",
+        "party": "JSP",
+        "status": "Incumbent"
+      },
+      {
+        "id": "bara3-rsp",
+        "name": "Arbind Sah",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Bara-4": {
+    "district": "Bara",
+    "constituency": "4",
+    "candidates": [
+      {
+        "id": "bara4-jsp",
+        "name": "JSP Candidate",
+        "party": "JSP",
+        "status": "Incumbent"
+      },
+      {
+        "id": "bara4-rsp",
+        "name": "Rahbar Ansari",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Parsa-1": {
+    "district": "Parsa",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "pars1-jsp",
+        "name": "JSP Candidate",
+        "party": "JSP",
+        "status": "Incumbent"
+      },
+      {
+        "id": "pars1-rsp",
+        "name": "Hari Pant",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Parsa-2": {
+    "district": "Parsa",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "pars2-jsp",
+        "name": "JSP Candidate",
+        "party": "JSP",
+        "status": "Incumbent"
+      },
+      {
+        "id": "pars2-rsp",
+        "name": "Sushil Patel",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Parsa-3": {
+    "district": "Parsa",
+    "constituency": "3",
+    "candidates": [
+      {
+        "id": "pars3-jsp",
+        "name": "JSP Candidate",
+        "party": "JSP",
+        "status": "Incumbent"
+      },
+      {
+        "id": "pars3-rsp",
+        "name": "Ramakant Chaurasiya",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Kathmandu-1": {
+    "district": "Kathmandu",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "kath1-nepalicongress",
+        "name": "Prakash Man Singh",
+        "party": "NEPALI_CONGRESS",
+        "status": "Incumbent"
+      },
+      {
+        "id": "kath1-rsp",
+        "name": "Ranju Darshana",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Kathmandu-2": {
+    "district": "Kathmandu",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "kath2-nepalicongress",
+        "name": "Ram Sharan Mahat",
+        "party": "NEPALI_CONGRESS",
+        "status": "Incumbent"
+      },
+      {
+        "id": "kath2-rsp",
+        "name": "Sunil KC",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Kathmandu-3": {
+    "district": "Kathmandu",
+    "constituency": "3",
+    "candidates": [
+      {
+        "id": "kath3-rpp",
+        "name": "Rabindra Mishra",
+        "party": "RPP",
+        "status": "Incumbent"
+      },
+      {
+        "id": "kath3-rsp",
+        "name": "Raju Pandey",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Kathmandu-4": {
+    "district": "Kathmandu",
+    "constituency": "4",
+    "candidates": [
+      {
+        "id": "kath4-nepalicongress",
+        "name": "Gagan Thapa",
+        "party": "NEPALI_CONGRESS",
+        "status": "Incumbent"
+      },
+      {
+        "id": "kath4-rsp",
+        "name": "Pukar Bam",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Kathmandu-5": {
+    "district": "Kathmandu",
+    "constituency": "5",
+    "candidates": [
+      {
+        "id": "kath5-nepalicongress",
+        "name": "Dhanraj Gurung",
+        "party": "NEPALI_CONGRESS",
+        "status": "Incumbent"
+      },
+      {
+        "id": "kath5-rsp",
+        "name": "Sasmita Pokharel",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Kathmandu-6": {
+    "district": "Kathmandu",
+    "constituency": "6",
+    "candidates": [
+      {
+        "id": "kath6-nepalicongress",
+        "name": "Minendra Rijal",
+        "party": "NEPALI_CONGRESS",
+        "status": "Incumbent"
+      },
+      {
+        "id": "kath6-rsp",
+        "name": "Shishir Khanal",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Kathmandu-7": {
+    "district": "Kathmandu",
+    "constituency": "7",
+    "candidates": [
+      {
+        "id": "kath7-nepalicongress",
+        "name": "Bal Krishna Khand",
+        "party": "NEPALI_CONGRESS",
+        "status": "Incumbent"
+      },
+      {
+        "id": "kath7-rsp",
+        "name": "Ganesh Parajuli",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Kathmandu-8": {
+    "district": "Kathmandu",
+    "constituency": "8",
+    "candidates": [
+      {
+        "id": "kath8-nepalicongress",
+        "name": "Krishna Prasad Sitaula",
+        "party": "NEPALI_CONGRESS",
+        "status": "Incumbent"
+      },
+      {
+        "id": "kath8-rsp",
+        "name": "Biraj Bhakta Shrestha",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Kathmandu-9": {
+    "district": "Kathmandu",
+    "constituency": "9",
+    "candidates": [
+      {
+        "id": "kath9-nepalicongress",
+        "name": "Jeevan Pariyar",
+        "party": "NEPALI_CONGRESS",
+        "status": "Incumbent"
+      },
+      {
+        "id": "kath9-rsp",
+        "name": "Dol Prasad Aryal",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Kathmandu-10": {
+    "district": "Kathmandu",
+    "constituency": "10",
+    "candidates": [
+      {
+        "id": "kath10-nepalicongress",
+        "name": "Purna Bahadur Khadka",
+        "party": "NEPALI_CONGRESS",
+        "status": "Incumbent"
+      },
+      {
+        "id": "kath10-rsp",
+        "name": "Pradeep Bista",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Lalitpur-1": {
+    "district": "Lalitpur",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "lali1-nepalicongress",
+        "name": "Bijaya Kumar Gachchhadar",
+        "party": "NEPALI_CONGRESS",
+        "status": "Incumbent"
+      },
+      {
+        "id": "lali1-rsp",
+        "name": "Buddharatna Maharjan",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Lalitpur-2": {
+    "district": "Lalitpur",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "lali2-nepalicongress",
+        "name": "Shashank Koirala",
+        "party": "NEPALI_CONGRESS",
+        "status": "Incumbent"
+      },
+      {
+        "id": "lali2-rsp",
+        "name": "Jagadish Kharel",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Lalitpur-3": {
+    "district": "Lalitpur",
+    "constituency": "3",
+    "candidates": [
+      {
+        "id": "lali3-nepalicongress",
+        "name": "Arjun Narsing KC",
+        "party": "NEPALI_CONGRESS",
+        "status": "Incumbent"
+      },
+      {
+        "id": "lali3-rsp",
+        "name": "Dr. Toshima Karki",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Bhaktapur-1": {
+    "district": "Bhaktapur",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "bhak1-nwpp",
+        "name": "Prem Suwal",
+        "party": "NWPP",
+        "status": "Incumbent"
+      },
+      {
+        "id": "bhak1-rsp",
+        "name": "Rukesh Ranjit",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Bhaktapur-2": {
+    "district": "Bhaktapur",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "bhak2-nwpp",
+        "name": "Narayan Man Bijukchhe",
+        "party": "NWPP",
+        "status": "Incumbent"
+      },
+      {
+        "id": "bhak2-rsp",
+        "name": "Rajiv Khatri",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Kavrepalanchok-1": {
+    "district": "Kavrepalanchok",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "kavr1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "kavr1-rsp",
+        "name": "Madhu Kumar Chaulagain",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Kavrepalanchok-2": {
+    "district": "Kavrepalanchok",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "kavr2-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "kavr2-rsp",
+        "name": "Badan Kumar Bhandari",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Kavrepalanchok-3": {
+    "district": "Kavrepalanchok",
+    "constituency": "3",
+    "candidates": [
+      {
+        "id": "kavr3-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "kavr3-rsp",
+        "name": "Badan Kumar Bhandari",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Sindhupalchok-1": {
+    "district": "Sindhupalchok",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "sind1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "sind1-rsp",
+        "name": "Bharat Prasad Parajuli",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Sindhupalchok-2": {
+    "district": "Sindhupalchok",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "sind2-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "sind2-rsp",
+        "name": "Ajay Shrestha",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Dolakha-1": {
+    "district": "Dolakha",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "dola1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "dola1-rsp",
+        "name": "Jagadish Kharel",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Ramechhap-1": {
+    "district": "Ramechhap",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "rame1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "rame1-rsp",
+        "name": "Krishna Hari Budhathoki",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Ramechhap-2": {
+    "district": "Ramechhap",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "rame2-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "rame2-rsp",
+        "name": "Krishna Hari Budhathoki",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Sindhuli-1": {
+    "district": "Sindhuli",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "sind1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "sind1-rsp",
+        "name": "Dhanendra Karki",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Sindhuli-2": {
+    "district": "Sindhuli",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "sind2-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "sind2-rsp",
+        "name": "Ashish Gajurel",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Makwanpur-1": {
+    "district": "Makwanpur",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "makw1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "makw1-rsp",
+        "name": "Prakash Gautam",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Makwanpur-2": {
+    "district": "Makwanpur",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "makw2-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "makw2-rsp",
+        "name": "Prashant Upreti",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Chitwan-1": {
+    "district": "Chitwan",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "chit1-nepalicongress",
+        "name": "Nima Lama",
+        "party": "NEPALI_CONGRESS",
+        "status": "Incumbent"
+      },
+      {
+        "id": "chit1-rsp",
+        "name": "Hari Dhakal",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Chitwan-2": {
+    "district": "Chitwan",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "chitwan2-rsp",
+        "name": "Ravi Lamichhane",
+        "party": "RSP",
+        "status": "Incumbent"
+      }
+    ]
+  },
+  "Chitwan-3": {
+    "district": "Chitwan",
+    "constituency": "3",
+    "candidates": [
+      {
+        "id": "chit3-nepalicongress",
+        "name": "NEPALI CONGRESS Candidate",
+        "party": "NEPALI_CONGRESS",
+        "status": "Incumbent"
+      },
+      {
+        "id": "chit3-rsp",
+        "name": "Sobita Gautam",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Chitwan-4": {
+    "district": "Chitwan",
+    "constituency": "4",
+    "candidates": [
+      {
+        "id": "chit4-nepalicongress",
+        "name": "NEPALI CONGRESS Candidate",
+        "party": "NEPALI_CONGRESS",
+        "status": "Incumbent"
+      },
+      {
+        "id": "chit4-rsp",
+        "name": "Sobita Gautam",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Nuwakot-1": {
+    "district": "Nuwakot",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "nuwa1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "nuwa1-rsp",
+        "name": "Dr. Bikram Timilsina",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Nuwakot-2": {
+    "district": "Nuwakot",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "nuwa2-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "nuwa2-rsp",
+        "name": "Dr. Achyut Ram Lamichhane",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Rasuwa-1": {
+    "district": "Rasuwa",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "rasu1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "rasu1-rsp",
+        "name": "Basanta Bhatt",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Dhading-1": {
+    "district": "Dhading",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "dhad1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "dhad1-rsp",
+        "name": "Ashika Tamang",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Dhading-2": {
+    "district": "Dhading",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "dhad2-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "dhad2-rsp",
+        "name": "Bodh Narayan Shrestha",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Gorkha-1": {
+    "district": "Gorkha",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "gork1-cpnmaoist",
+        "name": "Narayan Kaji Shrestha",
+        "party": "CPN_MAOIST",
+        "status": "Incumbent"
+      },
+      {
+        "id": "gork1-rsp",
+        "name": "Sudan Gurung",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Gorkha-2": {
+    "district": "Gorkha",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "gorkha2-maoist",
+        "name": "Pushpa Kamal Dahal",
+        "party": "CPN_MAOIST",
+        "status": "Incumbent"
+      },
+      {
+        "id": "gorkha2-rsp",
+        "name": "Kavindra Burlakoti",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Lamjung-1": {
+    "district": "Lamjung",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "lamj1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "lamj1-rsp",
+        "name": "Dharmaraj KC",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Tanahun-1": {
+    "district": "Tanahun",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "tana1-nepalicongress",
+        "name": "Ram Chandra Poudel",
+        "party": "NEPALI_CONGRESS",
+        "status": "Incumbent"
+      },
+      {
+        "id": "tana1-rsp",
+        "name": "Swarnim Wagle",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Tanahun-2": {
+    "district": "Tanahun",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "tana2-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "tana2-rsp",
+        "name": "Shriram Neupane",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Syangja-1": {
+    "district": "Syangja",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "syan1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "syan1-rsp",
+        "name": "Dhananjaya Regmi",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Syangja-2": {
+    "district": "Syangja",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "syan2-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "syan2-rsp",
+        "name": "Jhabilal Dumre",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Kaski-1": {
+    "district": "Kaski",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "kask1-nepalicongress",
+        "name": "Dhanraj Gurung",
+        "party": "NEPALI_CONGRESS",
+        "status": "Incumbent"
+      },
+      {
+        "id": "kask1-rsp",
+        "name": "Khadak Raj Paudel",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Kaski-2": {
+    "district": "Kaski",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "kask2-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "kask2-rsp",
+        "name": "Uttam Paudel",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Kaski-3": {
+    "district": "Kaski",
+    "constituency": "3",
+    "candidates": [
+      {
+        "id": "kask3-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "kask3-rsp",
+        "name": "Bina Gurung",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Kaski-4": {
+    "district": "Kaski",
+    "constituency": "4",
+    "candidates": [
+      {
+        "id": "kask4-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "kask4-rsp",
+        "name": "Bina Gurung",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Manang-1": {
+    "district": "Manang",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "mana1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "mana1-rsp",
+        "name": "Anil Gurung",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Mustang-1": {
+    "district": "Mustang",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "must1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "must1-rsp",
+        "name": "Aditya Thakali",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Myagdi-1": {
+    "district": "Myagdi",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "myag1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "myag1-rsp",
+        "name": "Yubaraj Roka",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Parbat-1": {
+    "district": "Parbat",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "parb1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "parb1-rsp",
+        "name": "Sagar Bhusal",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Baglung-1": {
+    "district": "Baglung",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "bagl1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "bagl1-rsp",
+        "name": "Sushil Khadka",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Baglung-2": {
+    "district": "Baglung",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "bagl2-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "bagl2-rsp",
+        "name": "Som Sharma",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Nawalparasi_East-1": {
+    "district": "Nawalparasi East",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "nawa1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "nawa1-rsp",
+        "name": "Rajan Gautam",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Nawalparasi_East-2": {
+    "district": "Nawalparasi East",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "nawa2-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "nawa2-rsp",
+        "name": "Manish Khanal",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Nawalparasi_West-1": {
+    "district": "Nawalparasi West",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "nawa1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "nawa1-rsp",
+        "name": "Bikram Khanal",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Nawalparasi_West-2": {
+    "district": "Nawalparasi West",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "nawa2-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "nawa2-rsp",
+        "name": "Narendra Kumar Gupta",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Rupandehi-1": {
+    "district": "Rupandehi",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "rupa1-nepalicongress",
+        "name": "Bijaya Kumar Gachchhadar",
+        "party": "NEPALI_CONGRESS",
+        "status": "Incumbent"
+      },
+      {
+        "id": "rupa1-rsp",
+        "name": "Sunil Lamsal",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Rupandehi-2": {
+    "district": "Rupandehi",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "rupa2-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "rupa2-rsp",
+        "name": "Sulabh Kharel",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Rupandehi-3": {
+    "district": "Rupandehi",
+    "constituency": "3",
+    "candidates": [
+      {
+        "id": "rupa3-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "rupa3-rsp",
+        "name": "Lekh Jung Thapa",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Rupandehi-4": {
+    "district": "Rupandehi",
+    "constituency": "4",
+    "candidates": [
+      {
+        "id": "rupa4-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "rupa4-rsp",
+        "name": "Kanya Banaya",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Rupandehi-5": {
+    "district": "Rupandehi",
+    "constituency": "5",
+    "candidates": [
+      {
+        "id": "rupa5-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "rupa5-rsp",
+        "name": "Tafiq Ahmad Khan",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Rupandehi-6": {
+    "district": "Rupandehi",
+    "constituency": "6",
+    "candidates": [
+      {
+        "id": "rupa6-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "rupa6-rsp",
+        "name": "Tafiq Ahmad Khan",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Kapilvastu-1": {
+    "district": "Kapilvastu",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "kapi1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "kapi1-rsp",
+        "name": "Mohan Acharya",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Kapilvastu-2": {
+    "district": "Kapilvastu",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "kapi2-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "kapi2-rsp",
+        "name": "Bikram Thapa",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Kapilvastu-3": {
+    "district": "Kapilvastu",
+    "constituency": "3",
+    "candidates": [
+      {
+        "id": "kapi3-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "kapi3-rsp",
+        "name": "Prakash Rajouria",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Palpa-1": {
+    "district": "Palpa",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "palp1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "palp1-rsp",
+        "name": "Bimal Pant",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Palpa-2": {
+    "district": "Palpa",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "palp2-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "palp2-rsp",
+        "name": "Madhav Thapa",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Arghakhanchi-1": {
+    "district": "Arghakhanchi",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "argh1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "argh1-rsp",
+        "name": "Hari Prasad Bhusal",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Gulmi-1": {
+    "district": "Gulmi",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "gulm1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "gulm1-rsp",
+        "name": "Sagar Dhakal",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Gulmi-2": {
+    "district": "Gulmi",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "gulm2-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "gulm2-rsp",
+        "name": "Gobinda Panthi",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Pyuthan-1": {
+    "district": "Pyuthan",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "pyut1-cpnmaoist",
+        "name": "Barsha Man Pun",
+        "party": "CPN_MAOIST",
+        "status": "Incumbent"
+      },
+      {
+        "id": "pyut1-rsp",
+        "name": "Sushant Baidik",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Rolpa-1": {
+    "district": "Rolpa",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "rolp1-cpnmaoist",
+        "name": "Barsha Man Pun",
+        "party": "CPN_MAOIST",
+        "status": "Incumbent"
+      },
+      {
+        "id": "rolp1-rsp",
+        "name": "Balram Thapa",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Rukum_East-1": {
+    "district": "Rukum East",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "ruku1-cpnmaoist",
+        "name": "Shakti Basnet",
+        "party": "CPN_MAOIST",
+        "status": "Incumbent"
+      },
+      {
+        "id": "ruku1-rsp",
+        "name": "Lakhan Thapa",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Dang-1": {
+    "district": "Dang",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "dang1-cpnmaoist",
+        "name": "Narayan Kaji Shrestha",
+        "party": "CPN_MAOIST",
+        "status": "Incumbent"
+      },
+      {
+        "id": "dang1-rsp",
+        "name": "Devaraj Pathak",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Dang-2": {
+    "district": "Dang",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "dang2-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "dang2-rsp",
+        "name": "Bipin Acharya",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Dang-3": {
+    "district": "Dang",
+    "constituency": "3",
+    "candidates": [
+      {
+        "id": "dang3-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "dang3-rsp",
+        "name": "Kamal Subedi",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Banke-1": {
+    "district": "Banke",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "bank1-cpnuml",
+        "name": "Ishwor Pokhrel",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "bank1-rsp",
+        "name": "Suresh Chaudhary",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Banke-2": {
+    "district": "Banke",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "bank2-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "bank2-rsp",
+        "name": "Bibek Shrestha",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Banke-3": {
+    "district": "Banke",
+    "constituency": "3",
+    "candidates": [
+      {
+        "id": "bank3-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "bank3-rsp",
+        "name": "Khagendra Sunar",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Bardiya-1": {
+    "district": "Bardiya",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "bard1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "bard1-rsp",
+        "name": "Thakur Singh Tharu",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Bardiya-2": {
+    "district": "Bardiya",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "bard2-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "bard2-rsp",
+        "name": "Shridhar Pokharel",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Dolpa-1": {
+    "district": "Dolpa",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "dolp1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "dolp1-rsp",
+        "name": "Dev Singh Aidi",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Mugu-1": {
+    "district": "Mugu",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "mugu1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "mugu1-rsp",
+        "name": "Rajendra Bahadur Shahi",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Humla-1": {
+    "district": "Humla",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "huml1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "huml1-rsp",
+        "name": "Tashi Lhazom",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Jumla-1": {
+    "district": "Jumla",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "juml1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "juml1-rsp",
+        "name": "Binita Kathayat",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Kalikot-1": {
+    "district": "Kalikot",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "kali1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "kali1-rsp",
+        "name": "Prakash Neupane",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Dailekh-1": {
+    "district": "Dailekh",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "dail1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "dail1-rsp",
+        "name": "N. K. Basnet",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Dailekh-2": {
+    "district": "Dailekh",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "dail2-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "dail2-rsp",
+        "name": "Bakhat Bahadur Shahi",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Jajarkot-1": {
+    "district": "Jajarkot",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "jaja1-cpnmaoist",
+        "name": "Hitraj Pandey",
+        "party": "CPN_MAOIST",
+        "status": "Incumbent"
+      },
+      {
+        "id": "jaja1-rsp",
+        "name": "Raghav Karki",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Rukum_West-1": {
+    "district": "Rukum West",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "ruku1-cpnmaoist",
+        "name": "Janardan Sharma",
+        "party": "CPN_MAOIST",
+        "status": "Incumbent"
+      },
+      {
+        "id": "ruku1-rsp",
+        "name": "Man Bahadur Shahi",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Salyan-1": {
+    "district": "Salyan",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "saly1-cpnmaoist",
+        "name": "Onsari Gharti",
+        "party": "CPN_MAOIST",
+        "status": "Incumbent"
+      },
+      {
+        "id": "saly1-rsp",
+        "name": "Lalit Kumar Chand",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Surkhet-1": {
+    "district": "Surkhet",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "surk1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "surk1-rsp",
+        "name": "Tek Bahadur Singh Thakuri",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Surkhet-2": {
+    "district": "Surkhet",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "surk2-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "surk2-rsp",
+        "name": "Ramesh Sapkota",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Bajura-1": {
+    "district": "Bajura",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "baju1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "baju1-rsp",
+        "name": "Hemraj Thapa",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Bajhang-1": {
+    "district": "Bajhang",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "bajh1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "bajh1-rsp",
+        "name": "Shailesh Kumar Singh",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Achham-1": {
+    "district": "Achham",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "achh1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "achh1-rsp",
+        "name": "Om Prakash Rawal",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Achham-2": {
+    "district": "Achham",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "achh2-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "achh2-rsp",
+        "name": "Bhupdev Shah",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Doti-1": {
+    "district": "Doti",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "doti1-nepalicongress",
+        "name": "NEPALI CONGRESS Candidate",
+        "party": "NEPALI_CONGRESS",
+        "status": "Incumbent"
+      },
+      {
+        "id": "doti1-rsp",
+        "name": "Narendra Bahadur Khadka",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Kailali-1": {
+    "district": "Kailali",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "kail1-cpnuml",
+        "name": "Bhim Rawal",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "kail1-rsp",
+        "name": "Komal Gyawali",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Kailali-2": {
+    "district": "Kailali",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "kail2-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "kail2-rsp",
+        "name": "K. P. Khanal",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Kailali-3": {
+    "district": "Kailali",
+    "constituency": "3",
+    "candidates": [
+      {
+        "id": "kail3-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "kail3-rsp",
+        "name": "Jagat Prasad Joshi",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Kailali-4": {
+    "district": "Kailali",
+    "constituency": "4",
+    "candidates": [
+      {
+        "id": "kail4-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "kail4-rsp",
+        "name": "Khemraj Koirala",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Kanchanpur-1": {
+    "district": "Kanchanpur",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "kanc1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "kanc1-rsp",
+        "name": "Janak Singh Dhami",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Kanchanpur-2": {
+    "district": "Kanchanpur",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "kanc2-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "kanc2-rsp",
+        "name": "Dipak Bohara",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Dadeldhura-1": {
+    "district": "Dadeldhura",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "dadeldhura1-nc",
+        "name": "Sher Bahadur Deuba",
+        "party": "NEPALI_CONGRESS",
+        "status": "Incumbent"
+      },
+      {
+        "id": "dadeldhura1-rsp",
+        "name": "Dr. Tara Joshi",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Baitadi-1": {
+    "district": "Baitadi",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "bait1-nepalicongress",
+        "name": "NEPALI CONGRESS Candidate",
+        "party": "NEPALI_CONGRESS",
+        "status": "Incumbent"
+      },
+      {
+        "id": "bait1-rsp",
+        "name": "Harimohan Bhandari",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Baitadi-2": {
+    "district": "Baitadi",
+    "constituency": "2",
+    "candidates": [
+      {
+        "id": "bait2-nepalicongress",
+        "name": "NEPALI CONGRESS Candidate",
+        "party": "NEPALI_CONGRESS",
+        "status": "Incumbent"
+      },
+      {
+        "id": "bait2-rsp",
+        "name": "Harimohan Bhandari",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  },
+  "Darchula-1": {
+    "district": "Darchula",
+    "constituency": "1",
+    "candidates": [
+      {
+        "id": "darc1-cpnuml",
+        "name": "CPN UML Candidate",
+        "party": "CPN_UML",
+        "status": "Incumbent"
+      },
+      {
+        "id": "darc1-rsp",
+        "name": "Rajesh Singh Samant",
+        "party": "RSP",
+        "status": "Challenger"
+      }
+    ]
+  }
+}

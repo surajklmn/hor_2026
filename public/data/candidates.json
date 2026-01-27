@@ -1,0 +1,4284 @@
+{
+  "achham-1": [
+    {
+      "name": "Bharat Kumar Swar",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Jhapat Bahadur Bohora",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Om Prakash Rawal",
+      "party": "RSP"
+    },
+    {
+      "name": "Bhim Bahadur Rawal",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Lokendra Bahadur Shah",
+      "party": "RPP"
+    }
+  ],
+  "achham-2": [
+    {
+      "name": "Pushpa Bahadur Shah",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Yagya Bogati",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Bhupdev Shah",
+      "party": "RSP"
+    },
+    {
+      "name": "Bal Bahadur Kunwar",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Min Bahadur Shahi",
+      "party": "RPP"
+    }
+  ],
+  "arghakhanchi-1": [
+    {
+      "name": "Bishnu Prasad Khanal",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Pitambar Bhusal",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Hari Prasad Bhusal",
+      "party": "RSP"
+    },
+    {
+      "name": "Ram Bahadur Chauhan",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Jhabindra Phulel",
+      "party": "RPP"
+    }
+  ],
+  "baglung-1": [
+    {
+      "name": "Bhim Bahadur Shris Rana",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Sita KC",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Sushil Khadka",
+      "party": "RSP"
+    },
+    {
+      "name": "Kalyan Bikram Acharya",
+      "party": "RPP"
+    },
+    {
+      "name": "Lal Bahadur Garti",
+      "party": "SSP"
+    }
+  ],
+  "baglung-2": [
+    {
+      "name": "Tekraj Paudel",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Manju Sharma Chalise",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Som Sharma",
+      "party": "RSP"
+    },
+    {
+      "name": "Gyan Nath Gaire",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Anchal Shahi Thakuri",
+      "party": "RPP"
+    },
+    {
+      "name": "Harka Bahadur Poon",
+      "party": "SSP"
+    }
+  ],
+  "baitadi-1": [
+    {
+      "name": "Chatur Bahadur Chand",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Damodar Bhandari",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Harimohan Bhandari",
+      "party": "RSP"
+    },
+    {
+      "name": "Bhupen Bahadru Chand",
+      "party": "RPP"
+    },
+    {
+      "name": "Gajendra Raj Pande",
+      "party": "SSP"
+    }
+  ],
+  "bajhang-1": [
+    {
+      "name": "Prakash Rasaili Snehi",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Ain Mahat",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Shailesh Kumar Singh",
+      "party": "RSP"
+    },
+    {
+      "name": "Bishwa Prakash Jethara",
+      "party": "RPP"
+    }
+  ],
+  "bajura-1": [
+    {
+      "name": "Janak Raj Giri",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Lal Bahadur Thapa",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Hemraj Thapa",
+      "party": "RSP"
+    },
+    {
+      "name": "Prakash Bahadur Shah",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Keshar Bahadur Shahi",
+      "party": "RPP"
+    }
+  ],
+  "banke-1": [
+    {
+      "name": "Narayan Prasad Gaudel",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Surya Dhakal",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Suresh Chaudhary",
+      "party": "RSP"
+    },
+    {
+      "name": "Narendra Pandey",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Pradip Kumar Shah",
+      "party": "RPP"
+    },
+    {
+      "name": "Bharat Nidhi Tiwari",
+      "party": "SSP"
+    }
+  ],
+  "banke-2": [
+    {
+      "name": "Sudhanshu Koirala",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Mohammad Istiyaq Rai",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Bibek Shrestha",
+      "party": "RSP"
+    },
+    {
+      "name": "Dipendra Bista",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Rishi Raj Devkota",
+      "party": "RPP"
+    },
+    {
+      "name": "Ram Charan Chaudari",
+      "party": "SSP"
+    },
+    {
+      "name": "Mohammad Awaj Sai",
+      "party": "Janamat Party"
+    }
+  ],
+  "banke-3": [
+    {
+      "name": "Amarsingh Pun",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Suman Malla",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Khagendra Sunar",
+      "party": "RSP"
+    },
+    {
+      "name": "Dipak GM",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Tarak Singh Tharu",
+      "party": "RPP"
+    },
+    {
+      "name": "Omkar Thapa Magar",
+      "party": "SSP"
+    },
+    {
+      "name": "Firoj Khan",
+      "party": "Janamat Party"
+    }
+  ],
+  "bara-1": [
+    {
+      "name": "Shambhu Budhathoki",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Achyut Mainali",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Ganesh Dhimal",
+      "party": "RSP"
+    },
+    {
+      "name": "Santosh Dangal",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Laxmi Shah Kalwar",
+      "party": "RPP"
+    },
+    {
+      "name": "Bhulan Kumar Paswan",
+      "party": "SSP"
+    },
+    {
+      "name": "Dr. Kamrulla Ansari",
+      "party": "Janamat Party"
+    }
+  ],
+  "bara-2": [
+    {
+      "name": "Bhaiya Ram Yadav",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Balbir Chaudhary",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Chandan Singh",
+      "party": "RSP"
+    },
+    {
+      "name": "Ramesh Prasad Yadav",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Lalbahadur Prasad Teli",
+      "party": "RPP"
+    },
+    {
+      "name": "Jitani Kumari",
+      "party": "SSP"
+    },
+    {
+      "name": "Rajesh Sah (CA)",
+      "party": "Janamat Party"
+    }
+  ],
+  "bara-3": [
+    {
+      "name": "Farmullah Mansur",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Jwala Sah",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Arbind Sah",
+      "party": "RSP"
+    },
+    {
+      "name": "Bharat Prasad Sah",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Rajendra Prasad Jaiswal",
+      "party": "RPP"
+    },
+    {
+      "name": "Mumtaji Begam Khatri",
+      "party": "SSP"
+    },
+    {
+      "name": "Pramod Gupta",
+      "party": "Janamat Party"
+    }
+  ],
+  "bara-4": [
+    {
+      "name": "Shyam Babu Gupta",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Kisan Shrestha",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Rahbar Ansari",
+      "party": "RSP"
+    },
+    {
+      "name": "Ajay Kushwaha",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Dilip Sharma Nepal",
+      "party": "RPP"
+    },
+    {
+      "name": "Gopal Bahadur Khatri",
+      "party": "SSP"
+    },
+    {
+      "name": "Hasanjan Miya",
+      "party": "Janamat Party"
+    }
+  ],
+  "bardiya-1": [
+    {
+      "name": "Sanjay Gautam",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Shalikram Adhikari",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Thakur Singh Tharu",
+      "party": "RSP"
+    },
+    {
+      "name": "Bishnu Prasad Tharu",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Bir Bahadur Kami",
+      "party": "RPP"
+    },
+    {
+      "name": "Dhan Bahadur B.K",
+      "party": "SSP"
+    },
+    {
+      "name": "Yamanath Ghimeri",
+      "party": "Janamat Party"
+    }
+  ],
+  "bardiya-2": [
+    {
+      "name": "Kishor Singh Rathore",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Bimala BK",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Shridhar Pokharel",
+      "party": "RSP"
+    },
+    {
+      "name": "Suresh Pantha",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Sushil Chaudhari",
+      "party": "RPP"
+    },
+    {
+      "name": "Man Bahadur Baigar",
+      "party": "SSP"
+    },
+    {
+      "name": "Dr. Shashi Kumar Yadav",
+      "party": "Janamat Party"
+    }
+  ],
+  "bhaktapur-1": [
+    {
+      "name": "Kiran Neupane",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Som Mishra",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Rukesh Ranjit",
+      "party": "RSP"
+    },
+    {
+      "name": "Hariram Lavaju",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Bharat Bahadur Khadka",
+      "party": "RPP"
+    },
+    {
+      "name": "Bishnu Hari Nihisutu",
+      "party": "SSP"
+    }
+  ],
+  "bhaktapur-2": [
+    {
+      "name": "Kabir Rana",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Mahesh Basnet",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Rajiv Khatri",
+      "party": "RSP"
+    },
+    {
+      "name": "Ram Prasad Sapkota (Dipshikha)",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Bikram Thapa",
+      "party": "RPP"
+    },
+    {
+      "name": "Arjun Basu",
+      "party": "SSP"
+    }
+  ],
+  "bhojpur-1": [
+    {
+      "name": "Balkrishna Thapa",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Sherdhan Rai",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Ramesh Prasad Ojha",
+      "party": "RSP"
+    },
+    {
+      "name": "Ajambar Rai Kangbang",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Janak Nepal",
+      "party": "RPP"
+    },
+    {
+      "name": "Dhurwa Raj Rai",
+      "party": "SSP"
+    }
+  ],
+  "chitwan-1": [
+    {
+      "name": "Rajendra Burlakoti",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Dawa Dorje Lama",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Hari Dhakal",
+      "party": "RSP"
+    },
+    {
+      "name": "Dr. Krishna Panta",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Balram Khanal",
+      "party": "RPP"
+    },
+    {
+      "name": "Anil Tamang",
+      "party": "SSP"
+    }
+  ],
+  "chitwan-2": [
+    {
+      "name": "Minakumari Kharel",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Asmin Ghimire",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Ravi Lamichhane",
+      "party": "RSP"
+    },
+    {
+      "name": "Pratap Gurung",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Jagdish Adhikari",
+      "party": "RPP"
+    },
+    {
+      "name": "Milan Thapa Magar",
+      "party": "SSP"
+    },
+    {
+      "name": "Nirmala Kumari Thakur",
+      "party": "Janamat Party"
+    }
+  ],
+  "chitwan-3": [
+    {
+      "name": "Tek Prasad Gurung",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Shankar Raj Thapaliya",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Sobita Gautam",
+      "party": "RSP"
+    },
+    {
+      "name": "Renu Dahal",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Deepak Thapa Magar",
+      "party": "RPP"
+    },
+    {
+      "name": "Tojman Gurung",
+      "party": "SSP"
+    }
+  ],
+  "dadeldhura-1": [
+    {
+      "name": "Nain Singh Mahar",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Chakra Snehi",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Dr. Tara Joshi",
+      "party": "RSP"
+    },
+    {
+      "name": "Man Singh Mal",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Govinda Khadayat",
+      "party": "RPP"
+    },
+    {
+      "name": "Mahendra Poon Magar",
+      "party": "SSP"
+    }
+  ],
+  "dailekh-1": [
+    {
+      "name": "Basana Thapa",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Bishwambar Raj Sharma",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "N. K. Basnet",
+      "party": "RSP"
+    },
+    {
+      "name": "Ambar Bahadur Thapa",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Ran Bahadur Singh",
+      "party": "RPP"
+    }
+  ],
+  "dailekh-2": [
+    {
+      "name": "Dikpal Kumar Shahi",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Laxmi Raj Pokhrel",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Bakhat Bahadur Shahi",
+      "party": "RSP"
+    },
+    {
+      "name": "Yogendra Shahi",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Babita Shahi",
+      "party": "RPP"
+    }
+  ],
+  "dang-1": [
+    {
+      "name": "Yogendra Chaudhary",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Revati Raman Sharma",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Devaraj Pathak",
+      "party": "RSP"
+    },
+    {
+      "name": "Met Mani Chaudhari",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Binaya Budhathoki",
+      "party": "RPP"
+    }
+  ],
+  "dang-2": [
+    {
+      "name": "Kiran Kishor Ghimire",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Shankar Pokhrel",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Bipin Acharya",
+      "party": "RSP"
+    },
+    {
+      "name": "Nirmal Acharya",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Rishikesh Pokharel",
+      "party": "RPP"
+    },
+    {
+      "name": "Rajan Singh B.K",
+      "party": "SSP"
+    }
+  ],
+  "dang-3": [
+    {
+      "name": "Dipak Giri",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Ghanashyam Pandey",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Kamal Subedi",
+      "party": "RSP"
+    },
+    {
+      "name": "Dhan Bahadur Maski",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Damodar Bhandari",
+      "party": "RPP"
+    },
+    {
+      "name": "Top Bahadur Mahtori",
+      "party": "SSP"
+    }
+  ],
+  "darchula-1": [
+    {
+      "name": "Dharmananda Joshi",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Ganesh Singh Thagunna",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Rajesh Singh Samant",
+      "party": "RSP"
+    },
+    {
+      "name": "Laxman Datta Joshi",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Rajesh Bahadur Chand",
+      "party": "RPP"
+    }
+  ],
+  "dhading-1": [
+    {
+      "name": "Krishna Rijal",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Bhumi Tripathi",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Ashika Tamang",
+      "party": "RSP"
+    },
+    {
+      "name": "Geeta Prasad Acharya",
+      "party": "RPP"
+    },
+    {
+      "name": "Pralad Silwal",
+      "party": "SSP"
+    }
+  ],
+  "dhading-2": [
+    {
+      "name": "Ramesh Prasad Dhamala",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Dhan Bahadur Ale",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Bodh Narayan Shrestha",
+      "party": "RSP"
+    },
+    {
+      "name": "Suresh Rijal",
+      "party": "RPP"
+    },
+    {
+      "name": "Saroj Rai",
+      "party": "SSP"
+    }
+  ],
+  "dhankuta-1": [
+    {
+      "name": "Dinesh Rai",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Rajendra Rai",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Dinesh Bhandari",
+      "party": "RSP"
+    },
+    {
+      "name": "Dharma Prasad Paudyal",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Bivatsu Thapa",
+      "party": "RPP"
+    },
+    {
+      "name": "Shan Bahadur Rai",
+      "party": "SSP"
+    }
+  ],
+  "dhanusha-1": [
+    {
+      "name": "Rampaltan Sah",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Ramchandra Mandal",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Kishori Sah",
+      "party": "RSP"
+    },
+    {
+      "name": "Matrika Prasad Yadav",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Manoj Malla Thakuri",
+      "party": "RPP"
+    },
+    {
+      "name": "Brahmadev Mahato",
+      "party": "Janamat Party"
+    }
+  ],
+  "dhanusha-2": [
+    {
+      "name": "Dinesh Parsela",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Uma Shankar Agrawal",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Ram Binod Sah",
+      "party": "RSP"
+    },
+    {
+      "name": "Ram Chandra Jha",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Biheshwor Mandal",
+      "party": "RPP"
+    },
+    {
+      "name": "Dr. Surendra Prasad Yadav",
+      "party": "Janamat Party"
+    }
+  ],
+  "dhanusha-3": [
+    {
+      "name": "Vimalendra Nidhi",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Juli Mahato",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Manisha Jha",
+      "party": "RSP"
+    },
+    {
+      "name": "Ram Lalit Mandal",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Hussein Kawadi",
+      "party": "RPP"
+    },
+    {
+      "name": "Sadam Husan",
+      "party": "SSP"
+    },
+    {
+      "name": "Gopal Sah",
+      "party": "Janamat Party"
+    }
+  ],
+  "dhanusha-4": [
+    {
+      "name": "Mahendra Yadav",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Rabindra Mahaseth",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Raj Kishor Mahato",
+      "party": "RSP"
+    },
+    {
+      "name": "Sanjay Kumar Mahato",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Ram Babu Shah",
+      "party": "RPP"
+    },
+    {
+      "name": "Krishna Yadav",
+      "party": "SSP"
+    },
+    {
+      "name": "Indrajit Kumar Yadav",
+      "party": "Janamat Party"
+    }
+  ],
+  "dolakha-1": [
+    {
+      "name": "Ajay Babu Shivakoti",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Parbat Gurung",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Jagadish Kharel",
+      "party": "RSP"
+    },
+    {
+      "name": "Bishal Khadka",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Prabin Thokar Tamang",
+      "party": "RPP"
+    },
+    {
+      "name": "Hep Bahadur Dhami",
+      "party": "SSP"
+    }
+  ],
+  "dolpa-1": [
+    {
+      "name": "Karna Bahadur Budha",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Lank Rokaya",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Dev Singh Aidi",
+      "party": "RSP"
+    },
+    {
+      "name": "Hari Prasad Dangi",
+      "party": "RPP"
+    }
+  ],
+  "doti-1": [
+    {
+      "name": "Bharat Bahadur Khadka",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Deepak Dhami",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Narendra Bahadur Khadka",
+      "party": "RSP"
+    },
+    {
+      "name": "Trilochan Bhatta",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Khadka Prasad Agrawal",
+      "party": "RPP"
+    }
+  ],
+  "gorkha-1": [
+    {
+      "name": "Prem Kumar Khatri",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Rishi Lamichhane",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Sudan Gurung",
+      "party": "RSP"
+    },
+    {
+      "name": "Hariraj Adhikari",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Kedar Mani Khanal",
+      "party": "RPP"
+    }
+  ],
+  "gorkha-2": [
+    {
+      "name": "Prakash Chandra Dawadi",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Milan Gurung",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Kavindra Burlakoti",
+      "party": "RSP"
+    },
+    {
+      "name": "Lekhnath Neupane",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Kul Bahadur Basnet",
+      "party": "RPP"
+    }
+  ],
+  "gulmi-1": [
+    {
+      "name": "Chandra Kant Bhandari",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Pradeep Gyawali",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Sagar Dhakal",
+      "party": "RSP"
+    },
+    {
+      "name": "Sudarshan Baral",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Ajit Kumar Shrestha",
+      "party": "RPP"
+    }
+  ],
+  "gulmi-2": [
+    {
+      "name": "Bhuvan Prasad Shrestha",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Gokarna Bista",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Gobinda Panthi",
+      "party": "RSP"
+    },
+    {
+      "name": "Shriram Mahat",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Janak Sen",
+      "party": "RPP"
+    }
+  ],
+  "humla-1": [
+    {
+      "name": "Jaypati Rokaya",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Dal Fadera",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Tashi Lhazom",
+      "party": "RSP"
+    },
+    {
+      "name": "Dipendra Rokaya",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Chakka Bahadur Budha",
+      "party": "RPP"
+    }
+  ],
+  "ilam-1": [
+    {
+      "name": "Nishkal Rai",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Kajiman Kagate",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Bimal Gadal",
+      "party": "RSP"
+    },
+    {
+      "name": "Ran Bahadur Rai",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Jwala Nepal Dahal",
+      "party": "RPP"
+    },
+    {
+      "name": "Binod Nembang Limbu",
+      "party": "SSP"
+    }
+  ],
+  "ilam-2": [
+    {
+      "name": "Bheshraj Acharya",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Suhang Nembang",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Gokul Bahadur Rai",
+      "party": "RSP"
+    },
+    {
+      "name": "Om Bahadur Gurung",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Ganesh Prasad Dulal",
+      "party": "RPP"
+    },
+    {
+      "name": "Sudip Rai",
+      "party": "SSP"
+    }
+  ],
+  "jajarkot-1": [
+    {
+      "name": "Khadak Bahadur Budha",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Damodar Bahadur Singh",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Raghav Karki",
+      "party": "RSP"
+    },
+    {
+      "name": "Shakti Bahadur Basnet",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Krishna Bikram Shah",
+      "party": "RPP"
+    }
+  ],
+  "jhapa-1": [
+    {
+      "name": "Keshab Raj Pandey",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Ramchandra Upreti",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Nisha Dangi",
+      "party": "RSP"
+    },
+    {
+      "name": "Ashesh Ghimire",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Dr. Hemraj Karki",
+      "party": "RPP"
+    },
+    {
+      "name": "Kewal Ram Rai",
+      "party": "SSP"
+    },
+    {
+      "name": "Rajendra Kumar Lingden",
+      "party": "JSP"
+    }
+  ],
+  "jhapa-2": [
+    {
+      "name": "Sarita Prasai",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Devraj Ghimire",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Indira Ranamagar",
+      "party": "RSP"
+    },
+    {
+      "name": "Dharmashila Chapagain",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Swagat Nepal",
+      "party": "RPP"
+    },
+    {
+      "name": "Keshav Kumar Bhadari",
+      "party": "SSP"
+    },
+    {
+      "name": "Suresh Kumar Lingden",
+      "party": "JSP"
+    },
+    {
+      "name": "Ramesh Kumar Rajbanshi",
+      "party": "Janamat Party"
+    }
+  ],
+  "jhapa-3": [
+    {
+      "name": "Rajendra Ghimire",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Hariraj Rajbanshi",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Prakash Pathak",
+      "party": "RSP"
+    },
+    {
+      "name": "Dilli Ghimire",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Rajendra Lingden",
+      "party": "RPP"
+    },
+    {
+      "name": "Dipak Timshina",
+      "party": "SSP"
+    },
+    {
+      "name": "Krishna Kumar Lingden",
+      "party": "JSP"
+    },
+    {
+      "name": "Bharat Lal Rajbanshi",
+      "party": "Janamat Party"
+    }
+  ],
+  "jhapa-4": [
+    {
+      "name": "Deuman Thebe",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "LP Sawa",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Shambhu Sushkera",
+      "party": "RSP"
+    },
+    {
+      "name": "Purushottam Chudal",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Bhakti Prasad Sitaula",
+      "party": "RPP"
+    },
+    {
+      "name": "Amrita Rai",
+      "party": "SSP"
+    },
+    {
+      "name": "Bishnu Kumar Lingden",
+      "party": "JSP"
+    },
+    {
+      "name": "Luthro Mumu",
+      "party": "Janamat Party"
+    }
+  ],
+  "jhapa-5": [
+    {
+      "name": "Mandhara Chimariya",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "KP Sharma Oli",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Balendra Shah",
+      "party": "RSP"
+    },
+    {
+      "name": "Ranjit Tamang",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Laxmi Prasad Sangroula",
+      "party": "RPP"
+    },
+    {
+      "name": "Samir Tamang",
+      "party": "SSP"
+    },
+    {
+      "name": "Dil Kumar Lingden",
+      "party": "JSP"
+    },
+    {
+      "name": "Amrit Mahato",
+      "party": "Janamat Party"
+    }
+  ],
+  "jumla-1": [
+    {
+      "name": "Dip Bahadur Shahi",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Shanti Bahadur Mahat",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Binita Kathayat",
+      "party": "RSP"
+    },
+    {
+      "name": "Naresh Bandari",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Gyan Bahadur Shahi",
+      "party": "RPP"
+    }
+  ],
+  "kailali-1": [
+    {
+      "name": "Janak Raj Chaudhary",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Dwarika Neupane",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Komal Gyawali",
+      "party": "RSP"
+    },
+    {
+      "name": "Ramlal Dagoura Tharu",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Lokendra Kunwar",
+      "party": "RPP"
+    },
+    {
+      "name": "Bimal Kumar Dahaura",
+      "party": "SSP"
+    },
+    {
+      "name": "Bhagat Ram Dahngaur Tharu",
+      "party": "Janamat Party"
+    }
+  ],
+  "kailali-2": [
+    {
+      "name": "Bijay Bahadur Swar",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Surya Bahadur Thapa",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "K. P. Khanal",
+      "party": "RSP"
+    },
+    {
+      "name": "Nanda Bahadur Saud",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Bharat Singh B.C",
+      "party": "RPP"
+    }
+  ],
+  "kailali-3": [
+    {
+      "name": "Bhim Baduwal",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Gaurishankar Chaudhary",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Jagat Prasad Joshi",
+      "party": "RSP"
+    },
+    {
+      "name": "Birman Chaudhary",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Birendra Bam",
+      "party": "RPP"
+    },
+    {
+      "name": "Kamal Chaudhary",
+      "party": "Janamat Party"
+    }
+  ],
+  "kailali-4": [
+    {
+      "name": "Lekhraj Bhatt",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Khemraj Koirala",
+      "party": "RSP"
+    },
+    {
+      "name": "Hariram Chaudhary",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Kamal Bam Rajwar",
+      "party": "RPP"
+    },
+    {
+      "name": "Pratap Bahadur Thapa Magar",
+      "party": "SSP"
+    }
+  ],
+  "kailali-5": [
+    {
+      "name": "Yagyaraj Dhungana",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Anand Chand",
+      "party": "RSP"
+    },
+    {
+      "name": "Prem Ale",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Roshan Shahi",
+      "party": "RPP"
+    },
+    {
+      "name": "Dhan Bahadur Chaudhary",
+      "party": "Janamat Party"
+    }
+  ],
+  "kalikot-1": [
+    {
+      "name": "Harsha Bahadur Bam",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Nagendra Shahi",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Prakash Neupane",
+      "party": "RSP"
+    },
+    {
+      "name": "Mahendra Bahadur Shahi",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Surya Bahadur Shah",
+      "party": "RPP"
+    }
+  ],
+  "kanchanpur-1": [
+    {
+      "name": "Gopi Upadhyay",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Tara Lama Tamang",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Janak Singh Dhami",
+      "party": "RSP"
+    },
+    {
+      "name": "Bina Magar",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Dilli Bahadur Shahi",
+      "party": "RPP"
+    }
+  ],
+  "kanchanpur-2": [
+    {
+      "name": "Narayan Prakash Saud",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Bachan Bahadur Singh",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Dipak Bohara",
+      "party": "RSP"
+    },
+    {
+      "name": "Tirtha Raj Chataut",
+      "party": "RPP"
+    },
+    {
+      "name": "Tika Singh Khatri",
+      "party": "SSP"
+    },
+    {
+      "name": "Ram Chandra Bhat",
+      "party": "Janamat Party"
+    }
+  ],
+  "kanchanpur-3": [
+    {
+      "name": "Hari Bohara",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Dr Deepak Bhatt",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Gyanendra Mahatara",
+      "party": "RSP"
+    },
+    {
+      "name": "Purna Bahadur Chand",
+      "party": "RPP"
+    },
+    {
+      "name": "Ganga Datta Joshi",
+      "party": "SSP"
+    }
+  ],
+  "kapilvastu-1": [
+    {
+      "name": "Attar Kamal Musalman",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Bishram Chaudhary",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Mohan Acharya",
+      "party": "RSP"
+    },
+    {
+      "name": "Krishna Kunwar",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Satrughan Prasad Chaudhary",
+      "party": "RPP"
+    },
+    {
+      "name": "Darogya Prasad Kami",
+      "party": "SSP"
+    },
+    {
+      "name": "Er. Narendra Prasad Chaudhary",
+      "party": "Janamat Party"
+    }
+  ],
+  "kapilvastu-2": [
+    {
+      "name": "Surendra Raj Acharya",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Dhirya Narayan Pandey",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Bikram Thapa",
+      "party": "RSP"
+    },
+    {
+      "name": "Brijesh Kumar Gupta",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Bishnu Prasad Bhandari",
+      "party": "RPP"
+    },
+    {
+      "name": "Murli Kurmi",
+      "party": "Janamat Party"
+    }
+  ],
+  "kapilvastu-3": [
+    {
+      "name": "Abhishek Pratap Shah",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Birendra Kaduniya",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Prakash Rajouria",
+      "party": "RSP"
+    },
+    {
+      "name": "Ehsan Ahmed Khan",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Prem Shankar Shukla",
+      "party": "RPP"
+    },
+    {
+      "name": "Ishwar Kumar Rajat",
+      "party": "Janamat Party"
+    }
+  ],
+  "kaski-1": [
+    {
+      "name": "Tilak Bahadur Ranabhat",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Bain Bahadur Chhetri",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Khadak Raj Paudel",
+      "party": "RSP"
+    },
+    {
+      "name": "Rajkaji Gurung",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Baburam Thapa",
+      "party": "RPP"
+    },
+    {
+      "name": "Bil Bahadur Tamang",
+      "party": "SSP"
+    }
+  ],
+  "kaski-2": [
+    {
+      "name": "Madhav Prasad Bastola",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Roshni Acharya",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Uttam Paudel",
+      "party": "RSP"
+    },
+    {
+      "name": "Hem Bahadur Thapa",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Hem Jung Gurung",
+      "party": "RPP"
+    },
+    {
+      "name": "Nisha Kumari Gurung",
+      "party": "SSP"
+    }
+  ],
+  "kaski-3": [
+    {
+      "name": "Manoj Gurung",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Damodar Bairagi",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Bina Gurung",
+      "party": "RSP"
+    },
+    {
+      "name": "Gopal Giri",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Arjun Khanal",
+      "party": "RPP"
+    },
+    {
+      "name": "Hit Kaji Gurung",
+      "party": "SSP"
+    }
+  ],
+  "kathmandu-1": [
+    {
+      "name": "Prabal Thapa",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Mohan Raj Regmi",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Ranju Darshana",
+      "party": "RSP"
+    },
+    {
+      "name": "Menaka Bhandari",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Rabindra Mishra",
+      "party": "RPP"
+    }
+  ],
+  "kathmandu-10": [
+    {
+      "name": "Himal Karki",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Binod Shrestha",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Pradeep Bista",
+      "party": "RSP"
+    },
+    {
+      "name": "Rupa Maharjan",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Balram Thapa",
+      "party": "RPP"
+    },
+    {
+      "name": "Dhan Bahadur Shrestha",
+      "party": "SSP"
+    }
+  ],
+  "kathmandu-2": [
+    {
+      "name": "Kabir Sharma",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Maniram Phuyal",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Sunil KC",
+      "party": "RSP"
+    },
+    {
+      "name": "Nitesh Paudel",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Kuntidevi Pokharel",
+      "party": "RPP"
+    }
+  ],
+  "kathmandu-3": [
+    {
+      "name": "Ramesh Aryal",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Rameshwar Phuyal",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Raju Pandey",
+      "party": "RSP"
+    },
+    {
+      "name": "Niraj Lama",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Dr. Sundarsingh Bohara",
+      "party": "RPP"
+    },
+    {
+      "name": "Subash Ghising",
+      "party": "SSP"
+    }
+  ],
+  "kathmandu-4": [
+    {
+      "name": "Sachin Timilsina",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Dr Rajan Bhattarai",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Pukar Bam",
+      "party": "RSP"
+    },
+    {
+      "name": "Indra Bhusal",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Dr. Surendra Bhandari",
+      "party": "RPP"
+    },
+    {
+      "name": "Varun Amatya",
+      "party": "SSP"
+    }
+  ],
+  "kathmandu-5": [
+    {
+      "name": "Pradip Paudel",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Ishwar Pokhrel",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Sasmita Pokharel",
+      "party": "RSP"
+    },
+    {
+      "name": "Kalpana Sharma",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Kamal Thapa",
+      "party": "RPP"
+    },
+    {
+      "name": "Amit Thapa",
+      "party": "SSP"
+    }
+  ],
+  "kathmandu-6": [
+    {
+      "name": "Aman Kumar Maskey",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Shishir Khanal",
+      "party": "RSP"
+    },
+    {
+      "name": "Hemlal Sharma (Himal)",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Uddavraj Bhetwal",
+      "party": "RPP"
+    },
+    {
+      "name": "Lawali Thapa",
+      "party": "SSP"
+    }
+  ],
+  "kathmandu-7": [
+    {
+      "name": "Pramod Hari Guragai",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Prakash Shrestha",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Ganesh Parajuli",
+      "party": "RSP"
+    },
+    {
+      "name": "Basanta Prasad Manandhar",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Lal Kumar Lama",
+      "party": "RPP"
+    },
+    {
+      "name": "Mani Bahadur Pradhan",
+      "party": "SSP"
+    }
+  ],
+  "kathmandu-8": [
+    {
+      "name": "Sapana Rajbhandari",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Rajesh Shakya",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Biraj Bhakta Shrestha",
+      "party": "RSP"
+    },
+    {
+      "name": "Suman Sayami",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Nabin Shahi",
+      "party": "RPP"
+    },
+    {
+      "name": "Shiva Sundar Karmacharya",
+      "party": "SSP"
+    }
+  ],
+  "kathmandu-9": [
+    {
+      "name": "Nanu Bastola",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Ajay Kranti Shakya",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Dol Prasad Aryal",
+      "party": "RSP"
+    },
+    {
+      "name": "Radha Krishna Maharjan",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Dilip Kumar Karki",
+      "party": "RPP"
+    },
+    {
+      "name": "Balram Shrestha",
+      "party": "SSP"
+    }
+  ],
+  "kavrepalanchowk-1": [
+    {
+      "name": "Gunaraj Moktan",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Amit Lama",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Madhu Kumar Chaulagain",
+      "party": "RSP"
+    },
+    {
+      "name": "Dinanath Gautam",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Nawaraj Satyal",
+      "party": "RPP"
+    },
+    {
+      "name": "Dhiraj Lama",
+      "party": "SSP"
+    }
+  ],
+  "kavrepalanchowk-2": [
+    {
+      "name": "Madhu Prasad Acharya",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Ashok Byanju",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Badan Kumar Bhandari",
+      "party": "RSP"
+    },
+    {
+      "name": "Basundhara Humagain",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Ranjiv Shrestha",
+      "party": "RPP"
+    },
+    {
+      "name": "Tanka Bahadur Rana",
+      "party": "SSP"
+    }
+  ],
+  "khotang-1": [
+    {
+      "name": "Virkaji Rai",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Devesh Bikram Rai",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Rudra Giri",
+      "party": "RSP"
+    },
+    {
+      "name": "Hari Roka",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Deepak Tamang",
+      "party": "RPP"
+    },
+    {
+      "name": "Aaren Rai",
+      "party": "SSP"
+    }
+  ],
+  "lalitpur-1": [
+    {
+      "name": "Uday Shamsher Rana",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Chetnath Sanjel",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Buddharatna Maharjan",
+      "party": "RSP"
+    },
+    {
+      "name": "Sunil Maharjan",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Er. Sajina Karki",
+      "party": "RPP"
+    },
+    {
+      "name": "Gautam Thapa",
+      "party": "SSP"
+    }
+  ],
+  "lalitpur-2": [
+    {
+      "name": "Premkrishna Maharjan",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Prem Bahadur Maharjan",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Jagadish Kharel",
+      "party": "RSP"
+    },
+    {
+      "name": "Rajendra Amatya",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Raghubar Raj Thapa",
+      "party": "RPP"
+    }
+  ],
+  "lalitpur-3": [
+    {
+      "name": "Jitendra Kumar Shrestha",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Sandan Thapa Magar",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Dr. Toshima Karki",
+      "party": "RSP"
+    },
+    {
+      "name": "Rajkaji Maharjan",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Sabin Khadka",
+      "party": "RPP"
+    },
+    {
+      "name": "Bishnu Jung Basnet",
+      "party": "SSP"
+    }
+  ],
+  "lamjung-1": [
+    {
+      "name": "Gam Prasad Gurung",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Prithvi Subba Gurung",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Dharmaraj KC",
+      "party": "RSP"
+    },
+    {
+      "name": "Harijang Tamang",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Kevindra Jung Gurung",
+      "party": "RPP"
+    },
+    {
+      "name": "Ran Bahadur Ghale",
+      "party": "SSP"
+    }
+  ],
+  "mahottari-1": [
+    {
+      "name": "Mukeshraj Kafle",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Laxmi Mahato Koiri",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Pramod Mahato",
+      "party": "RSP"
+    },
+    {
+      "name": "Giriraj Mani Pokharel",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Yanikhar Gautam",
+      "party": "RPP"
+    },
+    {
+      "name": "Lila Diyali",
+      "party": "SSP"
+    },
+    {
+      "name": "Birendra Mahato",
+      "party": "Janamat Party"
+    }
+  ],
+  "mahottari-2": [
+    {
+      "name": "Kiran Yadav",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Kasim Nadaf",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Dipak Sah",
+      "party": "RSP"
+    },
+    {
+      "name": "Laxman Yadav",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Ram Lakhan Shah",
+      "party": "RPP"
+    },
+    {
+      "name": "Alam Kawari",
+      "party": "SSP"
+    },
+    {
+      "name": "Jai Kumar Pandey",
+      "party": "Janamat Party"
+    }
+  ],
+  "mahottari-3": [
+    {
+      "name": "Bajrang Nepali",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Manoj Singh",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Ujjwal Jha",
+      "party": "RSP"
+    },
+    {
+      "name": "Rajkishor Sah Sudi",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Rajeshwor Raya Yadav",
+      "party": "RPP"
+    },
+    {
+      "name": "Mohamad Sabir Nuri",
+      "party": "SSP"
+    },
+    {
+      "name": "Dr. Arbind Thakur",
+      "party": "Janamat Party"
+    }
+  ],
+  "mahottari-4": [
+    {
+      "name": "Mahendra Kumar Raya",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Nilam Kumari Adhikari",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Gauri Kumari Yadav",
+      "party": "RSP"
+    },
+    {
+      "name": "Bharat Prasad Sah",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Sunil Kumar Singh",
+      "party": "RPP"
+    },
+    {
+      "name": "Manoj Kumar Sah",
+      "party": "Janamat Party"
+    }
+  ],
+  "makwanpur-1": [
+    {
+      "name": "Rameshwar Rana",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Prakash Gautam",
+      "party": "RSP"
+    },
+    {
+      "name": "Bijay Gautam",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Deepak Bahadur Singh",
+      "party": "RPP"
+    },
+    {
+      "name": "Bidhya Shrestha",
+      "party": "SSP"
+    }
+  ],
+  "makwanpur-2": [
+    {
+      "name": "Buddha Lama",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Mahesh Bartaula",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Prashant Upreti",
+      "party": "RSP"
+    },
+    {
+      "name": "Labhasher Bista",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Ram Bahadur Thokar",
+      "party": "RPP"
+    },
+    {
+      "name": "Unish Lama Singtan",
+      "party": "SSP"
+    }
+  ],
+  "manang-1": [
+    {
+      "name": "Tek Bahadur Gurung",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Polden Sotang Gurung",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Anil Gurung",
+      "party": "RSP"
+    },
+    {
+      "name": "Yashoda Subedi Gurung",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Kubersingh Gurung",
+      "party": "RPP"
+    }
+  ],
+  "morang-1": [
+    {
+      "name": "Khadga Bahadur Phago",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Ghanashyam Khatibada",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Yagya Mani Neupane",
+      "party": "RSP"
+    },
+    {
+      "name": "Kul Prasad Samba",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Purna Bahadur Waiba",
+      "party": "RPP"
+    },
+    {
+      "name": "Shanti Pakhirin Lama",
+      "party": "SSP"
+    }
+  ],
+  "morang-2": [
+    {
+      "name": "Dr. Minendra Prasad Rijal",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Dilip Bagasediya",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Krishna Kumar Karki",
+      "party": "RSP"
+    },
+    {
+      "name": "Chandra Bir Rai",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Bangsha Raj Rajbanshi",
+      "party": "RPP"
+    },
+    {
+      "name": "Aaboha Raihara",
+      "party": "SSP"
+    },
+    {
+      "name": "Dhanashyam Chaudhary",
+      "party": "Janamat Party"
+    }
+  ],
+  "morang-3": [
+    {
+      "name": "Dr. Sunil Kumar Sharma",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Dilip Rai",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Ganesh Karki",
+      "party": "RSP"
+    },
+    {
+      "name": "Dr. Dev Man Sambahamphe",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Prem Subedi",
+      "party": "RPP"
+    },
+    {
+      "name": "Amir Magar",
+      "party": "SSP"
+    }
+  ],
+  "morang-4": [
+    {
+      "name": "Gururaj Ghimire",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Jivan Ghimire",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Santosh Rajbanshi",
+      "party": "RSP"
+    },
+    {
+      "name": "Aman Lal Modi",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Madhav Acharya",
+      "party": "RPP"
+    },
+    {
+      "name": "Krishna Kumar Atal",
+      "party": "SSP"
+    },
+    {
+      "name": "Jiban Kumar Gupta",
+      "party": "Janamat Party"
+    }
+  ],
+  "morang-5": [
+    {
+      "name": "Phul Kumar Lalwani",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Manoj Agrawal",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Asha Jha",
+      "party": "RSP"
+    },
+    {
+      "name": "Shiva Kumar Mandal",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Kumud Raya",
+      "party": "RPP"
+    },
+    {
+      "name": "Prameshwar Mumu",
+      "party": "Janamat Party"
+    }
+  ],
+  "morang-6": [
+    {
+      "name": "Dr. Shekhar Koirala",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Binod Kumar Dhakal",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Rubina Acharya",
+      "party": "RSP"
+    },
+    {
+      "name": "Upendra Kumar Raya",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Sabin Niroula",
+      "party": "RPP"
+    },
+    {
+      "name": "Matrika Poudel",
+      "party": "SSP"
+    },
+    {
+      "name": "Sudharam Majhi Tharu",
+      "party": "Janamat Party"
+    }
+  ],
+  "mugu-1": [
+    {
+      "name": "Khadga Shahi",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Purna Bahadur Rokaya",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Rajendra Bahadur Shahi",
+      "party": "RSP"
+    },
+    {
+      "name": "Chandra Bahadur Shahi",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Bal Bahadur Malla",
+      "party": "RPP"
+    }
+  ],
+  "mustang-1": [
+    {
+      "name": "Yogesh Gauchan",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Indradhara Bista",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Aditya Thakali",
+      "party": "RSP"
+    },
+    {
+      "name": "Kamala Lalchan",
+      "party": "RPP"
+    }
+  ],
+  "myagdi-1": [
+    {
+      "name": "Karna Bahadur Bhandari",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Hari Krishna Shrestha",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Yubaraj Roka",
+      "party": "RSP"
+    },
+    {
+      "name": "Dambar Bahadur Subedi",
+      "party": "RPP"
+    },
+    {
+      "name": "Binod Rana Magar",
+      "party": "SSP"
+    }
+  ],
+  "nawalparasi-east-1": [
+    {
+      "name": "Gajendra Ghale",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Bhagirath Sapkota",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Bikram Khanal",
+      "party": "RSP"
+    },
+    {
+      "name": "Lok Prasad Bhurtel",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Deepak Bastakoti",
+      "party": "RPP"
+    },
+    {
+      "name": "Ganesh Chaudhary",
+      "party": "Janamat Party"
+    }
+  ],
+  "nawalparasi-east-2": [
+    {
+      "name": "Ombahadur Ghartimagar",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Salik Bahadur Mahat Chhetri",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Narendra Kumar Gupta",
+      "party": "RSP"
+    },
+    {
+      "name": "Ganeshman Mahato",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Run Kumari Mahato",
+      "party": "RPP"
+    },
+    {
+      "name": "Jiban Mallah",
+      "party": "Janamat Party"
+    }
+  ],
+  "nawalparasi-west-1": [
+    {
+      "name": "Binod Chaudhary",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Ram Prasad Pandey",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Bikram Khanal",
+      "party": "RSP"
+    },
+    {
+      "name": "Sindhu Jalesha",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Nawanit Kumar Mishra",
+      "party": "RPP"
+    },
+    {
+      "name": "Debendra Chaudari",
+      "party": "SSP"
+    }
+  ],
+  "nawalparasi-west-2": [
+    {
+      "name": "Devendra Raj Kandel",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Lekhnath Kharel",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Narendra Kumar Gupta",
+      "party": "RSP"
+    },
+    {
+      "name": "Devendra Paudel",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Dhruva Bahadur Pradhan",
+      "party": "RPP"
+    },
+    {
+      "name": "Ram Chandra Chaudari Tharu",
+      "party": "SSP"
+    }
+  ],
+  "nuwakot-1": [
+    {
+      "name": "Dr. Prakash Sharan Mahat",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Biroj Mainali",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Dr. Bikram Timilsina",
+      "party": "RSP"
+    },
+    {
+      "name": "Hit Bahadur Tamang",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Bimal Thapa",
+      "party": "RPP"
+    },
+    {
+      "name": "Dawa Fuche Lama",
+      "party": "SSP"
+    }
+  ],
+  "nuwakot-2": [
+    {
+      "name": "Jagadish Narasingh K.C.",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Keshav Pandey",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Dr. Achyut Ram Lamichhane",
+      "party": "RSP"
+    },
+    {
+      "name": "Hiranath Khatiwada",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Jhanak Pyakurel",
+      "party": "RPP"
+    },
+    {
+      "name": "Binod Kumar Tamang",
+      "party": "SSP"
+    }
+  ],
+  "okhaldhunga-1": [
+    {
+      "name": "Kumar Luitel",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Asmita Thapa",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Bishwaraj Pokharel",
+      "party": "RSP"
+    },
+    {
+      "name": "Ambar Babu Gurung",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Dik Prasad Bastola",
+      "party": "RPP"
+    },
+    {
+      "name": "Udhav Kumar Podel",
+      "party": "SSP"
+    }
+  ],
+  "palpa-1": [
+    {
+      "name": "Sandip Rana",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Narayan Acharya",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Bimal Pant",
+      "party": "RSP"
+    },
+    {
+      "name": "Hom Bahadur Sunari",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Brihaspati Aryal",
+      "party": "RPP"
+    },
+    {
+      "name": "Yam Bahadur Darlami Magar",
+      "party": "SSP"
+    }
+  ],
+  "palpa-2": [
+    {
+      "name": "Himal Datta Shrestha",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Thakur Gaire",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Madhav Thapa",
+      "party": "RSP"
+    },
+    {
+      "name": "Som Prasad Pandey",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Dul Bahadur Kunwar",
+      "party": "RPP"
+    }
+  ],
+  "panchthar-1": [
+    {
+      "name": "Narendrakumar Kerung",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Indra Sundar Nembang",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Mahendra Bikram Thamsuhang",
+      "party": "RSP"
+    },
+    {
+      "name": "Harka Bahadur Nemwang",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Tej Kurumbang",
+      "party": "RPP"
+    },
+    {
+      "name": "Hasta Raj Sharma",
+      "party": "SSP"
+    }
+  ],
+  "parbat-1": [
+    {
+      "name": "Arjun Prasad Joshi",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Padam Giri",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Sagar Bhusal",
+      "party": "RSP"
+    },
+    {
+      "name": "Manahari Sharma",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Durga Bahadur Malla",
+      "party": "RPP"
+    }
+  ],
+  "parsa-1": [
+    {
+      "name": "Anil Kumar Rungta",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Pradeep Yadav",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Hari Pant",
+      "party": "RSP"
+    },
+    {
+      "name": "Ajay Chaurasiya",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Nanda Kishor Shrivastav",
+      "party": "RPP"
+    },
+    {
+      "name": "Wasim Sees",
+      "party": "SSP"
+    },
+    {
+      "name": "Om Prakash Sarraf",
+      "party": "Janamat Party"
+    }
+  ],
+  "parsa-2": [
+    {
+      "name": "Ajay Chaurasiya",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Rima Kumari Yadav",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Sushil Patel",
+      "party": "RSP"
+    },
+    {
+      "name": "Sushil Patel",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Bina Jaiswal",
+      "party": "RPP"
+    },
+    {
+      "name": "Pundeshor Prasad Yadav",
+      "party": "SSP"
+    },
+    {
+      "name": "Shyam Kumar Gupta",
+      "party": "Janamat Party"
+    }
+  ],
+  "parsa-3": [
+    {
+      "name": "Surendra Prasad Chaudhary",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Rupesh Pandey",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Ramakant Chaurasiya",
+      "party": "RSP"
+    },
+    {
+      "name": "Chhotelal Yadav",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Nabin Kumar Singh",
+      "party": "RPP"
+    },
+    {
+      "name": "Tajuddin Ansari",
+      "party": "SSP"
+    },
+    {
+      "name": "Malati Kumari Kushwaha",
+      "party": "Janamat Party"
+    }
+  ],
+  "parsa-4": [
+    {
+      "name": "Ramesh Rijal",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Jalil Miyan Mansuri",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Tek Shakya",
+      "party": "RSP"
+    },
+    {
+      "name": "Jaya Prakash Tharu",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Shant Kumar Joshi",
+      "party": "RPP"
+    },
+    {
+      "name": "Sima Gupta",
+      "party": "Janamat Party"
+    }
+  ],
+  "pyuthan-1": [
+    {
+      "name": "Dr. Govinda Prasad Pokharel",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Surya Bahadur Thapa",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Sushant Baidik",
+      "party": "RSP"
+    },
+    {
+      "name": "Krishna Dhwaj Khadka",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Dhaneshwor Pandit",
+      "party": "RPP"
+    },
+    {
+      "name": "Govinda Giri",
+      "party": "SSP"
+    }
+  ],
+  "ramechhap-1": [
+    {
+      "name": "Ram Chandra Khadka",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Madhav Prasad Dhungel",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Krishna Hari Budhathoki",
+      "party": "RSP"
+    },
+    {
+      "name": "Shyam Kumar Shrestha",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Gore Bahadur Tamang",
+      "party": "RPP"
+    },
+    {
+      "name": "Dhal Bahadur Khapangee Magar",
+      "party": "SSP"
+    }
+  ],
+  "rasuwa-1": [
+    {
+      "name": "Mohan Acharya",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Prem Bahadur Tamang",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Basanta Bhatt",
+      "party": "RSP"
+    },
+    {
+      "name": "Madhav Lamichhane",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Hari Prasad Ghimire",
+      "party": "RPP"
+    }
+  ],
+  "rautahat-1": [
+    {
+      "name": "Anilkumar Jha",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Ajay Gupta",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Rajesh Chaudhary",
+      "party": "RSP"
+    },
+    {
+      "name": "Madhav Kumar Nepal",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Shriram Shah",
+      "party": "RPP"
+    },
+    {
+      "name": "Umesh Kumar Shah",
+      "party": "SSP"
+    },
+    {
+      "name": "Devendra Mishra",
+      "party": "Janamat Party"
+    }
+  ],
+  "rautahat-2": [
+    {
+      "name": "Dr. Phirdosh Alam",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Shailendra Sah",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Sheikh Sagir",
+      "party": "RSP"
+    },
+    {
+      "name": "Kiran Sah",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Rabindra Prasad Shah",
+      "party": "RPP"
+    },
+    {
+      "name": "Ram Shrestha Mukhiya",
+      "party": "SSP"
+    },
+    {
+      "name": "Sonu Kushwaha",
+      "party": "Janamat Party"
+    }
+  ],
+  "rautahat-3": [
+    {
+      "name": "Ram Kripal Yadav",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Kundan Kushwaha",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Dhiraj Patel",
+      "party": "RSP"
+    },
+    {
+      "name": "Punam Devi",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Sikindra Prasad Shah",
+      "party": "RPP"
+    },
+    {
+      "name": "Jamsed Ansari",
+      "party": "SSP"
+    },
+    {
+      "name": "Mohammad Prabed Alam",
+      "party": "Janamat Party"
+    }
+  ],
+  "rautahat-4": [
+    {
+      "name": "Dev Prasad Timilsina",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Ramji Shah",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Ganesh Paudel",
+      "party": "RSP"
+    },
+    {
+      "name": "Ram Kumar Bhattarai",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Bahadur Yadav",
+      "party": "RPP"
+    },
+    {
+      "name": "Nabraj Aryal",
+      "party": "SSP"
+    },
+    {
+      "name": "Ram Kalyan Rajat",
+      "party": "Janamat Party"
+    }
+  ],
+  "rolpa-1": [
+    {
+      "name": "Dr. Sudan Kumar Oli",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Gokul Garti",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Balram Thapa",
+      "party": "RSP"
+    },
+    {
+      "name": "Barshaman Pun",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Ambar Bahadur Thapa",
+      "party": "RPP"
+    }
+  ],
+  "rukum-east-1": [
+    {
+      "name": "Kusumdevi Thapa Magar",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Leelamani Gautam",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Lakhan Thapa",
+      "party": "RSP"
+    },
+    {
+      "name": "Pushpa Kamal Dahal (Prachanda)",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Roshan Dhwoj Shah",
+      "party": "RPP"
+    },
+    {
+      "name": "Mahesh Kumar Rana Magar",
+      "party": "SSP"
+    }
+  ],
+  "rukum-west-1": [
+    {
+      "name": "Raju K.C.",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Nanda Ram Devkota",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Man Bahadur Shahi",
+      "party": "RSP"
+    },
+    {
+      "name": "Gopal Sharma",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Gopal Khadka",
+      "party": "RPP"
+    }
+  ],
+  "rupandehi-1": [
+    {
+      "name": "Hira Bahadur Khatri",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Dhaniram Neupane",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Sunil Lamsal",
+      "party": "RSP"
+    },
+    {
+      "name": "Binshyam Yadav",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Prajwol Bohara",
+      "party": "RPP"
+    },
+    {
+      "name": "Chabi Lal Gurung",
+      "party": "SSP"
+    },
+    {
+      "name": "Nilu Chaudhary",
+      "party": "Janamat Party"
+    }
+  ],
+  "rupandehi-2": [
+    {
+      "name": "Chunna Prasad Sharma",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Bishnu Prasad Paudel",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Sulabh Kharel",
+      "party": "RSP"
+    },
+    {
+      "name": "Subhash Pandey (Bishwadeep)",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Karvika Thapa",
+      "party": "RPP"
+    },
+    {
+      "name": "Bhim Bahadur Gautam",
+      "party": "SSP"
+    },
+    {
+      "name": "Ramesh Lodha",
+      "party": "Janamat Party"
+    }
+  ],
+  "rupandehi-3": [
+    {
+      "name": "Sushil Gurung",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Basudev Ghimire",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Lekh Jung Thapa",
+      "party": "RSP"
+    },
+    {
+      "name": "Faiz Ahmed Khan",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Gaurav Bohara",
+      "party": "RPP"
+    },
+    {
+      "name": "Purna Bahadur Kami",
+      "party": "SSP"
+    },
+    {
+      "name": "Bishal Gupta",
+      "party": "Janamat Party"
+    }
+  ],
+  "rupandehi-4": [
+    {
+      "name": "Ashutosh Mishra",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Pramod Yadav",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Kanya Banaya",
+      "party": "RSP"
+    },
+    {
+      "name": "Babulal Yadav",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Ahmaddin Khan",
+      "party": "RPP"
+    },
+    {
+      "name": "Jethu Damai",
+      "party": "SSP"
+    },
+    {
+      "name": "Bhupendra Prasad Yadav",
+      "party": "Janamat Party"
+    }
+  ],
+  "rupandehi-5": [
+    {
+      "name": "Bharatkumar Shah",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Khimlal Bhattarai",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Tafiq Ahmad Khan",
+      "party": "RSP"
+    },
+    {
+      "name": "Vakil Musalman",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Min Prasad Ghimire",
+      "party": "RPP"
+    },
+    {
+      "name": "Shival Bishokarma",
+      "party": "SSP"
+    },
+    {
+      "name": "Om Prakash Yadav (Guljari)",
+      "party": "Janamat Party"
+    }
+  ],
+  "salyan-1": [
+    {
+      "name": "Keshab Bahadur Bista",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Gulab Jung Shah",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Lalit Kumar Chand",
+      "party": "RSP"
+    },
+    {
+      "name": "Anisha Nepali",
+      "party": "RPP"
+    }
+  ],
+  "sankhuwasabha-1": [
+    {
+      "name": "Dipan Shrestha",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Dr Arjun Karki",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Mingma Sherpa",
+      "party": "RSP"
+    },
+    {
+      "name": "Sarita Khadka Thapa",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Padam Tamang",
+      "party": "RPP"
+    },
+    {
+      "name": "Uma Kumari Rai",
+      "party": "SSP"
+    }
+  ],
+  "saptari-1": [
+    {
+      "name": "Ramdev Sah",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Suman Pyakurel",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Pushpa Chaudhary",
+      "party": "RSP"
+    },
+    {
+      "name": "Raghvendra Chaudhary",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Satyajit Kumar Shah",
+      "party": "RPP"
+    },
+    {
+      "name": "Dr. Jayakant Rajat",
+      "party": "Janamat Party"
+    }
+  ],
+  "saptari-2": [
+    {
+      "name": "Ram Kumar Yadav",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Satis Singh",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Ramji Yadav",
+      "party": "RSP"
+    },
+    {
+      "name": "Suryanath Prasad Yadav",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Ajaya Kumar Das",
+      "party": "RPP"
+    },
+    {
+      "name": "Dr. C.K. Rajat",
+      "party": "Janamat Party"
+    }
+  ],
+  "saptari-3": [
+    {
+      "name": "Dinesh Kumar Yadav",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Tarakanta Chaudhary",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Umakant Chaudhary",
+      "party": "RSP"
+    },
+    {
+      "name": "Arun Kumar Sah",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Umdeshwor Shah",
+      "party": "RPP"
+    },
+    {
+      "name": "Jay Narayan Mandal",
+      "party": "SSP"
+    },
+    {
+      "name": "Surendra Prasad Sharma (Madheshi)",
+      "party": "Janamat Party"
+    }
+  ],
+  "saptari-4": [
+    {
+      "name": "Tejulal Chaudhary",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Ganga Chaudhary",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Sitaram Sah",
+      "party": "RSP"
+    },
+    {
+      "name": "Rubi Kumari Karna",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Rup Kumar Neupane",
+      "party": "RPP"
+    },
+    {
+      "name": "Tribhuvan Khag Rawate",
+      "party": "SSP"
+    },
+    {
+      "name": "Jitendra Kumar Sah",
+      "party": "Janamat Party"
+    }
+  ],
+  "sarlahi-1": [
+    {
+      "name": "Shambhulal Shrestha",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Manoj Devkota",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Nitima Karki",
+      "party": "RSP"
+    },
+    {
+      "name": "Pramod Sah",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Surya Narayan Yadav",
+      "party": "RPP"
+    },
+    {
+      "name": "Sunam Hari Adhikari",
+      "party": "SSP"
+    },
+    {
+      "name": "Shreenjay Mahato",
+      "party": "Janamat Party"
+    }
+  ],
+  "sarlahi-2": [
+    {
+      "name": "Dr. Saroj Kumar Yadav",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Nageshwar Sah",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Rabin Mahato",
+      "party": "RSP"
+    },
+    {
+      "name": "Mahindra Raya Yadav",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Rajkishor Raya Yadav",
+      "party": "RPP"
+    },
+    {
+      "name": "Bipin Kapad",
+      "party": "Janamat Party"
+    }
+  ],
+  "sarlahi-3": [
+    {
+      "name": "Binod Khanal",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Hari Upreti",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Narendra Sah Kalwar",
+      "party": "RSP"
+    },
+    {
+      "name": "Narayankaji Shrestha",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Dhola Ram Barakoti",
+      "party": "RPP"
+    },
+    {
+      "name": "Sunil Prasad Gupta",
+      "party": "Janamat Party"
+    }
+  ],
+  "sarlahi-4": [
+    {
+      "name": "Gagan Kumar Thapa",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Amonit Kumar Yadav",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Amaresh Singh",
+      "party": "RSP"
+    },
+    {
+      "name": "Raghunath Raya Yadav",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Pradip Jha",
+      "party": "RPP"
+    },
+    {
+      "name": "Ashis Poudel",
+      "party": "SSP"
+    },
+    {
+      "name": "Rakesh Kumar Mishra",
+      "party": "Janamat Party"
+    }
+  ],
+  "sindhuli-1": [
+    {
+      "name": "Ujjwal Baral",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Pradeep KC (Katuwal)",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Dhanendra Karki",
+      "party": "RSP"
+    },
+    {
+      "name": "Dekendra Subedi",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Ram Narayan Danuwar",
+      "party": "RPP"
+    },
+    {
+      "name": "Nim Bahadur Moktan",
+      "party": "SSP"
+    }
+  ],
+  "sindhuli-2": [
+    {
+      "name": "Sushila Thing",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Manoj Jung Thapa",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Ashish Gajurel",
+      "party": "RSP"
+    },
+    {
+      "name": "Lekhnath Dahal",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Prof. Dr. Mukunda Prasad Gajurel",
+      "party": "RPP"
+    },
+    {
+      "name": "Indra Bahadur B.K",
+      "party": "SSP"
+    }
+  ],
+  "sindhupalchowk-1": [
+    {
+      "name": "Jangbahadur Lama",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Suresh Nepal",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Bharat Prasad Parajuli",
+      "party": "RSP"
+    },
+    {
+      "name": "Madhav Sapkota",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Ram Mani Neypane",
+      "party": "RPP"
+    },
+    {
+      "name": "Phurwa Tamang",
+      "party": "SSP"
+    }
+  ],
+  "sindhupalchowk-2": [
+    {
+      "name": "Banshalal Tamang",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Sher Bahadur Tamang",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Ajay Shrestha",
+      "party": "RSP"
+    },
+    {
+      "name": "Yuvaraj Dulal",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Er. Gopi Krishna Chaulagain",
+      "party": "RPP"
+    },
+    {
+      "name": "Bhanu Shrestha",
+      "party": "SSP"
+    }
+  ],
+  "siraha-1": [
+    {
+      "name": "Ramsundar Chaudhary",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Ram Shankar Yadav",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Bablu Gupta",
+      "party": "RSP"
+    },
+    {
+      "name": "Ram Chandra Yadav",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Basudev Shah",
+      "party": "RPP"
+    },
+    {
+      "name": "Jiwach Thakur",
+      "party": "SSP"
+    },
+    {
+      "name": "Ram Swarup Chaudhary (Advocate)",
+      "party": "Janamat Party"
+    }
+  ],
+  "siraha-2": [
+    {
+      "name": "Ramchandra Yadav",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Naveen Kumar Yadav",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Shiv Shankar Yadav",
+      "party": "RSP"
+    },
+    {
+      "name": "Mumbi Singh",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Shyam Kishor Shah",
+      "party": "RPP"
+    },
+    {
+      "name": "Ganga Ram Thakur Barahi",
+      "party": "SSP"
+    },
+    {
+      "name": "Binod Kumar Yadav",
+      "party": "Janamat Party"
+    }
+  ],
+  "siraha-3": [
+    {
+      "name": "Dr. Subhash Chandra Yadav",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Leelanath Shrestha",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Dr. Shambhu Yadav",
+      "party": "RSP"
+    },
+    {
+      "name": "Bishwo Nath Sah",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Dev Dayal Singh",
+      "party": "RPP"
+    },
+    {
+      "name": "Dip Kumar Lama",
+      "party": "SSP"
+    },
+    {
+      "name": "Rohit Mahato",
+      "party": "Janamat Party"
+    }
+  ],
+  "siraha-4": [
+    {
+      "name": "Chandrakala Kumari Yadav",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Dharmanath Prasad Sah",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Tapeshwar Yadav",
+      "party": "RSP"
+    },
+    {
+      "name": "Ajay Shankar Nayak",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Shuvendra Kumar Shah",
+      "party": "RPP"
+    },
+    {
+      "name": "Pankaj Kumar Thakur",
+      "party": "SSP"
+    },
+    {
+      "name": "Dr. Birendra Prasad Mahato",
+      "party": "Janamat Party"
+    }
+  ],
+  "solukhumbu-1": [
+    {
+      "name": "Prakash Singh Karki",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Kalpana Rai",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Rishidhan Rai",
+      "party": "RSP"
+    },
+    {
+      "name": "Asim Rai",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Rajendra Basnet",
+      "party": "RPP"
+    },
+    {
+      "name": "Byash Rai",
+      "party": "SSP"
+    }
+  ],
+  "sunsari-1": [
+    {
+      "name": "Sujendra Tamang",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Surya Pandak",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Sarin Tamang",
+      "party": "RSP"
+    },
+    {
+      "name": "Surya Bahadur Bhattarai",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Uddhav Shrestha",
+      "party": "RPP"
+    },
+    {
+      "name": "Harka Rai Harka Sampag",
+      "party": "SSP"
+    }
+  ],
+  "sunsari-2": [
+    {
+      "name": "Rajiv Koirala",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Arjun Lama",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Lal Bikram",
+      "party": "RSP"
+    },
+    {
+      "name": "Ram Kumari Chaudhary",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Dinesh Kumar Basnet",
+      "party": "RPP"
+    },
+    {
+      "name": "Chetan Rai",
+      "party": "SSP"
+    },
+    {
+      "name": "Dr. Mahabir Mehta",
+      "party": "Janamat Party"
+    }
+  ],
+  "sunsari-3": [
+    {
+      "name": "Vijay Kumar Gachhadar",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Bhagwati Chaudhary",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Ashok Chaudhary",
+      "party": "RSP"
+    },
+    {
+      "name": "Durgesh Chaudhary",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Ghanshyam Gurung",
+      "party": "RPP"
+    },
+    {
+      "name": "Ram Prasad Sadha",
+      "party": "SSP"
+    },
+    {
+      "name": "Ram Narayan Tharu",
+      "party": "Janamat Party"
+    }
+  ],
+  "sunsari-4": [
+    {
+      "name": "Gyanendra Bahadur Karki",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Jagadish Prasad Kushiyat",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Dipak Kumar Shah",
+      "party": "RSP"
+    },
+    {
+      "name": "Mahamad Mahfuj Ansari",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Prem Prasad Bhattarai",
+      "party": "RPP"
+    },
+    {
+      "name": "Prabhananda Poudel",
+      "party": "SSP"
+    },
+    {
+      "name": "Dr. Kapleshwar Yadav (Kapil)",
+      "party": "Janamat Party"
+    }
+  ],
+  "surkhet-1": [
+    {
+      "name": "Bishnu Bahadur Khadka",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Dhruva Kumar Shahi",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Tek Bahadur Singh Thakuri",
+      "party": "RSP"
+    },
+    {
+      "name": "Rabi Kiran Hamal",
+      "party": "RPP"
+    }
+  ],
+  "surkhet-2": [
+    {
+      "name": "Narayan Koirala",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Kulmani Devkota",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Ramesh Sapkota",
+      "party": "RSP"
+    },
+    {
+      "name": "Jhak Bahadur Malla",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Kabiram Puri",
+      "party": "RPP"
+    }
+  ],
+  "syangja-1": [
+    {
+      "name": "Bharat Raj Dhakal",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Min Prasad Gurung",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Dhananjaya Regmi",
+      "party": "RSP"
+    },
+    {
+      "name": "Shailendra Ghimire",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Hukum Bahadur Rana",
+      "party": "RPP"
+    },
+    {
+      "name": "Piran Gurung",
+      "party": "SSP"
+    }
+  ],
+  "syangja-2": [
+    {
+      "name": "Bhagwat Prakash Malla",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Khim Bahadur Thapa",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Jhabilal Dumre",
+      "party": "RSP"
+    },
+    {
+      "name": "Padam Bishwakarma",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Rabin Pathak",
+      "party": "RPP"
+    },
+    {
+      "name": "Bhim Bahadur Subedi",
+      "party": "SSP"
+    }
+  ],
+  "tanahun-1": [
+    {
+      "name": "Govinda Bhattarai",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Bhagwati Neupane",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Swarnim Wagle",
+      "party": "RSP"
+    },
+    {
+      "name": "Bidhya Nath Dhakal",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Abhishek Joshi",
+      "party": "RPP"
+    }
+  ],
+  "tanahun-2": [
+    {
+      "name": "Shankar Bhandari",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Kedar Sigdel",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Shriram Neupane",
+      "party": "RSP"
+    },
+    {
+      "name": "Som Bahadur Thapa",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Yam Bahadur Khand Thakuri",
+      "party": "RPP"
+    }
+  ],
+  "taplejung-1": [
+    {
+      "name": "Kshitij Thebe",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Birendra Shrestha",
+      "party": "RSP"
+    },
+    {
+      "name": "Khel Prasad Budha Kshetri",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Indra Prasad Thapa",
+      "party": "RPP"
+    },
+    {
+      "name": "Santosh Rai",
+      "party": "SSP"
+    }
+  ],
+  "terhathum-1": [
+    {
+      "name": "Santosh Subba",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Bhanubhakta Dhakal",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Surendra Karki",
+      "party": "RSP"
+    },
+    {
+      "name": "Ranadhwaj Kandangwa",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Hom Bhakta Kurumbang",
+      "party": "RPP"
+    },
+    {
+      "name": "Suwindra Kumar Limbu",
+      "party": "SSP"
+    }
+  ],
+  "udayapur-1": [
+    {
+      "name": "Vidur Basnet",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Durga Thapa Swasti",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Parash Gelal",
+      "party": "RSP"
+    },
+    {
+      "name": "Baldev Chaudhary",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Subhash Chandra Khadka",
+      "party": "RPP"
+    },
+    {
+      "name": "Rajesh Kumar Rai",
+      "party": "SSP"
+    }
+  ],
+  "udayapur-2": [
+    {
+      "name": "Ram Kumar Rai",
+      "party": "Nepali Congress"
+    },
+    {
+      "name": "Amar Rai Majhi",
+      "party": "CPN-UML"
+    },
+    {
+      "name": "Surya Bahadur Tamang",
+      "party": "RSP"
+    },
+    {
+      "name": "Suresh Kumar Rai",
+      "party": "CPN-Maoist"
+    },
+    {
+      "name": "Bishnu Bahadur Khadka",
+      "party": "RPP"
+    },
+    {
+      "name": "Bal Raj Rai",
+      "party": "SSP"
+    }
+  ]
+}
