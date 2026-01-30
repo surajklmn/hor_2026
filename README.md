@@ -53,6 +53,7 @@ npm start
 | File | Description |
 |------|-------------|
 | `nepal_constituencies.geojson` | GeoJSON boundaries for all 165 HoR constituencies |
+| `nepal_municipalities.geojson` | GeoJSON boundaries for local levels (Municipalities/Gaunpalikas) |
 | `nepal_protected_areas.geojson` | GeoJSON boundaries for national parks and wildlife reserves |
 | `candidates.json` | Candidate information for each constituency |
 | `constituencies.json` | Additional constituency metadata |
@@ -109,6 +110,7 @@ Under the following conditions:
 
 - **Constituency boundaries**: Derived from publicly available electoral geographic data
 - **Protected area boundaries**: Derived from publicly available conservation area maps
+- **Local Level Boundaries**: Sourced from [Open Knowledge Nepal](https://localboundries.oknp.org/)
 
 Geographic boundary data of administrative divisions is generally considered **factual information** and is not subject to copyright protection, as facts cannot be copyrighted.
 

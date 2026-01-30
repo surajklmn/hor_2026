@@ -59,6 +59,8 @@ const PARTY_COLORS: Record<string, string> = {
     'Maoist': '#b91c1c',
 };
 
+
+
 const getPartyColor = (party: string) => {
     const p = party.replace(/[-_]/g, ' ').toLowerCase();
 
@@ -100,9 +102,11 @@ export default function NepalMap({ }: NepalMapProps) {
     const [geoData, setGeoData] = useState<import('geojson').FeatureCollection | null>(null);
     const [districtGeoData, setDistrictGeoData] = useState<import('geojson').FeatureCollection | null>(null);
     const [protectedAreasGeoData, setProtectedAreasGeoData] = useState<import('geojson').FeatureCollection | null>(null);
+    const [localLevelGeoData, setLocalLevelGeoData] = useState<import('geojson').FeatureCollection | null>(null);
     const [constituenciesMap, setConstituenciesMap] = useState<ConstituenciesMap | null>(null);
     const [isSatellite, setIsSatellite] = useState(false);
     const [showDistrictNames, setShowDistrictNames] = useState(true);
+    const [showLocalLevels, setShowLocalLevels] = useState(false);
     const [selectedId, setSelectedId] = useState<string | null>(null);
     const [isAnimating, setIsAnimating] = useState(false);
     const geoJsonRef = useRef<L.GeoJSON>(null);
@@ -113,12 +117,14 @@ export default function NepalMap({ }: NepalMapProps) {
             fetch('/data/nepal_constituencies.geojson').then(r => r.json()),
             fetch('/data/nepal_districts.geojson').then(r => r.json()),
             fetch('/data/candidates.json').then(r => r.json()),
-            fetch('/data/nepal_protected_areas.geojson').then(r => r.json())
-        ]).then(([geo, districts, candidates, protectedAreas]) => {
+            fetch('/data/nepal_protected_areas.geojson').then(r => r.json()),
+            fetch('/data/nepal_municipalities.geojson').then(r => r.json())
+        ]).then(([geo, districts, candidates, protectedAreas, localLevels]) => {
             setGeoData(geo);
             setDistrictGeoData(districts);
             setConstituenciesMap(candidates);
             setProtectedAreasGeoData(protectedAreas);
+            setLocalLevelGeoData(localLevels);
         }).catch(err => console.error("Error loading data:", err));
     }, []);
 
@@ -283,6 +289,8 @@ export default function NepalMap({ }: NepalMapProps) {
                 onToggle={() => setIsSatellite(!isSatellite)}
                 showDistrictNames={showDistrictNames}
                 onToggleNames={() => setShowDistrictNames(!showDistrictNames)}
+                showLocalLevels={showLocalLevels}
+                onToggleLocalLevels={() => setShowLocalLevels(!showLocalLevels)}
             />
 
             {/* Search Control */}
@@ -324,6 +332,38 @@ export default function NepalMap({ }: NepalMapProps) {
                                 direction: 'center',
                                 className: 'font-bold text-xs text-emerald-800 bg-white/80 border-emerald-200'
                             });
+                        }}
+                    />
+                )}
+
+                {/* Local Levels Layer */}
+                {showLocalLevels && localLevelGeoData && (
+                    <GeoJSON
+                        data={localLevelGeoData}
+                        style={{
+                            fillColor: 'transparent',
+                            color: '#9333ea', // Purple-600
+                            weight: 0.5,
+                            opacity: 0.6,
+                            dashArray: '2, 4'
+                        }}
+                        onEachFeature={(feature, layer) => {
+                            if (feature.properties) {
+                                // Tooltip: "Deumai Nagarpalika, Ilam"
+                                const name = `${feature.properties.GaPa_NaPa} ${feature.properties.Type_GN}`;
+                                const district = feature.properties.DISTRICT;
+                                const tooltipContent = `
+                                    <div class="text-xs font-sans">
+                                        <div class="font-bold text-purple-700">${name}</div>
+                                        <div class="text-gray-500">${district}</div>
+                                    </div>
+                                `;
+                                layer.bindTooltip(tooltipContent, {
+                                    className: 'leaflet-tooltip-rich',
+                                    sticky: true,
+                                    direction: 'top'
+                                });
+                            }
                         }}
                     />
                 )}
