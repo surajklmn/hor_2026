@@ -5,7 +5,7 @@ import { MapContainer, GeoJSON, TileLayer, useMap, useMapEvents } from 'react-le
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { ConstituenciesMap, Candidate, ConstituencyProperties } from '@/types';
-import { formatConstituencyName } from '@/lib/utils';
+
 
 import MapControls from '@/components/MapControls';
 import SearchControl from '@/components/Map/SearchControl';
@@ -99,6 +99,7 @@ function MapEvents({ onClear, setAnimating }: { onClear: () => void, setAnimatin
 export default function NepalMap({ }: NepalMapProps) {
     const [geoData, setGeoData] = useState<import('geojson').FeatureCollection | null>(null);
     const [districtGeoData, setDistrictGeoData] = useState<import('geojson').FeatureCollection | null>(null);
+    const [protectedAreasGeoData, setProtectedAreasGeoData] = useState<import('geojson').FeatureCollection | null>(null);
     const [constituenciesMap, setConstituenciesMap] = useState<ConstituenciesMap | null>(null);
     const [isSatellite, setIsSatellite] = useState(false);
     const [showDistrictNames, setShowDistrictNames] = useState(true);
@@ -111,11 +112,13 @@ export default function NepalMap({ }: NepalMapProps) {
         Promise.all([
             fetch('/data/nepal_constituencies.geojson').then(r => r.json()),
             fetch('/data/nepal_districts.geojson').then(r => r.json()),
-            fetch('/data/candidates.json').then(r => r.json())
-        ]).then(([geo, districts, candidates]) => {
+            fetch('/data/candidates.json').then(r => r.json()),
+            fetch('/data/nepal_protected_areas.geojson').then(r => r.json())
+        ]).then(([geo, districts, candidates, protectedAreas]) => {
             setGeoData(geo);
             setDistrictGeoData(districts);
             setConstituenciesMap(candidates);
+            setProtectedAreasGeoData(protectedAreas);
         }).catch(err => console.error("Error loading data:", err));
     }, []);
 
@@ -136,7 +139,7 @@ export default function NepalMap({ }: NepalMapProps) {
             // Safe access to feature property using 'in' check or casting to unknown first
             // But we know these are GeoJSON layers which have a feature property
             const l = layer as L.Layer & { feature?: import('geojson').Feature<import('geojson').Geometry, ConstituencyProperties> };
-            return l.feature?.properties?.orig_id === geoId;
+            return l.feature?.properties?.id === geoId;
         });
 
         if (foundLayer && foundLayer instanceof L.Polygon) {
@@ -155,15 +158,15 @@ export default function NepalMap({ }: NepalMapProps) {
     };
 
     const getFeatureStyle = useCallback((feature: import('geojson').Feature<import('geojson').Geometry, ConstituencyProperties> | undefined) => {
-        if (feature?.properties?.orig_id === selectedId) {
+        if (feature?.properties?.id === selectedId) {
             return SELECTED_STYLE;
         }
         return isSatellite ? SATELLITE_STYLE : ELECTION_STYLE;
     }, [isSatellite, selectedId]);
 
     const createTooltipContent = (properties: ConstituencyProperties) => {
-        const candidates = getCandidates(properties.orig_id);
-        const name = formatConstituencyName(properties.orig_id);
+        const candidates = getCandidates(properties.id);
+        const name = properties.name;
 
         let listHtml = '';
         if (candidates.length > 0) {
@@ -200,7 +203,7 @@ export default function NepalMap({ }: NepalMapProps) {
                 if (isAnimating) return; // Prevent ghost hovers
 
                 const l = e.target;
-                if (feature.properties.orig_id === selectedId) return; // Maintain selected style
+                if (feature.properties.id === selectedId) return; // Maintain selected style
 
                 if (l instanceof L.Path) {
                     // Dynamic Style based on mode
@@ -216,7 +219,7 @@ export default function NepalMap({ }: NepalMapProps) {
             },
             click: (e) => {
                 L.DomEvent.stopPropagation(e);
-                setSelectedId(feature.properties.orig_id);
+                setSelectedId(feature.properties.id);
 
                 const l = e.target;
                 // Type guard and zoom logic
@@ -301,6 +304,27 @@ export default function NepalMap({ }: NepalMapProps) {
                     <TileLayer
                         url="https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}"
                         attribution="Google Maps"
+                    />
+                )}
+
+                {/* Protected Areas Layer */}
+                {protectedAreasGeoData && (
+                    <GeoJSON
+                        data={protectedAreasGeoData}
+                        style={{
+                            fillColor: '#10B981', // Emerald-500
+                            color: '#059669',     // Emerald-600
+                            weight: 1,
+                            fillOpacity: 0.3,
+                            dashArray: '4, 4'
+                        }}
+                        onEachFeature={(feature, layer) => {
+                            layer.bindTooltip(feature.properties.name, {
+                                sticky: true,
+                                direction: 'center',
+                                className: 'font-bold text-xs text-emerald-800 bg-white/80 border-emerald-200'
+                            });
+                        }}
                     />
                 )}
 

@@ -8,8 +8,9 @@ export interface ConstituenciesMap {
 }
 
 export interface ConstituencyProperties {
-    orig_id: string;
+    id: string;
+    name: string;
     district: string;
-    const_id: string;
+    constituencyNumber: number;
     [key: string]: unknown;
 }
