@@ -140,6 +140,3 @@ Contributions are welcome! If you find errors in the boundary data or have impro
 - [Election Commission of Nepal](https://election.gov.np/)
 - [Survey Department of Nepal](https://dos.gov.np/)
 
-## Author
-
-Built with ❤️ for Nepal's democratic process.
