@@ -5,7 +5,7 @@ import { MapContainer, GeoJSON, TileLayer, useMap, useMapEvents } from 'react-le
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { ConstituenciesMap, Candidate, ConstituencyProperties } from '@/types';
-
+import * as turf from '@turf/turf';
 
 import MapControls from '@/components/MapControls';
 import SearchControl from '@/components/Map/SearchControl';
@@ -120,6 +120,70 @@ export default function NepalMap({ }: NepalMapProps) {
             fetch('/data/nepal_protected_areas.geojson').then(r => r.json()),
             fetch('/data/nepal_municipalities.geojson').then(r => r.json())
         ]).then(([geo, districts, candidates, protectedAreas, localLevels]) => {
+            // FIX: Kailali 3 overlaps Kailali 1. We geometricall subtract Kailali 1 from Kailali 3.
+            if (geo && geo.features) {
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                const k1 = geo.features.find((f: any) => f.properties?.id === 'kailali-1');
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                const k2 = geo.features.find((f: any) => f.properties?.id === 'kailali-2');
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                const k3 = geo.features.find((f: any) => f.properties?.id === 'kailali-3');
+
+                if (k3) {
+                    try {
+                        let fixedK3 = turf.feature(k3.geometry);
+
+                        // Subtract K1
+                        if (k1) {
+                            const diff1 = turf.difference(turf.featureCollection([fixedK3, turf.feature(k1.geometry)]));
+                            if (diff1) fixedK3 = diff1;
+                        }
+
+                        // Subtract K2
+                        if (k2) {
+                            const diff2 = turf.difference(turf.featureCollection([fixedK3, turf.feature(k2.geometry)]));
+                            if (diff2) fixedK3 = diff2;
+                        }
+
+                        if (fixedK3) {
+                            // Preserve properties
+                            fixedK3.properties = k3.properties;
+                            fixedK3.id = k3.id;
+
+                            // Replace in array
+                            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                            const k3Index = geo.features.findIndex((f: any) => f.properties?.id === 'kailali-3');
+                            if (k3Index !== -1) {
+                                geo.features[k3Index] = fixedK3;
+                            }
+                        }
+                    } catch (e) {
+                        console.error("Failed to fix Kailali overlap:", e);
+                    }
+                }
+
+                // FIX: Jhapa 1 overlaps Ilam 1. Subtract Ilam 1 from Jhapa 1.
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                const i1 = geo.features.find((f: any) => f.properties?.id === 'ilam-1');
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                const j1 = geo.features.find((f: any) => f.properties?.id === 'jhapa-1');
+
+                if (j1 && i1) {
+                    try {
+                        const fixedJ1 = turf.difference(turf.featureCollection([turf.feature(j1.geometry), turf.feature(i1.geometry)]));
+                        if (fixedJ1) {
+                            fixedJ1.properties = j1.properties;
+                            fixedJ1.id = j1.id;
+                            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                            const index = geo.features.findIndex((f: any) => f.properties?.id === 'jhapa-1');
+                            if (index !== -1) geo.features[index] = fixedJ1;
+                        }
+                    } catch (e) {
+                        console.error("Failed to fix Jhapa-Ilam overlap:", e);
+                    }
+                }
+            }
+
             setGeoData(geo);
             setDistrictGeoData(districts);
             setConstituenciesMap(candidates);
