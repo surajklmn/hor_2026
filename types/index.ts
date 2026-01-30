@@ -14,3 +14,19 @@ export interface ConstituencyProperties {
     constituencyNumber: number;
     [key: string]: unknown;
 }
+
+export interface ResultCandidate {
+    name: string;
+    party: string;
+    votes: number;
+    status: string;
+    symbol: string;
+}
+
+export interface ElectionResult {
+    district: string;
+    constituency: string;
+    candidates: ResultCandidate[];
+}
+
+export type ElectionResultsMap = Record<string, ElectionResult>;

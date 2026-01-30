@@ -7,9 +7,10 @@ import { formatConstituencyName, cn } from '@/lib/utils';
 interface SearchControlProps {
     items: string[]; // List of IDs like "achham-1"
     onSelect: (id: string) => void;
+    className?: string;
 }
 
-export default function SearchControl({ items, onSelect }: SearchControlProps) {
+export default function SearchControl({ items, onSelect, className }: SearchControlProps) {
     const [query, setQuery] = useState('');
     const [isOpen, setIsOpen] = useState(false);
     const [selectedIndex, setSelectedIndex] = useState(0);
@@ -73,7 +74,7 @@ export default function SearchControl({ items, onSelect }: SearchControlProps) {
     return (
         <div
             ref={containerRef}
-            className="absolute top-4 left-4 z-[500] w-64 md:w-80 group"
+            className={cn("w-64 md:w-80 group relative z-[500]", className)}
         >
             <div className={cn(
                 "relative flex items-center bg-white/90 backdrop-blur-sm border border-gray-200 shadow-md transition-all",

@@ -4,7 +4,7 @@ import { useEffect, useState, useRef, useCallback } from 'react';
 import { MapContainer, GeoJSON, TileLayer, useMap, useMapEvents } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import { ConstituenciesMap, Candidate, ConstituencyProperties } from '@/types';
+import { ConstituenciesMap, Candidate, ConstituencyProperties, ElectionResultsMap, ElectionResult } from '@/types';
 import * as turf from '@turf/turf';
 
 import MapControls from '@/components/MapControls';
@@ -51,25 +51,26 @@ const SELECTED_STYLE = {
     fillOpacity: 0.4
 };
 
-const PARTY_COLORS: Record<string, string> = {
-    'CPN-UML': '#DC143C',
-    'Nepali Congress': '#2E8B57',
-    'RSP': '#0056b3',
-    'RPP': '#FFD700',
-    'Maoist': '#b91c1c',
-};
+
 
 
 
 const getPartyColor = (party: string) => {
-    const p = party.replace(/[-_]/g, ' ').toLowerCase();
+    const p = party.toLowerCase();
 
-    if (p.includes('uml')) return PARTY_COLORS['CPN-UML'];
-    if (p.includes('congress') || p === 'nc') return PARTY_COLORS['Nepali Congress'];
-    if (p.includes('rsp') || p.includes('swatantra')) return PARTY_COLORS['RSP'];
-    if (p.includes('rpp') || p.includes('prajatantra')) return PARTY_COLORS['RPP'];
-    if (p.includes('maoist')) return PARTY_COLORS['Maoist'];
+    // Nepali Congress - Green
+    if (p.includes('congress') || p === 'nc' || p.includes('काँग्र')) return '#2E8B57'; // SeaGreen
 
+    // RSP - Blue
+    if (p.includes('rsp') || p === 'rastriya swatantra party' || p.includes('राष्ट्रिय स्वतन्त्र पार्टी')) return '#0056b3';
+
+    // RPP - Yellow
+    if (p.includes('rpp') || p.includes('prajatantra') || p.includes('प्रजातन्त्र')) return '#FFD700'; // Gold
+
+    // Communist Parties (UML, Maoist, Unified Socialist, etc.) - Red
+    if (p.includes('communist') || p.includes('कम्युनिष्ट') || p.includes('uml') || p.includes('maoist') || p.includes('एमाले') || p.includes('माओवादी')) return '#DC143C'; // Crimson Red
+
+    // Others - Grey
     return '#6B7280';
 };
 
@@ -104,7 +105,9 @@ export default function NepalMap({ }: NepalMapProps) {
     const [protectedAreasGeoData, setProtectedAreasGeoData] = useState<import('geojson').FeatureCollection | null>(null);
     const [localLevelGeoData, setLocalLevelGeoData] = useState<import('geojson').FeatureCollection | null>(null);
     const [constituenciesMap, setConstituenciesMap] = useState<ConstituenciesMap | null>(null);
+    const [electionResults2079, setElectionResults2079] = useState<ElectionResultsMap | null>(null);
     const [isSatellite, setIsSatellite] = useState(false);
+    const [electionYear, setElectionYear] = useState<'2026' | '2079'>('2026');
     const [showDistrictNames, setShowDistrictNames] = useState(true);
     const [showLocalLevels, setShowLocalLevels] = useState(false);
     const [selectedId, setSelectedId] = useState<string | null>(null);
@@ -118,6 +121,7 @@ export default function NepalMap({ }: NepalMapProps) {
             fetch('/data/nepal_districts.geojson').then(r => r.json()),
             fetch('/data/candidates.json').then(r => r.json()),
             fetch('/data/nepal_protected_areas.geojson').then(r => r.json()),
+            fetch('/data/nepal_municipalities.geojson').then(r => r.json()),
             fetch('/data/nepal_municipalities.geojson').then(r => r.json())
         ]).then(([geo, districts, candidates, protectedAreas, localLevels]) => {
             // FIX: Kailali 3 overlaps Kailali 1. We geometricall subtract Kailali 1 from Kailali 3.
@@ -189,7 +193,21 @@ export default function NepalMap({ }: NepalMapProps) {
             setConstituenciesMap(candidates);
             setProtectedAreasGeoData(protectedAreas);
             setLocalLevelGeoData(localLevels);
+            setLocalLevelGeoData(localLevels);
         }).catch(err => console.error("Error loading data:", err));
+
+        // Load 2079 results separately to avoid blocking map render
+        fetch('/data/results_2079.json')
+            .then(r => r.json())
+            .then((data: Record<string, ElectionResult>) => {
+                // Normalize keys to lowercase for matching with GeoJSON IDs
+                const normalized: ElectionResultsMap = {};
+                Object.entries(data).forEach(([key, val]) => {
+                    normalized[key.toLowerCase()] = val as ElectionResult;
+                });
+                setElectionResults2079(normalized);
+            })
+            .catch(err => console.error("Error loading 2079 results:", err));
     }, []);
 
     const getCandidates = (id: string): Candidate[] => {
@@ -231,8 +249,23 @@ export default function NepalMap({ }: NepalMapProps) {
         if (feature?.properties?.id === selectedId) {
             return SELECTED_STYLE;
         }
+        if (electionYear === '2079' && feature?.properties?.id) {
+            const result = electionResults2079?.[feature.properties.id];
+
+            // Find winner (Elected status)
+            const winner = result?.candidates?.find((c: { status: string; }) => c.status === 'Elected');
+
+            if (winner?.party) {
+                return {
+                    fillColor: getPartyColor(winner.party),
+                    color: '#D1D5DB',
+                    weight: 1,
+                    fillOpacity: 0.7
+                };
+            }
+        }
         return isSatellite ? SATELLITE_STYLE : ELECTION_STYLE;
-    }, [isSatellite, selectedId]);
+    }, [isSatellite, selectedId, electionYear, electionResults2079]);
 
     const createTooltipContent = (properties: ConstituencyProperties) => {
         const candidates = getCandidates(properties.id);
@@ -258,6 +291,67 @@ export default function NepalMap({ }: NepalMapProps) {
             <div class="min-w-[200px] font-sans">
                 <div class="font-bold text-sm text-gray-900 border-b pb-1 mb-2">${name}</div>
                 <div class="space-y-1 max-h-[300px] overflow-y-auto custom-scrollbar">${listHtml}</div>
+            </div>
+        `;
+    };
+
+    const createTooltipContent2079 = (properties: ConstituencyProperties) => {
+        const result = electionResults2079?.[properties.id];
+        const name = properties.name;
+
+        if (!result) {
+            return `
+                <div class="min-w-[200px] font-sans">
+                    <div class="font-bold text-sm text-gray-900 border-b pb-1 mb-2">${name}</div>
+                    <div class="text-xs text-gray-400 italic">No 2079 data available</div>
+                </div>
+            `;
+        }
+
+        // Sort candidates by votes (descending) just in case
+        const sortedCandidates = [...result.candidates].sort((a, b) => b.votes - a.votes);
+
+        // Show top 5 and summary for others
+        const topCandidates = sortedCandidates.slice(0, 5);
+        const otherCandidates = sortedCandidates.slice(5);
+
+        const candidatesHtml = topCandidates.map(c => `
+             <div class="flex items-center gap-2 mb-1 p-1 rounded hover:bg-gray-50 ${c.status === 'Elected' ? 'bg-yellow-50/50' : ''}">
+                <div class="relative w-5 h-5 flex-shrink-0 flex items-center justify-center">
+                    ${c.symbol ? `<img src="/${c.symbol}" alt="Symbol" class="w-full h-full object-contain" />` : `<span class="w-2 h-2 rounded-full" style="background-color: ${getPartyColor(c.party)}"></span>`}
+                </div>
+                <div class="flex-grow min-w-0">
+                    <div class="flex justify-between items-baseline">
+                        <span class="font-medium text-xs text-gray-900 truncate mr-2">${c.name}</span>
+                        <span class="text-[10px] font-mono text-gray-500">${c.votes.toLocaleString()}</span>
+                    </div>
+                    <div class="text-[10px] text-gray-500 truncate flex justify-between">
+                         <span>${c.party}</span>
+                         ${c.status === 'Elected' ? '<span class="text-green-600 font-bold ml-1">WINNER</span>' : ''}
+                    </div>
+                </div>
+            </div>
+        `).join('');
+
+        const othersHtml = otherCandidates.length > 0 ? `
+            <div class="mt-2 pt-1 border-t border-gray-100 text-[10px] text-gray-500 text-center font-medium">
+                +${otherCandidates.length} other candidates
+                <div class="text-[9px] text-gray-400 font-normal">
+                    (${otherCandidates.reduce((sum, c) => sum + c.votes, 0).toLocaleString()} votes combined)
+                </div>
+            </div>
+        ` : '';
+
+        return `
+            <div class="min-w-[240px] font-sans">
+                <div class="font-bold text-sm text-gray-900 border-b pb-1 mb-2 sticky top-0 bg-white z-10 flex justify-between items-center">
+                    <span>${name}</span>
+                    <span class="text-[10px] font-normal text-gray-500 border border-gray-200 px-1 rounded">2079</span>
+                </div>
+                <div class="space-y-0.5 max-h-[300px] overflow-visible">
+                    ${candidatesHtml}
+                    ${othersHtml}
+                </div>
             </div>
         `;
     };
@@ -305,7 +399,11 @@ export default function NepalMap({ }: NepalMapProps) {
             }
         });
 
-        layer.bindTooltip(createTooltipContent(feature.properties), {
+        const tooltipContent = electionYear === '2079'
+            ? createTooltipContent2079(feature.properties)
+            : createTooltipContent(feature.properties);
+
+        layer.bindTooltip(tooltipContent, {
             sticky: true,
             className: 'leaflet-tooltip-rich',
             direction: 'auto',
@@ -348,6 +446,8 @@ export default function NepalMap({ }: NepalMapProps) {
                 
             `}</style>
 
+
+
             <MapControls
                 isSatellite={isSatellite}
                 onToggle={() => setIsSatellite(!isSatellite)}
@@ -357,11 +457,28 @@ export default function NepalMap({ }: NepalMapProps) {
                 onToggleLocalLevels={() => setShowLocalLevels(!showLocalLevels)}
             />
 
-            {/* Search Control */}
-            <SearchControl
-                items={constituenciesMap ? Object.keys(constituenciesMap) : []}
-                onSelect={handleSearchSelect}
-            />
+            {/* Top Left Controls Group */}
+            <div className="absolute top-4 left-4 z-[500] flex gap-2 items-start">
+                {/* Search Control */}
+                <SearchControl
+                    items={constituenciesMap ? Object.keys(constituenciesMap) : []}
+                    onSelect={handleSearchSelect}
+                />
+
+                {/* Year Toggle Button */}
+                <button
+                    onClick={() => setElectionYear(prev => prev === '2026' ? '2079' : '2026')}
+                    className={`
+                        h-10 px-4 rounded-lg shadow-md border font-bold text-sm flex items-center justify-center transition-all whitespace-nowrap
+                        ${electionYear === '2079'
+                            ? 'bg-blue-600 text-white border-blue-700 hover:bg-blue-700'
+                            : 'bg-white text-gray-700 border-gray-200 hover:bg-gray-50'}
+                    `}
+                    title="Switch Election Year"
+                >
+                    {electionYear === '2079' ? '2079 Results' : '2079 Results'}
+                </button>
+            </div>
 
             <MapContainer
                 ref={mapRef}
@@ -462,7 +579,7 @@ export default function NepalMap({ }: NepalMapProps) {
 
                 {/* Key prop ensures re-mount when mode switches, refreshing event hooks with new state */}
                 <GeoJSON
-                    key={isSatellite ? 'sat' : 'elect'}
+                    key={isSatellite ? 'sat' : `elect-${electionYear}`}
                     ref={geoJsonRef}
                     data={geoData}
                     style={getFeatureStyle}
@@ -476,8 +593,57 @@ export default function NepalMap({ }: NepalMapProps) {
 
 
             <div className="absolute bottom-4 left-4 bg-white/90 p-2 rounded border border-gray-100 text-[10px] text-gray-400 z-[400] pointer-events-none">
-                Nepal Election 2026 • {isSatellite ? "Satellite View" : "Map View"}
+                Nepal Election {electionYear} • {isSatellite ? "Satellite View" : "Map View"}
             </div>
+
+            {/* Results Summary Modal (2079 only) */}
+            {electionYear === '2079' && electionResults2079 && (
+                <div className="absolute bottom-4 right-4 z-[500] w-64 bg-white/10 backdrop-blur-lg rounded-2xl shadow-[0_8px_32px_0_rgba(31,38,135,0.07)] border border-white/20 p-5 transition-all animate-in fade-in slide-in-from-bottom-4 duration-700">
+                    <div className="flex items-center justify-between mb-4 border-b border-white/10 pb-2">
+                        <h3 className="font-bold text-gray-800 text-sm flex items-center gap-2 drop-shadow-sm">
+                            📊 2079 Seat Tally
+                        </h3>
+                        <span className="text-[10px] font-mono text-gray-500">Total: 165</span>
+                    </div>
+
+                    <div className="space-y-2 max-h-[300px] overflow-y-auto custom-scrollbar pr-1">
+                        {(() => {
+                            // Calculate tally
+                            const tally: Record<string, { seats: number; color: string }> = {};
+                            Object.values(electionResults2079).forEach(res => {
+                                const winner = res.candidates.find(c => c.status === 'Elected');
+                                if (winner) {
+                                    const party = winner.party;
+                                    if (!tally[party]) {
+                                        tally[party] = { seats: 0, color: getPartyColor(party) };
+                                    }
+                                    tally[party].seats += 1;
+                                }
+                            });
+
+                            // Sort by seats
+                            return Object.entries(tally)
+                                .sort((a, b) => b[1].seats - a[1].seats)
+                                .map(([party, data]) => (
+                                    <div key={party} className="flex items-center justify-between group">
+                                        <div className="flex items-center gap-2 overflow-hidden">
+                                            <div
+                                                className="w-2 h-2 rounded-full flex-shrink-0"
+                                                style={{ backgroundColor: data.color }}
+                                            />
+                                            <span className="text-xs text-gray-700 truncate font-medium group-hover:text-blue-600 transition-colors">
+                                                {party}
+                                            </span>
+                                        </div>
+                                        <div className="flex items-center gap-1.5 min-w-[32px] justify-end">
+                                            <span className="text-xs font-bold text-gray-900">{data.seats}</span>
+                                        </div>
+                                    </div>
+                                ));
+                        })()}
+                    </div>
+                </div>
+            )}
         </div >
     );
 }
