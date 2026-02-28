@@ -2,7 +2,15 @@
 
 import { useState, useMemo, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { TrendingUp, MapPin, Filter, Search, Lock } from "lucide-react";
+import {
+  TrendingUp,
+  MapPin,
+  Filter,
+  Search,
+  Lock,
+  LayoutList,
+  LayoutGrid,
+} from "lucide-react";
 import { Petition, PetitionCategory, VoteDelta } from "@/types";
 import { useAuth } from "@/context/AuthContext";
 import PetitionCard from "./PetitionCard";
@@ -52,6 +60,7 @@ export default function PetitionFeed({
     PetitionCategory | "All"
   >("All");
   const [sortBy, setSortBy] = useState<SortKey>("votes");
+  const [viewMode, setViewMode] = useState<"list" | "grid">("list");
 
   // Browse-tab constituency (pre-populated from URL param or map selection)
   const [browseConstituencyId, setBrowseConstituencyId] = useState<string>(
@@ -138,27 +147,55 @@ export default function PetitionFeed({
           </p>
         </div>
 
-        {/* Sort control */}
-        <div className="flex items-center gap-2 text-xs">
-          <Filter size={13} className="text-gray-400" />
-          <span className="text-gray-500 font-medium">Sort by</span>
-          {(["votes", "recent", "progress"] as SortKey[]).map((s) => (
+        {/* Controls: sort + view toggle */}
+        <div className="flex items-center gap-3 text-sm flex-wrap">
+          <div className="flex items-center gap-2">
+            <Filter size={13} className="text-gray-400" />
+            <span className="text-gray-500 font-medium">Sort by</span>
+            {(["votes", "recent", "progress"] as SortKey[]).map((s) => (
+              <button
+                key={s}
+                onClick={() => setSortBy(s)}
+                className={`px-3 py-1.5 rounded-lg font-semibold capitalize transition-colors ${
+                  sortBy === s
+                    ? "bg-blue-900 text-white"
+                    : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                }`}
+              >
+                {s === "votes"
+                  ? "Most Votes"
+                  : s === "recent"
+                    ? "Newest"
+                    : "Progress"}
+              </button>
+            ))}
+          </div>
+
+          {/* View mode toggle */}
+          <div className="flex items-center gap-1 bg-gray-100 rounded-lg p-1">
             <button
-              key={s}
-              onClick={() => setSortBy(s)}
-              className={`px-3 py-1.5 rounded-lg font-semibold capitalize transition-colors ${
-                sortBy === s
-                  ? "bg-blue-900 text-white"
-                  : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+              onClick={() => setViewMode("list")}
+              title="List view"
+              className={`p-1.5 rounded-md transition-colors ${
+                viewMode === "list"
+                  ? "bg-white text-blue-900 shadow-sm"
+                  : "text-gray-500 hover:text-gray-700"
               }`}
             >
-              {s === "votes"
-                ? "Most Votes"
-                : s === "recent"
-                  ? "Newest"
-                  : "Progress"}
+              <LayoutList size={14} />
             </button>
-          ))}
+            <button
+              onClick={() => setViewMode("grid")}
+              title="Grid view"
+              className={`p-1.5 rounded-md transition-colors ${
+                viewMode === "grid"
+                  ? "bg-white text-blue-900 shadow-sm"
+                  : "text-gray-500 hover:text-gray-700"
+              }`}
+            >
+              <LayoutGrid size={14} />
+            </button>
+          </div>
         </div>
       </div>
 
@@ -219,7 +256,7 @@ export default function PetitionFeed({
       {/* Browse constituency selector */}
       {activeTab === "browse" && (
         <div className="mb-6 p-4 bg-blue-50 border border-blue-100 rounded-xl">
-          <p className="text-xs text-blue-700 font-semibold mb-2">
+          <p className="text-sm text-blue-700 font-semibold mb-2">
             Select a constituency to browse petitions
             {selectedConstituencyId && !browseConstituencyId && (
               <span className="ml-1 text-blue-500">
@@ -255,7 +292,7 @@ export default function PetitionFeed({
             </select>
           </div>
           {browseConstituencyName && (
-            <p className="text-xs text-blue-600 mt-2 font-medium">
+            <p className="text-sm text-blue-600 mt-2 font-medium">
               Showing petitions for: {browseConstituencyName}
             </p>
           )}
@@ -270,7 +307,7 @@ export default function PetitionFeed({
             onClick={() =>
               setCategoryFilter(f.value as PetitionCategory | "All")
             }
-            className={`px-3 py-1 rounded-full text-xs font-semibold border transition-all ${
+            className={`px-3 py-1 rounded-full text-sm font-semibold border transition-all ${
               categoryFilter === f.value
                 ? "bg-blue-900 text-white border-blue-900"
                 : "bg-white text-gray-600 border-gray-200 hover:border-blue-300 hover:text-blue-700"
@@ -290,7 +327,7 @@ export default function PetitionFeed({
               <p className="text-sm font-medium text-gray-500">
                 No petitions yet in {user.constituencyName}.
               </p>
-              <p className="text-xs mt-1">Be the first to start a petition!</p>
+              <p className="text-sm mt-1">Be the first to start a petition!</p>
             </div>
           ) : activeTab === "browse" && !browseConstituencyId ? (
             <p className="text-sm">
@@ -301,13 +338,20 @@ export default function PetitionFeed({
           )}
         </div>
       ) : (
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div
+          className={
+            viewMode === "grid"
+              ? "grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+              : "flex flex-col gap-3"
+          }
+        >
           {filtered.map((p) => (
             <PetitionCard
               key={p.id}
               petition={p}
               voteDelta={voteDeltas[p.id] ?? { upvotes: 0, downvotes: 0 }}
               onVote={onVote}
+              viewMode={viewMode}
             />
           ))}
         </div>

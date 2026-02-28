@@ -176,7 +176,7 @@ export default function PetitionForm({
       <form onSubmit={handleSubmit} className="p-6 space-y-5">
         {/* Title */}
         <div className="space-y-1.5">
-          <label className="block text-xs font-semibold text-gray-700 uppercase tracking-wide">
+          <label className="block text-sm font-semibold text-gray-700 uppercase tracking-wide">
             Petition Title <span className="text-rose-500">*</span>
           </label>
           <input
@@ -191,13 +191,13 @@ export default function PetitionForm({
             }`}
           />
           {errors.title && (
-            <p className="text-xs text-rose-600">{errors.title}</p>
+            <p className="text-sm text-rose-600">{errors.title}</p>
           )}
         </div>
 
         {/* Description */}
         <div className="space-y-1.5">
-          <label className="block text-xs font-semibold text-gray-700 uppercase tracking-wide">
+          <label className="block text-sm font-semibold text-gray-700 uppercase tracking-wide">
             Description <span className="text-rose-500">*</span>
           </label>
           <textarea
@@ -213,11 +213,11 @@ export default function PetitionForm({
           />
           <div className="flex justify-between">
             {errors.description ? (
-              <p className="text-xs text-rose-600">{errors.description}</p>
+              <p className="text-sm text-rose-600">{errors.description}</p>
             ) : (
               <span />
             )}
-            <span className="text-[10px] text-gray-400">
+            <span className="text-xs text-gray-400">
               {formData.description.length}/1000
             </span>
           </div>
@@ -225,7 +225,7 @@ export default function PetitionForm({
 
         {/* Category */}
         <div className="space-y-1.5">
-          <label className="block text-xs font-semibold text-gray-700 uppercase tracking-wide">
+          <label className="block text-sm font-semibold text-gray-700 uppercase tracking-wide">
             Category <span className="text-rose-500">*</span>
           </label>
           <div className="grid grid-cols-3 gap-2">
@@ -234,7 +234,7 @@ export default function PetitionForm({
                 key={cat}
                 type="button"
                 onClick={() => handleChange("category", cat)}
-                className={`py-2 px-3 rounded-xl text-xs font-semibold border transition-all ${
+                className={`py-2 px-3 rounded-xl text-sm font-semibold border transition-all ${
                   formData.category === cat
                     ? "bg-blue-900 text-white border-blue-900 shadow-sm"
                     : "bg-gray-50 text-gray-600 border-gray-200 hover:border-blue-300 hover:text-blue-700"
@@ -245,13 +245,13 @@ export default function PetitionForm({
             ))}
           </div>
           {errors.category && (
-            <p className="text-xs text-rose-600">{errors.category}</p>
+            <p className="text-sm text-rose-600">{errors.category}</p>
           )}
         </div>
 
         {/* Constituency searchable dropdown */}
         <div className="space-y-1.5 relative">
-          <label className="block text-xs font-semibold text-gray-700 uppercase tracking-wide">
+          <label className="block text-sm font-semibold text-gray-700 uppercase tracking-wide">
             Constituency <span className="text-rose-500">*</span>
           </label>
           <div className="relative">
@@ -287,7 +287,7 @@ export default function PetitionForm({
                       setSearch(opt.name);
                       setShowDropdown(false);
                     }}
-                    className="w-full text-left px-3 py-2 text-xs hover:bg-blue-50 hover:text-blue-700 transition-colors"
+                    className="w-full text-left px-3 py-2 text-sm hover:bg-blue-50 hover:text-blue-700 transition-colors"
                   >
                     <span className="font-medium">{opt.name}</span>
                     <span className="text-gray-400 ml-1.5">({opt.id})</span>
@@ -297,7 +297,7 @@ export default function PetitionForm({
             </ul>
           )}
           {errors.constituency_id && (
-            <p className="text-xs text-rose-600">{errors.constituency_id}</p>
+            <p className="text-sm text-rose-600">{errors.constituency_id}</p>
           )}
         </div>
 

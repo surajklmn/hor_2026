@@ -10,6 +10,7 @@ import {
   Clock,
   AlertCircle,
   Lock,
+  ChevronRight,
 } from "lucide-react";
 import { Petition, PetitionStatus, PetitionCategory } from "@/types";
 import { useAuth } from "@/context/AuthContext";
@@ -19,6 +20,7 @@ interface PetitionCardProps {
   /** Delta applied on top of the seed data (managed by parent) */
   voteDelta: { upvotes: number; downvotes: number };
   onVote: (id: string, direction: "up" | "down") => void;
+  viewMode?: "list" | "grid";
 }
 
 const STATUS_CONFIG: Record<
@@ -55,6 +57,7 @@ export default function PetitionCard({
   petition,
   voteDelta,
   onVote,
+  viewMode = "grid",
 }: PetitionCardProps) {
   const { user } = useAuth();
   const router = useRouter();
@@ -74,7 +77,8 @@ export default function PetitionCard({
     user !== null && user.constituencyId === petition.constituency_id;
   const canVote = !isResolved && isOwnConstituency;
 
-  const handleVote = (direction: "up" | "down") => {
+  const handleVote = (direction: "up" | "down", e: React.MouseEvent) => {
+    e.stopPropagation();
     if (!user) {
       router.push("/auth?mode=login");
       return;
@@ -86,24 +90,187 @@ export default function PetitionCard({
     setUserVote(direction);
   };
 
+  const handleCardClick = () => {
+    router.push(`/petition/${petition.id}`);
+  };
+
+  // ─── Shared sub-elements ──────────────────────────────────────────────────
+
+  const badges = (
+    <div className="flex flex-wrap gap-1.5">
+      <span
+        className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold ${CATEGORY_COLORS[petition.category]}`}
+      >
+        {petition.category}
+      </span>
+      <span
+        className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium ${statusConfig.className}`}
+      >
+        {statusConfig.icon}
+        {statusConfig.label}
+      </span>
+    </div>
+  );
+
+  const progressBar = (
+    <div className="space-y-1">
+      <div className="flex justify-between text-xs font-medium">
+        <span
+          className={
+            petition.status === "Resolved"
+              ? "text-emerald-600"
+              : "text-blue-900"
+          }
+        >
+          {totalUpvotes.toLocaleString()} / {petition.target.toLocaleString()}{" "}
+          signatures
+        </span>
+        <span
+          className={
+            petition.status === "Resolved"
+              ? "text-emerald-600 font-bold"
+              : "text-gray-500"
+          }
+        >
+          {progressPct}%
+        </span>
+      </div>
+      <div className="h-1.5 rounded-full bg-gray-100 overflow-hidden">
+        <div
+          className={`h-full rounded-full transition-all duration-500 ${
+            petition.status === "Resolved"
+              ? "bg-emerald-500"
+              : progressPct >= 80
+                ? "bg-blue-600"
+                : "bg-blue-400"
+          }`}
+          style={{ width: `${progressPct}%` }}
+        />
+      </div>
+    </div>
+  );
+
+  const voteRow = (
+    <div className="flex items-center gap-2">
+      <button
+        onClick={(e) => handleVote("up", e)}
+        disabled={canVote ? false : isResolved}
+        title={
+          !user
+            ? "Log in to vote"
+            : !isOwnConstituency
+              ? "You can only vote on petitions in your own constituency"
+              : undefined
+        }
+        className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-semibold transition-all ${
+          userVote === "up" && canVote
+            ? "bg-blue-600 text-white shadow-sm"
+            : canVote
+              ? "bg-gray-50 text-gray-600 hover:bg-blue-50 hover:text-blue-700"
+              : "bg-gray-50 text-gray-300 cursor-not-allowed"
+        } disabled:opacity-40`}
+      >
+        {!user ? <Lock size={11} /> : <ThumbsUp size={13} />}
+        <span>{totalUpvotes.toLocaleString()}</span>
+      </button>
+
+      <button
+        onClick={(e) => handleVote("down", e)}
+        disabled={canVote ? false : isResolved}
+        title={
+          !user
+            ? "Log in to vote"
+            : !isOwnConstituency
+              ? "You can only vote on petitions in your own constituency"
+              : undefined
+        }
+        className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-semibold transition-all ${
+          userVote === "down" && canVote
+            ? "bg-rose-600 text-white shadow-sm"
+            : canVote
+              ? "bg-gray-50 text-gray-600 hover:bg-rose-50 hover:text-rose-700"
+              : "bg-gray-50 text-gray-300 cursor-not-allowed"
+        } disabled:opacity-40`}
+      >
+        {!user ? <Lock size={11} /> : <ThumbsDown size={13} />}
+        <span>{totalDownvotes.toLocaleString()}</span>
+      </button>
+
+      {isResolved ? (
+        <span className="ml-1 text-xs text-emerald-600 font-semibold flex items-center gap-1">
+          <CheckCircle2 size={12} /> Resolved
+        </span>
+      ) : !user ? (
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            router.push("/auth?mode=login");
+          }}
+          className="ml-1 text-xs text-blue-600 hover:underline font-semibold"
+        >
+          Log in to vote
+        </button>
+      ) : !isOwnConstituency ? (
+        <span className="ml-1 text-xs text-gray-400 flex items-center gap-0.5">
+          <Lock size={9} /> Own constituency only
+        </span>
+      ) : null}
+    </div>
+  );
+
+  // ─── List layout ──────────────────────────────────────────────────────────
+
+  if (viewMode === "list") {
+    return (
+      <article
+        onClick={handleCardClick}
+        className="group cursor-pointer bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-100 transition-all duration-200 p-4 flex gap-4 items-start"
+      >
+        {/* Left: main content */}
+        <div className="flex-1 min-w-0 flex flex-col gap-2">
+          <div className="flex items-center gap-2 flex-wrap">
+            {badges}
+            <span className="text-xs text-gray-400 ml-auto">
+              {petition.created_at}
+            </span>
+          </div>
+          <h3 className="font-semibold text-gray-900 text-sm leading-snug group-hover:text-blue-900 transition-colors">
+            {petition.title}
+          </h3>
+          <p className="text-sm text-gray-500 leading-relaxed line-clamp-2">
+            {petition.description}
+          </p>
+          <div className="flex items-center gap-1 text-xs text-gray-400">
+            <MapPin size={11} />
+            <span>{petition.constituency_name}</span>
+          </div>
+        </div>
+
+        {/* Right: progress + votes */}
+        <div className="flex flex-col gap-3 shrink-0 w-56">
+          {progressBar}
+          {voteRow}
+        </div>
+
+        <ChevronRight
+          size={16}
+          className="text-gray-300 group-hover:text-blue-400 transition-colors self-center shrink-0"
+        />
+      </article>
+    );
+  }
+
+  // ─── Grid layout (original) ───────────────────────────────────────────────
+
   return (
-    <article className="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-100 transition-all duration-200 p-5 flex flex-col gap-3">
+    <article
+      onClick={handleCardClick}
+      className="group cursor-pointer bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-100 transition-all duration-200 p-5 flex flex-col gap-3"
+    >
       {/* Header row */}
       <div className="flex items-start justify-between gap-3">
-        <div className="flex flex-wrap gap-1.5">
-          <span
-            className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-semibold ${CATEGORY_COLORS[petition.category]}`}
-          >
-            {petition.category}
-          </span>
-          <span
-            className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-medium ${statusConfig.className}`}
-          >
-            {statusConfig.icon}
-            {statusConfig.label}
-          </span>
-        </div>
-        <span className="flex-shrink-0 text-[10px] text-gray-400 mt-0.5">
+        {badges}
+        <span className="flex-shrink-0 text-xs text-gray-400 mt-0.5">
           {petition.created_at}
         </span>
       </div>
@@ -114,19 +281,19 @@ export default function PetitionCard({
       </h3>
 
       {/* Description */}
-      <p className="text-xs text-gray-500 leading-relaxed line-clamp-3">
+      <p className="text-sm text-gray-500 leading-relaxed line-clamp-3">
         {petition.description}
       </p>
 
       {/* Constituency badge */}
-      <div className="flex items-center gap-1 text-[11px] text-gray-400">
+      <div className="flex items-center gap-1 text-xs text-gray-400">
         <MapPin size={11} />
         <span>{petition.constituency_name}</span>
       </div>
 
       {/* Progress bar */}
       <div className="space-y-1">
-        <div className="flex justify-between text-[10px] font-medium">
+        <div className="flex justify-between text-xs font-medium">
           <span
             className={
               petition.status === "Resolved"
@@ -164,7 +331,7 @@ export default function PetitionCard({
       {/* Vote row */}
       <div className="flex items-center gap-3 pt-1 border-t border-gray-50">
         <button
-          onClick={() => handleVote("up")}
+          onClick={(e) => handleVote("up", e)}
           disabled={canVote ? false : isResolved}
           title={
             !user
@@ -173,7 +340,7 @@ export default function PetitionCard({
                 ? "You can only vote on petitions in your own constituency"
                 : undefined
           }
-          className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+          className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-semibold transition-all ${
             userVote === "up" && canVote
               ? "bg-blue-600 text-white shadow-sm"
               : canVote
@@ -186,7 +353,7 @@ export default function PetitionCard({
         </button>
 
         <button
-          onClick={() => handleVote("down")}
+          onClick={(e) => handleVote("down", e)}
           disabled={canVote ? false : isResolved}
           title={
             !user
@@ -195,7 +362,7 @@ export default function PetitionCard({
                 ? "You can only vote on petitions in your own constituency"
                 : undefined
           }
-          className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+          className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-semibold transition-all ${
             userVote === "down" && canVote
               ? "bg-rose-600 text-white shadow-sm"
               : canVote
@@ -208,18 +375,21 @@ export default function PetitionCard({
         </button>
 
         {isResolved ? (
-          <span className="ml-auto text-[10px] text-emerald-600 font-semibold flex items-center gap-1">
+          <span className="ml-auto text-xs text-emerald-600 font-semibold flex items-center gap-1">
             <CheckCircle2 size={12} /> Issue Resolved
           </span>
         ) : !user ? (
           <button
-            onClick={() => router.push("/auth?mode=login")}
-            className="ml-auto text-[10px] text-blue-600 hover:underline font-semibold"
+            onClick={(e) => {
+              e.stopPropagation();
+              router.push("/auth?mode=login");
+            }}
+            className="ml-auto text-xs text-blue-600 hover:underline font-semibold"
           >
             Log in to vote
           </button>
         ) : !isOwnConstituency ? (
-          <span className="ml-auto text-[10px] text-gray-400 flex items-center gap-0.5">
+          <span className="ml-auto text-xs text-gray-400 flex items-center gap-0.5">
             <Lock size={9} /> Own constituency only
           </span>
         ) : null}

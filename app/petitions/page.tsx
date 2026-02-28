@@ -3,7 +3,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { useSearchParams } from "next/navigation";
 import { Petition, VoteDelta } from "@/types";
-import NavBar from "@/components/NavBar";
 import PetitionFeed from "@/components/Petitions/PetitionFeed";
 
 function formatConstituencyName(id: string): string {
@@ -58,7 +57,6 @@ export default function PetitionsPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <NavBar />
       <PetitionFeed
         petitions={petitions}
         voteDeltas={voteDeltas}

@@ -17,7 +17,6 @@ import {
   districtFromConstituencyId,
   provinceForDistrict,
 } from "@/lib/nepal-geo";
-import NavBar from "@/components/NavBar";
 
 const NepalMap = dynamic(() => import("@/components/Map/NepalMap"), {
   ssr: false,
@@ -68,7 +67,7 @@ function LoginForm({
   return (
     <form onSubmit={handleSubmit} className="space-y-5 w-full max-w-sm mx-auto">
       <div>
-        <label className="block text-xs font-semibold text-gray-700 mb-1.5">
+        <label className="block text-sm font-semibold text-gray-700 mb-1.5">
           Voter ID
         </label>
         <div className="relative">
@@ -91,7 +90,7 @@ function LoginForm({
       </div>
 
       {error && (
-        <p className="text-xs text-red-600 bg-red-50 border border-red-100 rounded-lg px-3 py-2">
+        <p className="text-sm text-red-600 bg-red-50 border border-red-100 rounded-lg px-3 py-2">
           {error}
         </p>
       )}
@@ -109,7 +108,7 @@ function LoginForm({
         {loading ? "Logging in…" : "Log In"}
       </button>
 
-      <p className="text-center text-xs text-gray-500">
+      <p className="text-center text-sm text-gray-500">
         Don&apos;t have an account?{" "}
         <button
           type="button"
@@ -221,7 +220,7 @@ function SignupForm({
     <form onSubmit={handleSubmit} className="space-y-4 w-full">
       {/* Voter ID */}
       <div>
-        <label className="block text-xs font-semibold text-gray-700 mb-1.5">
+        <label className="block text-sm font-semibold text-gray-700 mb-1.5">
           Voter ID <span className="text-red-500">*</span>
         </label>
         <div className="relative">
@@ -245,7 +244,7 @@ function SignupForm({
 
       {/* Name */}
       <div>
-        <label className="block text-xs font-semibold text-gray-700 mb-1.5">
+        <label className="block text-sm font-semibold text-gray-700 mb-1.5">
           Full Name <span className="text-red-500">*</span>
         </label>
         <input
@@ -259,7 +258,7 @@ function SignupForm({
 
       {/* DOB */}
       <div>
-        <label className="block text-xs font-semibold text-gray-700 mb-1.5">
+        <label className="block text-sm font-semibold text-gray-700 mb-1.5">
           Date of Birth <span className="text-red-500">*</span>
         </label>
         <input
@@ -274,11 +273,11 @@ function SignupForm({
       {/* Constituency section */}
       <div className="pt-1">
         <div className="flex items-center justify-between mb-2">
-          <h3 className="text-xs font-semibold text-gray-700 uppercase tracking-wide">
+          <h3 className="text-sm font-semibold text-gray-700 uppercase tracking-wide">
             Constituency <span className="text-red-500">*</span>
           </h3>
           {mapHint && (
-            <span className="flex items-center gap-1 text-[10px] text-emerald-600 font-medium">
+            <span className="flex items-center gap-1 text-xs text-emerald-600 font-medium">
               <MapPin size={10} /> Filled from map
             </span>
           )}
@@ -356,7 +355,7 @@ function SignupForm({
       </div>
 
       {error && (
-        <p className="text-xs text-red-600 bg-red-50 border border-red-100 rounded-lg px-3 py-2">
+        <p className="text-sm text-red-600 bg-red-50 border border-red-100 rounded-lg px-3 py-2">
           {error}
         </p>
       )}
@@ -374,7 +373,7 @@ function SignupForm({
         {loading ? "Creating account…" : "Create Account"}
       </button>
 
-      <p className="text-center text-xs text-gray-500">
+      <p className="text-center text-sm text-gray-500">
         Already have an account?{" "}
         <button
           type="button"
@@ -433,8 +432,6 @@ export default function AuthPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
-      <NavBar />
-
       {/* Page header */}
       <div className="bg-blue-900 text-white py-10 px-4 text-center">
         <h1 className="text-2xl font-extrabold mb-1">

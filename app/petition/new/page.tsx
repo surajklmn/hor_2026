@@ -5,7 +5,6 @@ import { useRouter } from "next/navigation";
 import { Megaphone, Lock } from "lucide-react";
 import { Petition, VoteDelta } from "@/types";
 import { useAuth } from "@/context/AuthContext";
-import NavBar from "@/components/NavBar";
 import PetitionForm from "@/components/Petitions/PetitionForm";
 import PetitionFeed from "@/components/Petitions/PetitionFeed";
 
@@ -80,7 +79,6 @@ export default function NewPetitionPage() {
   if (!hydrated || !user) {
     return (
       <div className="min-h-screen bg-gray-50 flex flex-col">
-        <NavBar />
         <div className="flex-1 flex items-center justify-center">
           <div className="text-center text-gray-400">
             <Lock size={32} className="mx-auto mb-3 opacity-40" />
@@ -93,8 +91,6 @@ export default function NewPetitionPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <NavBar />
-
       {/* Page header */}
       <div className="bg-blue-900 text-white py-10 px-4 text-center">
         <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 text-xs font-semibold text-white/80 mb-4">
