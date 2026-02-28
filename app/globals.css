@@ -2,31 +2,116 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ── Civic Palette ─────────────────────────────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --background: #f9fafb;
+  --foreground: #111827;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Deep Blue – headers, CTAs */
+  --civic-blue-900: #1e3a5f;
+  --civic-blue-800: #1e40af;
+  --civic-blue-600: #2563eb;
+
+  /* Emerald Green – resolved petitions, success */
+  --civic-emerald-500: #10b981;
+  --civic-emerald-400: #34d399;
+
+  /* Crimson – urgent alerts, downvotes */
+  --civic-crimson: #dc143c;
+
+  /* Amber – collecting signatures */
+  --civic-amber: #f59e0b;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Inter, Arial, Helvetica, sans-serif;
 }
 
+/* ── Scrollbar ─────────────────────────────────────────────────────────── */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 4px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+  }
 }
 
-/* Fix Leaflet focus outline */
+/* ── Animations (used in petition card + hero) ─────────────────────────── */
+@layer utilities {
+  .animate-in {
+    animation-fill-mode: both;
+  }
+  .fade-in {
+    animation: fade-in 0.25s ease;
+  }
+  .zoom-in-95 {
+    animation: zoom-in-95 0.2s ease;
+  }
+  .slide-in-from-right-4 {
+    animation: slide-in-right 0.3s ease;
+  }
+  .slide-in-from-bottom-4 {
+    animation: slide-in-bottom 0.4s ease;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoom-in-95 {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(1rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-bottom {
+  from {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ── Leaflet patches ───────────────────────────────────────────────────── */
 .leaflet-interactive:focus {
-    outline: none;
+  outline: none;
 }

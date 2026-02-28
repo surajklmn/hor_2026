@@ -1,17 +1,398 @@
-'use client';
+"use client";
 
-import dynamic from 'next/dynamic';
+import dynamic from "next/dynamic";
+import { useState, useEffect, useCallback, useRef } from "react";
+import {
+  Megaphone,
+  ChevronDown,
+  X,
+  Users,
+  FileText,
+  TrendingUp,
+  AlertCircle,
+} from "lucide-react";
+import { Petition, VoteDelta } from "@/types";
+import PetitionFeed from "@/components/Petitions/PetitionFeed";
+import PetitionForm from "@/components/Petitions/PetitionForm";
 
 // Dynamically import Map to avoid SSR issues with Leaflet
-const NepalMap = dynamic(() => import('@/components/Map/NepalMap'), {
-    ssr: false,
-    loading: () => <div className="h-screen w-full flex items-center justify-center bg-gray-50 text-gray-400">Loading Map...</div>
+const NepalMap = dynamic(() => import("@/components/Map/NepalMap"), {
+  ssr: false,
+  loading: () => (
+    <div className="h-full w-full flex items-center justify-center bg-gray-50 text-gray-400">
+      Loading Map…
+    </div>
+  ),
 });
 
+function formatConstituencyName(id: string): string {
+  return id
+    .split("-")
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(" ");
+}
+
 export default function ElectionPage() {
-    return (
-        <div className="relative w-full h-screen bg-gray-50 overflow-hidden text-gray-900 font-sans">
-            <NepalMap />
+  const [petitions, setPetitions] = useState<Petition[]>([]);
+  const [voteDeltas, setVoteDeltas] = useState<Record<string, VoteDelta>>({});
+  const [constituencyOptions, setConstituencyOptions] = useState<
+    Array<{ id: string; name: string }>
+  >([]);
+  const [candidatesData, setCandidatesData] = useState<
+    Record<string, Array<{ name: string; party: string }>>
+  >({});
+  const [selectedConstituencyId, setSelectedConstituencyId] = useState<
+    string | null
+  >(null);
+  const [selectedConstituencyName, setSelectedConstituencyName] = useState<
+    string | null
+  >(null);
+  const [showPetitionForm, setShowPetitionForm] = useState(false);
+  const [panelTab, setPanelTab] = useState<"candidates" | "petitions">(
+    "candidates",
+  );
+  const feedRef = useRef<HTMLDivElement>(null);
+
+  // ── Load data ───────────────────────────────────────────────────────────
+  useEffect(() => {
+    fetch("/data/petitions.json")
+      .then((r) => r.json())
+      .then((data: Petition[]) => setPetitions(data))
+      .catch(console.error);
+
+    fetch("/data/candidates.json")
+      .then((r) => r.json())
+      .then((data: Record<string, Array<{ name: string; party: string }>>) => {
+        setCandidatesData(data);
+        const opts = Object.keys(data)
+          .map((id) => ({ id, name: formatConstituencyName(id) }))
+          .sort((a, b) => a.name.localeCompare(b.name));
+        setConstituencyOptions(opts);
+      })
+      .catch(console.error);
+  }, []);
+
+  // ── Handlers ────────────────────────────────────────────────────────────
+  const handleConstituencySelect = useCallback(
+    (id: string | null, name: string | null) => {
+      setSelectedConstituencyId(id);
+      setSelectedConstituencyName(name);
+      if (id) setPanelTab("candidates");
+    },
+    [],
+  );
+
+  const handleVote = useCallback(
+    (petitionId: string, direction: "up" | "down") => {
+      setVoteDeltas((prev) => {
+        const cur = prev[petitionId] ?? { upvotes: 0, downvotes: 0 };
+        return {
+          ...prev,
+          [petitionId]: {
+            upvotes: cur.upvotes + (direction === "up" ? 1 : 0),
+            downvotes: cur.downvotes + (direction === "down" ? 1 : 0),
+          },
+        };
+      });
+    },
+    [],
+  );
+
+  const handleNewPetition = useCallback((petition: Petition) => {
+    setPetitions((prev) => [petition, ...prev]);
+    setShowPetitionForm(false);
+  }, []);
+
+  const scrollToFeed = () =>
+    feedRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+
+  // ── Derived ─────────────────────────────────────────────────────────────
+  const localPetitions = selectedConstituencyId
+    ? petitions.filter((p) => p.constituency_id === selectedConstituencyId)
+    : [];
+
+  const candidates = selectedConstituencyId
+    ? (candidatesData[selectedConstituencyId] ?? [])
+    : [];
+
+  const resolvedCount = petitions.filter((p) => p.status === "Resolved").length;
+
+  // ── Render ──────────────────────────────────────────────────────────────
+  return (
+    <div className="min-h-screen bg-gray-50 font-sans">
+      {/* ════ HERO ════════════════════════════════════════════════════════ */}
+      <section className="relative bg-blue-900 text-white overflow-hidden">
+        {/* Decorative blobs */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          aria-hidden="true"
+        >
+          <div className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full bg-blue-700/40 blur-3xl" />
+          <div className="absolute -bottom-20 -left-20 w-96 h-96 rounded-full bg-emerald-600/20 blur-3xl" />
+          <div className="absolute top-1/2 left-1/3 w-64 h-64 rounded-full bg-blue-800/30 blur-2xl" />
         </div>
-    );
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+          <div className="max-w-3xl">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-1.5 text-xs font-semibold text-white/80 mb-6 select-none">
+              <Megaphone size={12} />
+              Civic Petition Platform — Nepal 2026
+            </div>
+
+            {/* Headline */}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight mb-6">
+              Make A Petition,
+              <br />
+              <span className="text-emerald-400">Raise Your Voice.</span>
+            </h1>
+
+            <p className="text-blue-100 text-lg leading-relaxed mb-10 max-w-xl">
+              Select your constituency on the map below, then start or sign
+              petitions on issues that matter — from road repairs to policy
+              reform. Every signature drives Parliamentary Discussion.
+            </p>
+
+            {/* CTAs */}
+            <div className="flex flex-wrap gap-4">
+              <button
+                onClick={() => setShowPetitionForm(true)}
+                className="inline-flex items-center gap-2.5 bg-emerald-500 hover:bg-emerald-400 active:scale-95 text-white font-bold px-7 py-3.5 rounded-xl shadow-lg shadow-emerald-500/30 transition-all"
+              >
+                <Megaphone size={18} />
+                Start a Petition
+              </button>
+              <button
+                onClick={scrollToFeed}
+                className="inline-flex items-center gap-2.5 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold px-7 py-3.5 rounded-xl backdrop-blur-sm transition-all"
+              >
+                <TrendingUp size={18} />
+                View Petitions
+                <ChevronDown size={15} />
+              </button>
+            </div>
+          </div>
+
+          {/* Stats */}
+          <div className="mt-14 flex flex-wrap gap-4">
+            {[
+              {
+                label: "Active Petitions",
+                value: String(petitions.length),
+                icon: <FileText size={16} />,
+              },
+              {
+                label: "Constituencies",
+                value: "165",
+                icon: <Users size={16} />,
+              },
+              {
+                label: "Resolved Issues",
+                value: String(resolvedCount),
+                icon: <AlertCircle size={16} />,
+              },
+            ].map((stat) => (
+              <div
+                key={stat.label}
+                className="flex items-center gap-3 bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl px-5 py-3"
+              >
+                <span className="text-emerald-400">{stat.icon}</span>
+                <div>
+                  <div className="text-2xl font-extrabold leading-none">
+                    {stat.value}
+                  </div>
+                  <div className="text-xs text-blue-200 mt-0.5">
+                    {stat.label}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ════ MAP SECTION ═════════════════════════════════════════════════ */}
+      <section
+        className="relative bg-white border-b border-gray-200"
+        style={{ height: 600 }}
+      >
+        <NepalMap onConstituencySelect={handleConstituencySelect} />
+
+        {/* ── Constituency panel overlay ── */}
+        {selectedConstituencyId && (
+          <aside className="absolute top-0 right-0 bottom-0 w-[300px] bg-white border-l border-gray-200 z-[600] flex flex-col shadow-2xl overflow-hidden">
+            {/* Panel header – Deep Blue */}
+            <div className="bg-blue-900 text-white px-4 py-3 flex items-start justify-between flex-shrink-0">
+              <div className="min-w-0">
+                <div className="text-[10px] font-semibold text-blue-300 uppercase tracking-widest mb-0.5">
+                  Selected Constituency
+                </div>
+                <h3 className="font-bold text-sm leading-tight truncate">
+                  {selectedConstituencyName}
+                </h3>
+              </div>
+              <button
+                onClick={() => handleConstituencySelect(null, null)}
+                className="ml-3 mt-0.5 p-1.5 rounded-lg hover:bg-white/10 transition-colors flex-shrink-0"
+                aria-label="Close panel"
+              >
+                <X size={15} />
+              </button>
+            </div>
+
+            {/* Tabs */}
+            <div className="flex border-b border-gray-100 flex-shrink-0 bg-white">
+              {(["candidates", "petitions"] as const).map((tab) => (
+                <button
+                  key={tab}
+                  onClick={() => setPanelTab(tab)}
+                  className={`flex-1 py-2.5 text-[11px] font-bold transition-colors border-b-2 uppercase tracking-wide ${
+                    panelTab === tab
+                      ? "border-blue-900 text-blue-900 bg-blue-50/50"
+                      : "border-transparent text-gray-400 hover:text-gray-600"
+                  }`}
+                >
+                  {tab === "candidates"
+                    ? `Candidates (${candidates.length})`
+                    : `Petitions (${localPetitions.length})`}
+                </button>
+              ))}
+            </div>
+
+            {/* Panel body */}
+            <div className="flex-1 overflow-y-auto">
+              {panelTab === "candidates" ? (
+                <div className="p-3 space-y-2">
+                  {candidates.length === 0 ? (
+                    <p className="text-xs text-gray-400 italic py-6 text-center">
+                      No 2026 candidates registered yet.
+                    </p>
+                  ) : (
+                    candidates.map((c, i) => (
+                      <div
+                        key={i}
+                        className="flex items-center gap-3 p-2.5 rounded-xl bg-gray-50 hover:bg-blue-50 transition-colors"
+                      >
+                        <div className="w-8 h-8 rounded-full bg-blue-900 flex items-center justify-center text-white text-xs font-extrabold flex-shrink-0">
+                          {c.name.charAt(0)}
+                        </div>
+                        <div className="min-w-0">
+                          <div className="font-semibold text-xs text-gray-900 truncate">
+                            {c.name}
+                          </div>
+                          <div className="text-[11px] text-gray-500 truncate">
+                            {c.party}
+                          </div>
+                        </div>
+                      </div>
+                    ))
+                  )}
+                </div>
+              ) : (
+                <div className="p-3 space-y-2">
+                  {localPetitions.length === 0 ? (
+                    <div className="py-8 text-center px-4">
+                      <div className="text-3xl mb-2">📋</div>
+                      <p className="text-xs text-gray-400 mb-3">
+                        No petitions yet for this constituency.
+                      </p>
+                      <button
+                        onClick={() => setShowPetitionForm(true)}
+                        className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-900 hover:text-blue-700"
+                      >
+                        <Megaphone size={13} />
+                        Be the first to raise a petition
+                      </button>
+                    </div>
+                  ) : (
+                    localPetitions.map((p) => (
+                      <div
+                        key={p.id}
+                        onClick={scrollToFeed}
+                        className="p-3 rounded-xl border border-gray-100 bg-gray-50 hover:border-blue-200 hover:bg-white transition-all cursor-pointer"
+                      >
+                        <div className="text-xs font-semibold text-gray-900 leading-snug mb-2 line-clamp-2">
+                          {p.title}
+                        </div>
+                        <div className="flex items-center justify-between">
+                          <span
+                            className={`text-[10px] font-medium px-2 py-0.5 rounded-full ${
+                              p.status === "Resolved"
+                                ? "bg-emerald-100 text-emerald-700"
+                                : p.status === "Under Review"
+                                  ? "bg-blue-100 text-blue-700"
+                                  : "bg-amber-100 text-amber-700"
+                            }`}
+                          >
+                            {p.status}
+                          </span>
+                          <span className="text-[10px] text-gray-400">
+                            {(
+                              p.upvotes + (voteDeltas[p.id]?.upvotes ?? 0)
+                            ).toLocaleString()}{" "}
+                            votes
+                          </span>
+                        </div>
+                      </div>
+                    ))
+                  )}
+                </div>
+              )}
+            </div>
+
+            {/* Panel footer */}
+            <div className="p-3 border-t border-gray-100 flex-shrink-0 space-y-2 bg-gray-50/80">
+              <button
+                onClick={() => setShowPetitionForm(true)}
+                className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl bg-blue-900 text-white font-bold text-xs hover:bg-blue-800 transition-colors shadow-sm shadow-blue-900/20"
+              >
+                <Megaphone size={13} />
+                Start a Petition for {selectedConstituencyName}
+              </button>
+              <button
+                onClick={() => {
+                  setPanelTab("petitions");
+                  scrollToFeed();
+                }}
+                className="w-full flex items-center justify-center gap-2 py-2 rounded-xl bg-white border border-gray-200 text-gray-600 font-semibold text-xs hover:bg-gray-100 transition-colors"
+              >
+                View Local Petitions ↓
+              </button>
+            </div>
+          </aside>
+        )}
+      </section>
+
+      {/* ════ PETITION FEED ═══════════════════════════════════════════════ */}
+      <div ref={feedRef}>
+        <PetitionFeed
+          petitions={petitions}
+          voteDeltas={voteDeltas}
+          onVote={handleVote}
+          selectedConstituencyId={selectedConstituencyId}
+          selectedConstituencyName={selectedConstituencyName}
+        />
+      </div>
+
+      {/* ════ PETITION FORM MODAL ═════════════════════════════════════════ */}
+      {showPetitionForm && (
+        <div
+          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[1000] flex items-center justify-center p-4"
+          onClick={(e) => {
+            if (e.target === e.currentTarget) setShowPetitionForm(false);
+          }}
+        >
+          <div className="bg-white rounded-2xl shadow-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto">
+            <PetitionForm
+              preselectedConstituencyId={selectedConstituencyId}
+              preselectedConstituencyName={selectedConstituencyName}
+              constituencyOptions={constituencyOptions}
+              onSubmit={handleNewPetition}
+              onClose={() => setShowPetitionForm(false)}
+            />
+          </div>
+        </div>
+      )}
+    </div>
+  );
 }
