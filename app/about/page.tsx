@@ -124,11 +124,11 @@ export default function AboutPage() {
             Democracy in Your Pocket
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mb-12">
-            SpeakUp Nepal is the country&apos;s first dedicated Civic Tech
-            petition platform. We bridge the gap between citizen frustration and
+            NepalVoice is the country&apos;s first dedicated Civic Tech petition
+            platform. We bridge the gap between citizen frustration and
             government action by providing a structured, digital infrastructure
             for advocacy. Unlike a typical social media post, a petition on
-            SpeakUp Nepal is:
+            NepalVoice is:
           </p>
           <div className="grid sm:grid-cols-3 gap-5">
             {[

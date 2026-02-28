@@ -127,63 +127,58 @@ export default function PetitionDetailPage() {
   };
 
   return (
-    <main className="min-h-screen bg-gray-50 py-10">
-      <div className="max-w-2xl mx-auto px-4 sm:px-6">
+    <main className="min-h-screen bg-white">
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 py-12">
         {/* Back */}
         <button
           onClick={() => router.back()}
-          className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-blue-700 font-medium mb-6 transition-colors"
+          className="flex items-center gap-1.5 text-sm text-gray-400 hover:text-blue-700 font-medium mb-10 transition-colors"
         >
           <ArrowLeft size={15} />
           Back to petitions
         </button>
 
-        <article className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 sm:p-8 flex flex-col gap-6">
-          {/* Badges + date */}
-          <div className="flex items-start justify-between gap-3 flex-wrap">
-            <div className="flex flex-wrap gap-2">
-              <span
-                className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-sm font-semibold ${CATEGORY_COLORS[petition.category]}`}
-              >
-                {petition.category}
-              </span>
-              <span
-                className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-sm font-medium ${statusConfig.className}`}
-              >
-                {statusConfig.icon}
-                {statusConfig.label}
-              </span>
-            </div>
-            <div className="flex items-center gap-1 text-sm text-gray-400">
-              <Calendar size={12} />
-              <span>{petition.created_at}</span>
-            </div>
+        <article>
+          {/* Category + status tags */}
+          <div className="flex flex-wrap items-center gap-2 mb-5">
+            <span
+              className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-sm font-semibold ${CATEGORY_COLORS[petition.category]}`}
+            >
+              {petition.category}
+            </span>
+            <span
+              className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-sm font-medium ${statusConfig.className}`}
+            >
+              {statusConfig.icon}
+              {statusConfig.label}
+            </span>
           </div>
 
-          {/* Title */}
-          <h1 className="text-xl font-bold text-gray-900 leading-snug">
+          {/* Headline */}
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 leading-tight tracking-tight mb-5">
             {petition.title}
           </h1>
 
-          {/* Constituency */}
-          <div className="flex items-center gap-1.5 text-sm text-gray-500">
-            <MapPin size={14} className="text-gray-400" />
-            <span>{petition.constituency_name}</span>
+          {/* Byline row */}
+          <div className="flex flex-wrap items-center gap-4 text-sm text-gray-400 pb-6 border-b border-gray-100 mb-8">
+            <span className="flex items-center gap-1.5">
+              <MapPin size={14} />
+              {petition.constituency_name}
+            </span>
+            <span className="flex items-center gap-1.5">
+              <Calendar size={14} />
+              {petition.created_at}
+            </span>
           </div>
 
-          {/* Description */}
-          <div>
-            <h2 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-2">
-              Description
-            </h2>
-            <p className="text-sm text-gray-700 leading-relaxed whitespace-pre-line">
-              {petition.description}
-            </p>
-          </div>
+          {/* Body */}
+          <p className="text-lg text-gray-700 leading-relaxed whitespace-pre-line mb-12">
+            {petition.description}
+          </p>
 
-          {/* Progress */}
-          <div className="space-y-2">
-            <h2 className="text-sm font-semibold text-gray-400 uppercase tracking-wider">
+          {/* Signature progress */}
+          <div className="border-t border-gray-100 pt-8 mb-8 space-y-3">
+            <h2 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">
               Signature Progress
             </h2>
             <div className="flex justify-between text-sm font-semibold">
@@ -193,13 +188,12 @@ export default function PetitionDetailPage() {
                 {totalUpvotes.toLocaleString()} signatures
               </span>
               <span
-                className={isResolved ? "text-emerald-600" : "text-gray-500"}
+                className={isResolved ? "text-emerald-600" : "text-gray-400"}
               >
-                Goal: {petition.target.toLocaleString()} for Parliamentary
-                Discussion
+                Goal: {petition.target.toLocaleString()}
               </span>
             </div>
-            <div className="h-3 rounded-full bg-gray-100 overflow-hidden">
+            <div className="h-2.5 rounded-full bg-gray-100 overflow-hidden">
               <div
                 className={`h-full rounded-full transition-all duration-500 ${
                   isResolved
@@ -216,19 +210,19 @@ export default function PetitionDetailPage() {
             </p>
           </div>
 
-          {/* Vote section */}
-          <div className="border-t border-gray-100 pt-5">
-            <h2 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
+          {/* Community vote */}
+          <div className="border-t border-gray-100 pt-8">
+            <h2 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-5">
               Community Vote
             </h2>
 
             {isResolved ? (
-              <div className="flex items-center gap-2 text-sm text-emerald-600 font-semibold">
+              <div className="flex items-center gap-2 text-sm text-emerald-600 font-semibold mb-4">
                 <CheckCircle2 size={16} />
                 This issue has been resolved.
               </div>
             ) : !user ? (
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 mb-4">
                 <button
                   onClick={() => router.push("/auth?mode=login")}
                   className="flex items-center gap-2 px-4 py-2 bg-blue-900 text-white rounded-lg text-sm font-semibold hover:bg-blue-800 transition-colors"
@@ -241,21 +235,21 @@ export default function PetitionDetailPage() {
                 </span>
               </div>
             ) : !isOwnConstituency ? (
-              <p className="text-sm text-gray-400 flex items-center gap-1.5">
+              <p className="text-sm text-gray-400 flex items-center gap-1.5 mb-4">
                 <Lock size={13} />
                 You can only vote on petitions in your own constituency.
               </p>
             ) : (
-              <p className="text-sm text-gray-500 mb-3">
+              <p className="text-sm text-gray-500 mb-4">
                 Cast your vote as a resident of {petition.constituency_name}.
               </p>
             )}
 
-            <div className="flex items-center gap-3 mt-3">
+            <div className="flex items-center gap-3">
               <button
                 onClick={() => handleVote("up")}
                 disabled={!canVote}
-                className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all ${
+                className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all ${
                   userVote === "up" && canVote
                     ? "bg-blue-600 text-white shadow"
                     : canVote
@@ -270,7 +264,7 @@ export default function PetitionDetailPage() {
               <button
                 onClick={() => handleVote("down")}
                 disabled={!canVote}
-                className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all ${
+                className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all ${
                   userVote === "down" && canVote
                     ? "bg-rose-600 text-white shadow"
                     : canVote
