@@ -1,19 +1,24 @@
 "use client";
 
-import { useState, useMemo } from "react";
-import { TrendingUp, MapPin, Filter } from "lucide-react";
+import { useState, useMemo, useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { TrendingUp, MapPin, Filter, Search, Lock } from "lucide-react";
 import { Petition, PetitionCategory, VoteDelta } from "@/types";
+import { useAuth } from "@/context/AuthContext";
 import PetitionCard from "./PetitionCard";
 
 interface PetitionFeedProps {
   petitions: Petition[];
   voteDeltas: Record<string, VoteDelta>;
   onVote: (id: string, direction: "up" | "down") => void;
+  /** ID from map selection — pre-populates the Browse tab */
   selectedConstituencyId: string | null;
-  selectedConstituencyName: string | null;
+  /** ID passed from URL ?constituency= param — opens Browse tab on mount */
+  initialConstituencyId?: string | null;
+  constituencyOptions: Array<{ id: string; name: string }>;
 }
 
-type TabKey = "trending" | "constituency";
+type TabKey = "my-constituency" | "trending" | "browse";
 type SortKey = "votes" | "recent" | "progress";
 
 const CATEGORY_FILTERS: Array<{
@@ -34,19 +39,63 @@ export default function PetitionFeed({
   voteDeltas,
   onVote,
   selectedConstituencyId,
-  selectedConstituencyName,
+  initialConstituencyId,
+  constituencyOptions,
 }: PetitionFeedProps) {
-  const [activeTab, setActiveTab] = useState<TabKey>("trending");
+  const { user } = useAuth();
+  const router = useRouter();
+
+  // Default tab: 'my-constituency' if logged in, else 'trending'
+  const defaultTab: TabKey = user ? "my-constituency" : "trending";
+  const [activeTab, setActiveTab] = useState<TabKey>(defaultTab);
   const [categoryFilter, setCategoryFilter] = useState<
     PetitionCategory | "All"
   >("All");
   const [sortBy, setSortBy] = useState<SortKey>("votes");
 
+  // Browse-tab constituency (pre-populated from URL param or map selection)
+  const [browseConstituencyId, setBrowseConstituencyId] = useState<string>(
+    initialConstituencyId ?? selectedConstituencyId ?? "",
+  );
+  const [browseSearch, setBrowseSearch] = useState("");
+
+  // When initialConstituencyId is provided (from URL), open Browse tab
+  useEffect(() => {
+    if (initialConstituencyId) {
+      setBrowseConstituencyId(initialConstituencyId);
+      setActiveTab("browse");
+    }
+  }, [initialConstituencyId]);
+
+  // When user logs in, switch to my-constituency tab
+  useEffect(() => {
+    if (user) setActiveTab("my-constituency");
+  }, [user?.constituencyId]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // When map selection changes, update browse tab selection
+  useEffect(() => {
+    if (selectedConstituencyId) {
+      setBrowseConstituencyId(selectedConstituencyId);
+    }
+  }, [selectedConstituencyId]);
+
+  const filteredConstituencyOptions = useMemo(
+    () =>
+      constituencyOptions.filter(
+        (o) =>
+          !browseSearch ||
+          o.name.toLowerCase().includes(browseSearch.toLowerCase()),
+      ),
+    [constituencyOptions, browseSearch],
+  );
+
   const filtered = useMemo(() => {
     let list = petitions;
 
-    if (activeTab === "constituency" && selectedConstituencyId) {
-      list = list.filter((p) => p.constituency_id === selectedConstituencyId);
+    if (activeTab === "my-constituency" && user) {
+      list = list.filter((p) => p.constituency_id === user.constituencyId);
+    } else if (activeTab === "browse" && browseConstituencyId) {
+      list = list.filter((p) => p.constituency_id === browseConstituencyId);
     }
 
     if (categoryFilter !== "All") {
@@ -66,9 +115,14 @@ export default function PetitionFeed({
     activeTab,
     categoryFilter,
     sortBy,
-    selectedConstituencyId,
+    user,
+    browseConstituencyId,
     voteDeltas,
   ]);
+
+  const browseConstituencyName =
+    constituencyOptions.find((o) => o.id === browseConstituencyId)?.name ??
+    null;
 
   return (
     <section
@@ -109,7 +163,33 @@ export default function PetitionFeed({
       </div>
 
       {/* Tabs */}
-      <div className="flex gap-1 bg-gray-100 rounded-xl p-1 w-fit mb-6">
+      <div className="flex gap-1 bg-gray-100 rounded-xl p-1 w-fit mb-6 flex-wrap">
+        {/* My Constituency tab */}
+        <button
+          onClick={() => {
+            if (!user) {
+              router.push("/auth?mode=login");
+              return;
+            }
+            setActiveTab("my-constituency");
+          }}
+          className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
+            activeTab === "my-constituency" && user
+              ? "bg-white text-blue-900 shadow-sm"
+              : user
+                ? "text-gray-500 hover:text-gray-700"
+                : "text-gray-400 hover:text-gray-500"
+          }`}
+          title={
+            !user ? "Log in to see your constituency's petitions" : undefined
+          }
+        >
+          {!user && <Lock size={12} />}
+          <MapPin size={15} />
+          {user ? user.constituencyName : "My Constituency"}
+        </button>
+
+        {/* Trending tab */}
         <button
           onClick={() => setActiveTab("trending")}
           className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
@@ -121,28 +201,66 @@ export default function PetitionFeed({
           <TrendingUp size={15} />
           Trending Nationwide
         </button>
+
+        {/* Browse tab */}
         <button
-          onClick={() => setActiveTab("constituency")}
-          disabled={!selectedConstituencyId}
+          onClick={() => setActiveTab("browse")}
           className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
-            activeTab === "constituency" && selectedConstituencyId
+            activeTab === "browse"
               ? "bg-white text-blue-900 shadow-sm"
-              : !selectedConstituencyId
-                ? "text-gray-300 cursor-not-allowed"
-                : "text-gray-500 hover:text-gray-700"
+              : "text-gray-500 hover:text-gray-700"
           }`}
-          title={
-            !selectedConstituencyId
-              ? "Click a constituency on the map to filter"
-              : undefined
-          }
         >
-          <MapPin size={15} />
-          {selectedConstituencyName
-            ? `${selectedConstituencyName}`
-            : "My Constituency"}
+          <Search size={15} />
+          Browse
         </button>
       </div>
+
+      {/* Browse constituency selector */}
+      {activeTab === "browse" && (
+        <div className="mb-6 p-4 bg-blue-50 border border-blue-100 rounded-xl">
+          <p className="text-xs text-blue-700 font-semibold mb-2">
+            Select a constituency to browse petitions
+            {selectedConstituencyId && !browseConstituencyId && (
+              <span className="ml-1 text-blue-500">
+                (or click a constituency on the map)
+              </span>
+            )}
+          </p>
+          <div className="flex gap-2">
+            <div className="relative flex-1">
+              <Search
+                size={13}
+                className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
+              />
+              <input
+                type="text"
+                value={browseSearch}
+                onChange={(e) => setBrowseSearch(e.target.value)}
+                placeholder="Search constituencies…"
+                className="w-full pl-8 pr-3 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+              />
+            </div>
+            <select
+              value={browseConstituencyId}
+              onChange={(e) => setBrowseConstituencyId(e.target.value)}
+              className="flex-1 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+            >
+              <option value="">All constituencies</option>
+              {filteredConstituencyOptions.map((o) => (
+                <option key={o.id} value={o.id}>
+                  {o.name}
+                </option>
+              ))}
+            </select>
+          </div>
+          {browseConstituencyName && (
+            <p className="text-xs text-blue-600 mt-2 font-medium">
+              Showing petitions for: {browseConstituencyName}
+            </p>
+          )}
+        </div>
+      )}
 
       {/* Category chips */}
       <div className="flex flex-wrap gap-2 mb-6">
@@ -166,11 +284,21 @@ export default function PetitionFeed({
       {/* Grid */}
       {filtered.length === 0 ? (
         <div className="py-16 text-center text-gray-400">
-          <p className="text-sm">
-            {activeTab === "constituency" && !selectedConstituencyId
-              ? "Click a constituency on the map to see local petitions."
-              : "No petitions match the selected filters."}
-          </p>
+          {activeTab === "my-constituency" && user ? (
+            <div>
+              <div className="text-3xl mb-2">📋</div>
+              <p className="text-sm font-medium text-gray-500">
+                No petitions yet in {user.constituencyName}.
+              </p>
+              <p className="text-xs mt-1">Be the first to start a petition!</p>
+            </div>
+          ) : activeTab === "browse" && !browseConstituencyId ? (
+            <p className="text-sm">
+              Select a constituency above to browse its petitions.
+            </p>
+          ) : (
+            <p className="text-sm">No petitions match the selected filters.</p>
+          )}
         </div>
       ) : (
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import {
   ThumbsUp,
   ThumbsDown,
@@ -8,8 +9,10 @@ import {
   CheckCircle2,
   Clock,
   AlertCircle,
+  Lock,
 } from "lucide-react";
 import { Petition, PetitionStatus, PetitionCategory } from "@/types";
+import { useAuth } from "@/context/AuthContext";
 
 interface PetitionCardProps {
   petition: Petition;
@@ -53,6 +56,8 @@ export default function PetitionCard({
   voteDelta,
   onVote,
 }: PetitionCardProps) {
+  const { user } = useAuth();
+  const router = useRouter();
   const [userVote, setUserVote] = useState<"up" | "down" | null>(null);
 
   const totalUpvotes = petition.upvotes + voteDelta.upvotes;
@@ -63,8 +68,20 @@ export default function PetitionCard({
   );
   const statusConfig = STATUS_CONFIG[petition.status];
 
+  // Voting rules: must be logged in AND petition must be in own constituency
+  const isResolved = petition.status === "Resolved";
+  const isOwnConstituency =
+    user !== null && user.constituencyId === petition.constituency_id;
+  const canVote = !isResolved && isOwnConstituency;
+
   const handleVote = (direction: "up" | "down") => {
-    if (userVote === direction) return; // already voted this way
+    if (!user) {
+      router.push("/auth?mode=login");
+      return;
+    }
+    if (!isOwnConstituency) return; // silently blocked (button is disabled)
+    if (isResolved) return;
+    if (userVote === direction) return;
     onVote(petition.id, direction);
     setUserVote(direction);
   };
@@ -148,35 +165,64 @@ export default function PetitionCard({
       <div className="flex items-center gap-3 pt-1 border-t border-gray-50">
         <button
           onClick={() => handleVote("up")}
-          disabled={petition.status === "Resolved"}
+          disabled={canVote ? false : isResolved}
+          title={
+            !user
+              ? "Log in to vote"
+              : !isOwnConstituency
+                ? "You can only vote on petitions in your own constituency"
+                : undefined
+          }
           className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
-            userVote === "up"
+            userVote === "up" && canVote
               ? "bg-blue-600 text-white shadow-sm"
-              : "bg-gray-50 text-gray-600 hover:bg-blue-50 hover:text-blue-700"
-          } disabled:opacity-40 disabled:cursor-not-allowed`}
+              : canVote
+                ? "bg-gray-50 text-gray-600 hover:bg-blue-50 hover:text-blue-700"
+                : "bg-gray-50 text-gray-300 cursor-not-allowed"
+          } disabled:opacity-40`}
         >
-          <ThumbsUp size={13} />
+          {!user ? <Lock size={11} /> : <ThumbsUp size={13} />}
           <span>{totalUpvotes.toLocaleString()}</span>
         </button>
 
         <button
           onClick={() => handleVote("down")}
-          disabled={petition.status === "Resolved"}
+          disabled={canVote ? false : isResolved}
+          title={
+            !user
+              ? "Log in to vote"
+              : !isOwnConstituency
+                ? "You can only vote on petitions in your own constituency"
+                : undefined
+          }
           className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
-            userVote === "down"
+            userVote === "down" && canVote
               ? "bg-rose-600 text-white shadow-sm"
-              : "bg-gray-50 text-gray-600 hover:bg-rose-50 hover:text-rose-700"
-          } disabled:opacity-40 disabled:cursor-not-allowed`}
+              : canVote
+                ? "bg-gray-50 text-gray-600 hover:bg-rose-50 hover:text-rose-700"
+                : "bg-gray-50 text-gray-300 cursor-not-allowed"
+          } disabled:opacity-40`}
         >
-          <ThumbsDown size={13} />
+          {!user ? <Lock size={11} /> : <ThumbsDown size={13} />}
           <span>{totalDownvotes.toLocaleString()}</span>
         </button>
 
-        {petition.status === "Resolved" && (
+        {isResolved ? (
           <span className="ml-auto text-[10px] text-emerald-600 font-semibold flex items-center gap-1">
             <CheckCircle2 size={12} /> Issue Resolved
           </span>
-        )}
+        ) : !user ? (
+          <button
+            onClick={() => router.push("/auth?mode=login")}
+            className="ml-auto text-[10px] text-blue-600 hover:underline font-semibold"
+          >
+            Log in to vote
+          </button>
+        ) : !isOwnConstituency ? (
+          <span className="ml-auto text-[10px] text-gray-400 flex items-center gap-0.5">
+            <Lock size={9} /> Own constituency only
+          </span>
+        ) : null}
       </div>
     </article>
   );

@@ -10,10 +10,11 @@ import {
   FileText,
   TrendingUp,
   AlertCircle,
+  ArrowRight,
 } from "lucide-react";
-import { Petition, VoteDelta } from "@/types";
-import PetitionFeed from "@/components/Petitions/PetitionFeed";
-import PetitionForm from "@/components/Petitions/PetitionForm";
+import Link from "next/link";
+import { Petition } from "@/types";
+import NavBar from "@/components/NavBar";
 
 // Dynamically import Map to avoid SSR issues with Leaflet
 const NepalMap = dynamic(() => import("@/components/Map/NepalMap"), {
@@ -25,19 +26,8 @@ const NepalMap = dynamic(() => import("@/components/Map/NepalMap"), {
   ),
 });
 
-function formatConstituencyName(id: string): string {
-  return id
-    .split("-")
-    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-    .join(" ");
-}
-
 export default function ElectionPage() {
   const [petitions, setPetitions] = useState<Petition[]>([]);
-  const [voteDeltas, setVoteDeltas] = useState<Record<string, VoteDelta>>({});
-  const [constituencyOptions, setConstituencyOptions] = useState<
-    Array<{ id: string; name: string }>
-  >([]);
   const [candidatesData, setCandidatesData] = useState<
     Record<string, Array<{ name: string; party: string }>>
   >({});
@@ -47,11 +37,10 @@ export default function ElectionPage() {
   const [selectedConstituencyName, setSelectedConstituencyName] = useState<
     string | null
   >(null);
-  const [showPetitionForm, setShowPetitionForm] = useState(false);
   const [panelTab, setPanelTab] = useState<"candidates" | "petitions">(
     "candidates",
   );
-  const feedRef = useRef<HTMLDivElement>(null);
+  const mapRef = useRef<HTMLDivElement>(null);
 
   // ── Load data ───────────────────────────────────────────────────────────
   useEffect(() => {
@@ -62,13 +51,9 @@ export default function ElectionPage() {
 
     fetch("/data/candidates.json")
       .then((r) => r.json())
-      .then((data: Record<string, Array<{ name: string; party: string }>>) => {
-        setCandidatesData(data);
-        const opts = Object.keys(data)
-          .map((id) => ({ id, name: formatConstituencyName(id) }))
-          .sort((a, b) => a.name.localeCompare(b.name));
-        setConstituencyOptions(opts);
-      })
+      .then((data: Record<string, Array<{ name: string; party: string }>>) =>
+        setCandidatesData(data),
+      )
       .catch(console.error);
   }, []);
 
@@ -82,29 +67,8 @@ export default function ElectionPage() {
     [],
   );
 
-  const handleVote = useCallback(
-    (petitionId: string, direction: "up" | "down") => {
-      setVoteDeltas((prev) => {
-        const cur = prev[petitionId] ?? { upvotes: 0, downvotes: 0 };
-        return {
-          ...prev,
-          [petitionId]: {
-            upvotes: cur.upvotes + (direction === "up" ? 1 : 0),
-            downvotes: cur.downvotes + (direction === "down" ? 1 : 0),
-          },
-        };
-      });
-    },
-    [],
-  );
-
-  const handleNewPetition = useCallback((petition: Petition) => {
-    setPetitions((prev) => [petition, ...prev]);
-    setShowPetitionForm(false);
-  }, []);
-
-  const scrollToFeed = () =>
-    feedRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  const scrollToMap = () =>
+    mapRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
 
   // ── Derived ─────────────────────────────────────────────────────────────
   const localPetitions = selectedConstituencyId
@@ -117,9 +81,9 @@ export default function ElectionPage() {
 
   const resolvedCount = petitions.filter((p) => p.status === "Resolved").length;
 
-  // ── Render ──────────────────────────────────────────────────────────────
   return (
     <div className="min-h-screen bg-gray-50 font-sans">
+      <NavBar />
       {/* ════ HERO ════════════════════════════════════════════════════════ */}
       <section className="relative bg-blue-900 text-white overflow-hidden">
         {/* Decorative blobs */}
@@ -155,15 +119,15 @@ export default function ElectionPage() {
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-4">
-              <button
-                onClick={() => setShowPetitionForm(true)}
+              <Link
+                href="/petition/new"
                 className="inline-flex items-center gap-2.5 bg-emerald-500 hover:bg-emerald-400 active:scale-95 text-white font-bold px-7 py-3.5 rounded-xl shadow-lg shadow-emerald-500/30 transition-all"
               >
                 <Megaphone size={18} />
                 Start a Petition
-              </button>
+              </Link>
               <button
-                onClick={scrollToFeed}
+                onClick={scrollToMap}
                 className="inline-flex items-center gap-2.5 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold px-7 py-3.5 rounded-xl backdrop-blur-sm transition-all"
               >
                 <TrendingUp size={18} />
@@ -213,6 +177,7 @@ export default function ElectionPage() {
 
       {/* ════ MAP SECTION ═════════════════════════════════════════════════ */}
       <section
+        ref={mapRef}
         className="relative bg-white border-b border-gray-200"
         style={{ height: 600 }}
       >
@@ -296,20 +261,20 @@ export default function ElectionPage() {
                       <p className="text-xs text-gray-400 mb-3">
                         No petitions yet for this constituency.
                       </p>
-                      <button
-                        onClick={() => setShowPetitionForm(true)}
+                      <Link
+                        href="/petition/new"
                         className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-900 hover:text-blue-700"
                       >
                         <Megaphone size={13} />
                         Be the first to raise a petition
-                      </button>
+                      </Link>
                     </div>
                   ) : (
                     localPetitions.map((p) => (
-                      <div
+                      <Link
                         key={p.id}
-                        onClick={scrollToFeed}
-                        className="p-3 rounded-xl border border-gray-100 bg-gray-50 hover:border-blue-200 hover:bg-white transition-all cursor-pointer"
+                        href={`/petitions?constituency=${selectedConstituencyId}`}
+                        className="block p-3 rounded-xl border border-gray-100 bg-gray-50 hover:border-blue-200 hover:bg-white transition-all"
                       >
                         <div className="text-xs font-semibold text-gray-900 leading-snug mb-2 line-clamp-2">
                           {p.title}
@@ -327,13 +292,10 @@ export default function ElectionPage() {
                             {p.status}
                           </span>
                           <span className="text-[10px] text-gray-400">
-                            {(
-                              p.upvotes + (voteDeltas[p.id]?.upvotes ?? 0)
-                            ).toLocaleString()}{" "}
-                            votes
+                            {p.upvotes.toLocaleString()} votes
                           </span>
                         </div>
-                      </div>
+                      </Link>
                     ))
                   )}
                 </div>
@@ -342,57 +304,24 @@ export default function ElectionPage() {
 
             {/* Panel footer */}
             <div className="p-3 border-t border-gray-100 flex-shrink-0 space-y-2 bg-gray-50/80">
-              <button
-                onClick={() => setShowPetitionForm(true)}
+              <Link
+                href="/petition/new"
                 className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl bg-blue-900 text-white font-bold text-xs hover:bg-blue-800 transition-colors shadow-sm shadow-blue-900/20"
               >
                 <Megaphone size={13} />
                 Start a Petition for {selectedConstituencyName}
-              </button>
-              <button
-                onClick={() => {
-                  setPanelTab("petitions");
-                  scrollToFeed();
-                }}
+              </Link>
+              <Link
+                href={`/petitions?constituency=${selectedConstituencyId}`}
                 className="w-full flex items-center justify-center gap-2 py-2 rounded-xl bg-white border border-gray-200 text-gray-600 font-semibold text-xs hover:bg-gray-100 transition-colors"
               >
-                View Local Petitions ↓
-              </button>
+                <ArrowRight size={13} />
+                View Petitions in {selectedConstituencyName}
+              </Link>
             </div>
           </aside>
         )}
       </section>
-
-      {/* ════ PETITION FEED ═══════════════════════════════════════════════ */}
-      <div ref={feedRef}>
-        <PetitionFeed
-          petitions={petitions}
-          voteDeltas={voteDeltas}
-          onVote={handleVote}
-          selectedConstituencyId={selectedConstituencyId}
-          selectedConstituencyName={selectedConstituencyName}
-        />
-      </div>
-
-      {/* ════ PETITION FORM MODAL ═════════════════════════════════════════ */}
-      {showPetitionForm && (
-        <div
-          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[1000] flex items-center justify-center p-4"
-          onClick={(e) => {
-            if (e.target === e.currentTarget) setShowPetitionForm(false);
-          }}
-        >
-          <div className="bg-white rounded-2xl shadow-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto">
-            <PetitionForm
-              preselectedConstituencyId={selectedConstituencyId}
-              preselectedConstituencyName={selectedConstituencyName}
-              constituencyOptions={constituencyOptions}
-              onSubmit={handleNewPetition}
-              onClose={() => setShowPetitionForm(false)}
-            />
-          </div>
-        </div>
-      )}
     </div>
   );
 }

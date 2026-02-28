@@ -64,3 +64,16 @@ export interface VoteDelta {
   upvotes: number;
   downvotes: number;
 }
+
+// ─── Auth types ───────────────────────────────────────────────────────────────
+
+export interface User {
+  id: string;
+  voterID: string;
+  name: string;
+  dob: string; // ISO date string (YYYY-MM-DD)
+  constituencyId: string; // lowercase-hyphen e.g. "jhapa-1"
+  constituencyName: string; // display name e.g. "Jhapa 1"
+  province: string;
+  district: string;
+}
